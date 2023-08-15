@@ -50,10 +50,10 @@
                                     class="absolute right-0 mt-2 origin-top-right bg-white border rounded-md shadow-lg">
                                     <div class="py-1" role="menu" aria-orientation="vertical"
                                         aria-labelledby="options-menu">
-                                        <a href="#"
+                                        <a href="{{ route('login-ong', ['id'=>1]) }}"
                                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                                             role="menuitem">Ong</a>
-                                        <a href="#"
+                                        <a href="{{ route('login-voluntario', ['id'=>1]) }}"
                                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                                             role="menuitem">Voluntário</a>
                                     </div>
