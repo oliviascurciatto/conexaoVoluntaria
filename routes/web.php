@@ -35,7 +35,7 @@ Route::get('/login-ong/{id?}', function () {
 Route::get('/perfil-voluntario', function () {
     return view('perfis/perfil-voluntario');
 })->name('perfil-voluntario');
-Route::get('/perfil-ong', function () {
+Route::get('/perfil-ong/{id?}', function () {
     return view('perfis/perfil-ong');
 })->name('perfil-ong');
 
