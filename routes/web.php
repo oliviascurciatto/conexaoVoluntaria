@@ -32,7 +32,7 @@ Route::get('/login-ong/{id?}', function () {
 })->name('login-ong');
 
 
-Route::get('/perfil-voluntario', function () {
+Route::get('/perfil-voluntario/{id?}', function () {
     return view('perfis/perfil-voluntario');
 })->name('perfil-voluntario');
 Route::get('/perfil-ong/{id?}', function () {
