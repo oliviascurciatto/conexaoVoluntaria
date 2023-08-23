@@ -23,7 +23,7 @@
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex-  items-baseline space-x-4">
-                                <a href="#"
+                                <a href="{{ route('home-user', ['id'=>1]) }}"
                                     class="bg-orange-500 text-white hover:bg-green-300 rounded-md px-3 py-2 text-sm font-medium"
                                     aria-current="page">Início</a>
                                 <a href="#"

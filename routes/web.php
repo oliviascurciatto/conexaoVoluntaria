@@ -20,13 +20,14 @@ Route::get('/welcome', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/home_user', function () {
-    return view('home_logada');
+Route::get('/home-user/{id?}', function () {
+    return view('home-user');
 })->name('home-user');
 
 Route::get('/login-voluntario/{id?}', function () {
     return view('logins/login-voluntario');
 })->name('login-voluntario');
+
 Route::get('/login-ong/{id?}', function () {
     return view('logins/login-ong');
 })->name('login-ong');
@@ -35,6 +36,7 @@ Route::get('/login-ong/{id?}', function () {
 Route::get('/perfil-voluntario/{id?}', function () {
     return view('perfis/perfil-voluntario');
 })->name('perfil-voluntario');
+
 Route::get('/perfil-ong/{id?}', function () {
     return view('perfis/perfil-ong');
 })->name('perfil-ong');
