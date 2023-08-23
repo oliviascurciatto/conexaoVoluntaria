@@ -44,3 +44,7 @@ Route::get('/perfil-ong/{id?}', function () {
 Route::get('/edit-perfil-voluntario', function () {
     return view('perfis/edit-perfil-voluntario');
 })->name('edit-perfil-voluntario');
+
+Route::get('/edit-perfil-ong', function () {
+    return view('perfis/edit-perfil-ong');
+})->name('edit-perfil-ong');

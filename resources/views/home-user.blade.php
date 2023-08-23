@@ -24,12 +24,12 @@
                         <div class="hidden md:block">
                             <div class="ml-10 flex-  items-baseline space-x-4">
                                 <a href="#"
-                                    class="bg-orange-500 text-white hover:bg-green-300 rounded-md px-3 py-2 text-sm font-medium"
+                                    class="bg-orange-500 text-white hover:bg-green-400 rounded-md px-3 py-2 text-sm font-medium"
                                     aria-current="page">Início</a>
                                 <a href="#"
-                                    class="text-gray-700 hover:bg-orange-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
+                                    class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
                                 <a href="#"
-                                    class="text-gray-700 hover:bg-orange-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Vagas</a>
+                                    class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Vagas</a>
 
                             </div>
                         </div>
@@ -37,12 +37,12 @@
                     <div class="hidden md:block">
                         <div class="ml-4 flex items-center md:ml-10">
                             <a href="#"
-                                class="text-gray-700 hover:bg-orange-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium ml-2">Perguntas
+                                class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium ml-2">Perguntas
                                 Frequentes</a>
                             <a href="#"
-                                class="text-gray-700 hover:bg-orange-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium mr-3">Busca</a>
+                                class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium mr-3">Busca</a>
                             <button type="button"
-                                class="relative rounded-full bg-green-300 p-1 text-gray-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                                class="relative rounded-full bg-green-400 p-1 text-gray-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                 <span class="absolute -inset-1.5"></span>
                                 <span class="sr-only">View notifications</span>
                                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -86,25 +86,31 @@
             </div>
         </nav>
         <section
-            class="bg-center bg-no-repeat bg-[url('https://img.freepik.com/fotos-premium/grupo-de-diversas-pessoas-com-bracos-e-maos-levantadas-em-direcao-a-coracoes-pintados-a-mao-doacao-de-caridade-trabalho-voluntario-assistencia-de-suporte-comunidade-multicultural-pessoas-diversidade-generative-ai_438099-21704.jpg?w=2000')] bg-gray-700 bg-blend-multiply">
+            class="bg-center bg-no-repeat bg-[url('https://img.freepik.com/vetores-gratis/pessoas-abracando-design-plano_23-2148576539.jpg?w=740&t=st=1692797694~exp=1692798294~hmac=3604570fc9b6c5105bbcc0371bd5b4189d626e72e748162f2e0bca7717cc63ab')] bg-white bg-blend-multiply">
+            <h1 class="text-4xl text-center font-extrabold tracking-tight leading-none text-green-400 md:text-5xl lg:text-6xl">
+                O poder de fazer a diferença!</h1>
             <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-                <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
-                    O poder de fazer a diferença!</h1>
-                <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">"A solidariedade é o
-                    sentimento que melhor expressa o respeito pela dignidade humana." Franz Kafka</p>
-                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                    <a href="#"
-                        class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg bg-green-300 hover:bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                        Vagas abertas!
-                        <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
+                
+            </div>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="#"
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg bg-green-400 hover:bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                    Vagas Abertas!
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
             </div>
         </section>
+        
+<footer class="bg-white">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-400 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 . All Rights Reserved.</span>
+    </div>
+</footer>
 
 </body>
 
