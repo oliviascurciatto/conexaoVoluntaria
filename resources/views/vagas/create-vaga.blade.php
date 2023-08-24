@@ -99,7 +99,7 @@
         <form>
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <h2 class="text-base font-semibold leading-7 text-gray-900">Editar Perfil</h2>
+                    <h2 class="text-base font-semibold leading-7 text-gray-900">Criar Vaga</h2>
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
@@ -123,10 +123,7 @@
                 </div>
 
                 <div class="ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <h2 class="text-base font-semibold leading-7 text-gray-900">Informações da Ong</h2>
-                    <p class="mt-1 text-sm leading-6 text-gray-600">Dê preferência ao principal e-mail e principal
-                        número telefone!
-                    </p>
+                    <h2 class="text-base font-semibold leading-7 text-gray-900">Informações da vaga</h2>
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-3">
@@ -139,80 +136,39 @@
                         </div>
 
                         <div class="sm:col-span-4">
-                            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Endereço
-                                de e-mail</label>
+                            <label for="quantidade" class="block text-sm font-medium leading-6 text-gray-900">Quantidade</label>
                             <div class="mt-2">
-                                <input id="email" name="email" type="email" autocomplete="email"
+                                <input id="quantidade" name="quantidade" type="number" autocomplete="email"
                                     class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
                         <div class="sm:col-span-4">
-                            <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Telefone</label>
+                            <label for="date" class="block text-sm font-medium leading-6 text-gray-900">Criada em</label>
                             <div class="mt-2">
-                                <input id="phone" name="phone" type="phone" autocomplete="phone"
+                                <input id="date" name="date" type="date" autocomplete="date"
                                     class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-4 sm:col-span-2 sm:col-start-1">
-                        <label for="cidade" class="block text-sm font-medium leading-6 text-gray-900">Cidade</label>
-                        <div class="mt-2">
-                            <input type="text" name="cidade" id="cidade" autocomplete="address-level2"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
 
-                    <div class="mt-4 sm:col-span-2">
-                        <label for="estado" class="block text-sm font-medium leading-6 text-gray-900">Estado</label>
-                        <div class="mt-2">
-                            <input type="text" name="estado" id="estado" autocomplete="address-level1"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
-                    <div class="mt-4 sm:col-span-2">
-                        <label for="rua" class="block text-sm font-medium leading-6 text-gray-900">Rua</label>
-                        <div class="mt-2">
-                            <input type="text" name="rua" id="rua" autocomplete="street-address"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
-                    <div class="mt-4 sm:col-span-2">
-                        <label for="text" class="block text-sm font-medium leading-6 text-gray-900">Número</label>
-                        <div class="mt-2">
-                            <input type="text" name="rua" id="rua" autocomplete="#"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
-                    <div class="mt-4 sm:col-span-2">
-                        <label for="region" class="block text-sm font-medium leading-6 text-gray-900">Bairro</label>
-                        <div class="mt-2">
-                            <input type="text" name="region" id="region" autocomplete="address-level3"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
-                    <div class="mt-4 sm:col-span-2">
-                        <label for="cep" class="block text-sm font-medium leading-6 text-gray-900">Cep</label>
-                        <div class="mt-2">
-                            <input type="text" name="cep" id="cep" autocomplete="postal-code"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
+
+
 
                     <div class="sm:col-span-2">
                         <div class="mt-4 col-span-full">
-                            <label for="Sobre" class="block text-sm font-medium leading-6 text-gray-900">Sobre a Ong</label>
+                            <label for="Sobre" class="block text-sm font-medium leading-6 text-gray-900">Sobre a vaga</label>
                             <div class="mt-2">
                                 <textarea id="Sobre" name="Sobre" rows="3"
                                     class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                             </div>
-                            <p class="mt-3 text-sm leading-6 text-gray-600">Escreva um pouco sobre a história da ong!
+                            <p class="mt-3 text-sm leading-6 text-gray-600">Descreva a vaga!
                             </p>
                         </div>
                     </div>
                     <div class="mt-6 sm:col-span-3">
                         <label for="habilidades"
-                            class="block text-sm font-medium leading-6 text-gray-900">Causas</label>
+                            class="block text-sm font-medium leading-6 text-gray-900">Habilidades</label>
                         <div class="mt-2">
                             <select id="habilidades" name="habilidades" autocomplete="habilidades-name"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
@@ -224,74 +180,6 @@
                     </div>
                 </div>
 
-                <div class="ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <h2 class="text-base font-semibold leading-7 text-gray-900">Notificações</h2>
-                    <p class="mt-1 text-sm leading-6 text-gray-600">Quais notificações você deseja receber?</p>
-
-                    <div class="mt-10 space-y-10">
-                        <fieldset>
-                            <legend class="text-sm font-semibold leading-6 text-gray-900">Por E-mail</legend>
-                            <div class="mt-6 space-y-6">
-                                <div class="relative flex gap-x-3">
-                                    <div class="flex h-6 items-center">
-                                        <input id="vagas" name="vagas" type="checkbox"
-                                            class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    </div>
-                                    <div class="text-sm leading-6">
-                                        <label for="vagas" class="font-medium text-gray-900">Candidaturas nas vagas</label>
-                                        <p class="text-gray-500">Saiba quem se candidatou para sua vaga.</p>
-                                    </div>
-                                </div>
-                                <div class="relative flex gap-x-3">
-                                    <div class="flex h-6 items-center">
-                                        <input id="mensagens" name="mensagens" type="checkbox"
-                                            class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    </div>
-                                    <div class="text-sm leading-6">
-                                        <label for="mensagens" class="font-medium text-gray-900">Mensagens</label>
-                                        <p class="text-gray-500">Saiba quando um voluntário te enviou uma mensagem.</p>
-                                    </div>
-                                </div>
-                                <div class="relative flex gap-x-3">
-                                    <div class="flex h-6 items-center">
-                                        <input id="nenhuma" name="nenhuma" type="checkbox"
-                                            class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    </div>
-                                    <div class="text-sm leading-6">
-                                        <label for="nenhuma" class="font-medium text-gray-900">Nenhuma</label>
-                                        <p class="text-gray-500">Não quero receber nenhuma notificação.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="text-sm font-semibold leading-6 text-gray-900">Por Whatsapp</legend>
-                            <div class="mt-6 space-y-6">
-                                <div class="flex items-center gap-x-3">
-                                    <input id="push-todas" name="push-notifications" type="radio"
-                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    <label for="push-todas"
-                                        class="block text-sm font-medium leading-6 text-gray-900">Todas as
-                                        notificações</label>
-                                </div>
-                                <div class="flex items-center gap-x-3">
-                                    <input id="push-email" name="push-notifications" type="radio"
-                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    <label for="push-email"
-                                        class="block text-sm font-medium leading-6 text-gray-900">Igual ao
-                                        e-mail</label>
-                                </div>
-                                <div class="flex items-center gap-x-3">
-                                    <input id="push-nenhuma" name="push-notifications" type="radio"
-                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    <label for="push-nenhuma"
-                                        class="block text-sm font-medium leading-6 text-gray-900">Nenhuma
-                                        notificação</label>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
-                </div>
                 <div class="ml-10 mr-10 border-b border-gray-900/10 pb-12">
                     <button type="button" id="cancelar"
                         class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-white hover:bg-orange-500 focus:ring-4 focus:ring-gray-400"

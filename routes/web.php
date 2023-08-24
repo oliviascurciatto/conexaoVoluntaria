@@ -48,3 +48,7 @@ Route::get('/edit-perfil-voluntario', function () {
 Route::get('/edit-perfil-ong', function () {
     return view('perfis/edit-perfil-ong');
 })->name('edit-perfil-ong');
+
+Route::get('/create-vaga', function () {
+    return view('vagas/create-vaga');
+})->name('create-vaga');
