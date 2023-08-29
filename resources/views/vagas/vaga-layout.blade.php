@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="icon" href="./icone_cv.ico" type="image/ico">
-    <title>Conexão Voluntária</title>
+    <title>Perfil Ong</title>
 </head>
 
 <body class="h-full">
     @vite('resources/css/app.css')
 
-    <div class="min-h-full">
+    <div class="bg-gray-200 min-h-full">
+        {{-- ---------------Nav bar----------------------- --}}
         <nav class="bg-white drop-shadow-xl">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
@@ -24,12 +25,12 @@
                         <div class="hidden md:block">
                             <div class="ml-10 flex-  items-baseline space-x-4">
                                 <a href="#"
-                                    class="bg-orange-500 text-white hover:bg-green-400 rounded-md px-3 py-2 text-sm font-medium"
+                                    class="bg-orange-500 text-white hover:bg-green-300 rounded-md px-3 py-2 text-sm font-medium"
                                     aria-current="page">Início</a>
                                 <a href="#"
-                                    class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
+                                    class="text-gray-700 hover:bg-orange-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
                                 <a href="#"
-                                    class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Vagas</a>
+                                    class="text-gray-700 hover:bg-orange-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Vagas</a>
 
                             </div>
                         </div>
@@ -37,7 +38,7 @@
                     <div class="hidden md:block">
                         <div class="ml-4 flex items-center md:ml-10 space-x-2">
                             <a href="#"
-                                class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium ml-2">Perguntas
+                                class="text-gray-700 hover:bg-orange-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium ml-2">Perguntas
                                 Frequentes</a>
                                 <form>
                                     <div class="flex">
@@ -53,7 +54,7 @@
                                     </div>
                                 </form>
                             <button type="button"
-                                class="relative rounded-full bg-green-400 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800  hover:bg-orange-500">
+                                class="relative rounded-full bg-green-400 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-orange-500">
                                 <span class="absolute -inset-1.5"></span>
                                 <span class="sr-only">View notifications</span>
                                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -71,7 +72,7 @@
                                         id="user-menu-button" aria-expanded="false" aria-haspopup="false">
                                         <span class="sr-only">Open user menu</span>
                                         <img class="h-8 w-8 rounded-full"
-                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                                             alt="">
                                     </button>
                                 </div>
@@ -81,13 +82,13 @@
                                     tabindex="-1">
                                     <!-- Active: "bg-gray-100", Not Active: "" -->
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-0">Perfil</a>
+                                        tabindex="-1" id="user-menu-item-0">Your Profile</a>
 
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-1">Configurçõea</a>
+                                        tabindex="-1" id="user-menu-item-1">Settings</a>
 
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-2">Sair</a>
+                                        tabindex="-1" id="user-menu-item-2">Sign out</a>
 
                                 </div>
                             </div>
@@ -96,33 +97,51 @@
                 </div>
             </div>
         </nav>
-        <section
-            class="bg-center bg-no-repeat bg-[url('https://img.freepik.com/vetores-gratis/pessoas-abracando-design-plano_23-2148576539.jpg?w=740&t=st=1692797694~exp=1692798294~hmac=3604570fc9b6c5105bbcc0371bd5b4189d626e72e748162f2e0bca7717cc63ab')] bg-white bg-blend-multiply">
-            <h1 class="text-4xl text-center font-extrabold tracking-tight leading-none text-green-400 md:text-5xl lg:text-6xl">
-                O poder de fazer a diferença!</h1>
-            <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-                
-            </div>
-            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                <a href="#"
-                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg bg-green-400 hover:bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                    Vagas Abertas!
-                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 5h12m0 0L9 1m4 4L9 9" />
-                    </svg>
-                </a>
-            </div>
-        </section>
-        
-        <footer class="bg-white">
-            <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-400 lg:my-8" />
-                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">Conexão Voluntária © 2023</span>
-            </div>
-        </footer>
 
+        <div class="items-center my-6 flex flex-col 2xl:flex-row space-y- 2xl:space-y-0 2xl:space-x-4 bg-gray-200">
+            <div class="w-8/12 flex flex-col 2xl:w-1/3">
+                <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
+                    <div class="w-full flex flex-col 2xl:w-1/3">
+                        <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
+                            
+                            <h4 class="mt-0 mb-6 text-xl text-gray-700 underline font-bold text-center">Estágio • Pedagogo</h4>
+                                
+                                    <h4 class="text-xl text-gray-700 font-bold">Informações</h4>
+                                    <ul class="mt-2 text-gray-700">
+                
+                                        <li class="flex border-b py-2">
+                                            <span class="font-bold w-24">Quantidade:</span>
+                                            <span class="text-gray-700">2</span>
+                                        </li>
+                                        <li class="flex border-b py-2">
+                                            <span class="font-bold w-25">Inscrições até:</span>
+                                            <span class="text-gray-700">10/09/2023</span>
+                                        </li>
+                                    </ul>
+                                    <h4 class="mt-8 text-xl text-gray-700 font-bold">Descrição</h4>   
+                            <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                voluptates obcaecati numquam error et ut fugiat asperiores. Sunt nulla ad incidunt
+                                laboriosam,
+                                laudantium est unde natus cum numquam, neque facere. Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ut, magni odio magnam commodi sunt ipsum eum! Voluptas eveniet aperiam at
+                                maxime, iste id dicta autem odio laudantium eligendi commodi distinctio!</p>
+
+                                <a href="#"
+                                class="mt-8 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-orange-500 dark:hover:bg-green-500 dark:focus:ring-green-500">
+                                Candidatar-se
+                                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+        
+                    </div>
+                </div>
+        </div>
+
+       
 </body>
 
 </html>

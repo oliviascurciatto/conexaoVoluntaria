@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="icon" href="./icone_cv.ico" type="image/ico">
-    <title>Editar Perfil</title>
+    <title>Criar Campanha</title>
 </head>
 
 <body class="h-full bg-white">
@@ -99,7 +99,7 @@
         <form>
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <h2 class="text-base font-semibold leading-7 text-gray-900">Editar Perfil</h2>
+                    <h2 class="text-base font-semibold leading-7 text-gray-900">Criar Campanha</h2>
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
@@ -109,104 +109,56 @@
                         <div class="col-span-full">
                             <label for="foto" class="block text-sm font-medium leading-6 text-gray-900">Foto</label>
                             <div class="mt-2 flex items-center gap-x-3">
-                                <svg class="h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor"
-                                    aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
+                                <svg fill="#6b7280" width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#6b7280" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M30 2.497h-28c-1.099 0-2 0.901-2 2v23.006c0 1.099 0.9 2 2 2h28c1.099 0 2-0.901 2-2v-23.006c0-1.099-0.901-2-2-2zM30 27.503l-28-0v-5.892l8.027-7.779 8.275 8.265c0.341 0.414 0.948 0.361 1.379 0.035l3.652-3.306 6.587 6.762c0.025 0.025 0.053 0.044 0.080 0.065v1.85zM30 22.806l-5.876-6.013c-0.357-0.352-0.915-0.387-1.311-0.086l-3.768 3.282-8.28-8.19c-0.177-0.214-0.432-0.344-0.709-0.363-0.275-0.010-0.547 0.080-0.749 0.27l-7.309 7.112v-14.322h28v18.309zM23 12.504c1.102 0 1.995-0.894 1.995-1.995s-0.892-1.995-1.995-1.995-1.995 0.894-1.995 1.995c0 1.101 0.892 1.995 1.995 1.995z"></path> </g></svg>
                                 <button type="button"
-                                    class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Trocar</button>
+                                    class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-100">Adcionar</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <h2 class="text-base font-semibold leading-7 text-gray-900">Informações da Ong</h2>
-                    <p class="mt-1 text-sm leading-6 text-gray-600">Dê preferência ao principal e-mail e principal
-                        número telefone!
-                    </p>
+                    <h2 class="text-base font-semibold leading-7 text-gray-900">Informações da campanha</h2>
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-3">
                             <label for="first-name"
-                                class="block text-sm font-medium leading-6 text-gray-900">Nome</label>
+                                class="block text-sm font-medium leading-6 text-gray-900">Título</label>
                             <div class="mt-2">
                                 <input type="text" name="first-name" id="first-name" autocomplete="given-name"
                                     class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
 
+
                         <div class="sm:col-span-4">
-                            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Endereço
-                                de e-mail</label>
+                            <label for="date" class="block text-sm font-medium leading-6 text-gray-900">Início:</label>
                             <div class="mt-2">
-                                <input id="email" name="email" type="email" autocomplete="email"
+                                <input id="date" name="date" type="date" autocomplete="date"
                                     class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
                         <div class="sm:col-span-4">
-                            <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Telefone</label>
+                            <label for="date" class="block text-sm font-medium leading-6 text-gray-900">Fim:</label>
                             <div class="mt-2">
-                                <input id="phone" name="phone" type="phone" autocomplete="phone"
+                                <input id="date" name="date" type="date" autocomplete="date"
                                     class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-4 sm:col-span-2 sm:col-start-1">
-                        <label for="cidade" class="block text-sm font-medium leading-6 text-gray-900">Cidade</label>
-                        <div class="mt-2">
-                            <input type="text" name="cidade" id="cidade" autocomplete="address-level2"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
 
-                    <div class="mt-4 sm:col-span-2">
-                        <label for="estado" class="block text-sm font-medium leading-6 text-gray-900">Estado</label>
-                        <div class="mt-2">
-                            <input type="text" name="estado" id="estado" autocomplete="address-level1"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
-                    <div class="mt-4 sm:col-span-2">
-                        <label for="rua" class="block text-sm font-medium leading-6 text-gray-900">Rua</label>
-                        <div class="mt-2">
-                            <input type="text" name="rua" id="rua" autocomplete="street-address"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
-                    <div class="mt-4 sm:col-span-2">
-                        <label for="text" class="block text-sm font-medium leading-6 text-gray-900">Número</label>
-                        <div class="mt-2">
-                            <input type="text" name="rua" id="rua" autocomplete="#"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
-                    <div class="mt-4 sm:col-span-2">
-                        <label for="region" class="block text-sm font-medium leading-6 text-gray-900">Bairro</label>
-                        <div class="mt-2">
-                            <input type="text" name="region" id="region" autocomplete="address-level3"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
-                    <div class="mt-4 sm:col-span-2">
-                        <label for="cep" class="block text-sm font-medium leading-6 text-gray-900">Cep</label>
-                        <div class="mt-2">
-                            <input type="text" name="cep" id="cep" autocomplete="postal-code"
-                                class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
+
+
 
                     <div class="sm:col-span-2">
                         <div class="mt-4 col-span-full">
-                            <label for="Sobre" class="block text-sm font-medium leading-6 text-gray-900">Sobre a Ong</label>
+                            <label for="Sobre" class="block text-sm font-medium leading-6 text-gray-900">Sobre a campanha</label>
                             <div class="mt-2">
                                 <textarea id="Sobre" name="Sobre" rows="3"
                                     class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                             </div>
-                            <p class="mt-3 text-sm leading-6 text-gray-600">Escreva um pouco sobre a história da ong!
+                            <p class="mt-3 text-sm leading-6 text-gray-600">Descreva a campanha!
                             </p>
                         </div>
                     </div>
@@ -225,79 +177,11 @@
                 </div>
 
                 <div class="ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <h2 class="text-base font-semibold leading-7 text-gray-900">Notificações</h2>
-                    <p class="mt-1 text-sm leading-6 text-gray-600">Quais notificações você deseja receber?</p>
-
-                    <div class="mt-10 space-y-10">
-                        <fieldset>
-                            <legend class="text-sm font-semibold leading-6 text-gray-900">Por E-mail</legend>
-                            <div class="mt-6 space-y-6">
-                                <div class="relative flex gap-x-3">
-                                    <div class="flex h-6 items-center">
-                                        <input id="vagas" name="vagas" type="checkbox"
-                                            class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    </div>
-                                    <div class="text-sm leading-6">
-                                        <label for="vagas" class="font-medium text-gray-900">Candidaturas nas vagas</label>
-                                        <p class="text-gray-500">Saiba quem se candidatou para sua vaga.</p>
-                                    </div>
-                                </div>
-                                <div class="relative flex gap-x-3">
-                                    <div class="flex h-6 items-center">
-                                        <input id="mensagens" name="mensagens" type="checkbox"
-                                            class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    </div>
-                                    <div class="text-sm leading-6">
-                                        <label for="mensagens" class="font-medium text-gray-900">Mensagens</label>
-                                        <p class="text-gray-500">Saiba quando um voluntário te enviou uma mensagem.</p>
-                                    </div>
-                                </div>
-                                <div class="relative flex gap-x-3">
-                                    <div class="flex h-6 items-center">
-                                        <input id="nenhuma" name="nenhuma" type="checkbox"
-                                            class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    </div>
-                                    <div class="text-sm leading-6">
-                                        <label for="nenhuma" class="font-medium text-gray-900">Nenhuma</label>
-                                        <p class="text-gray-500">Não quero receber nenhuma notificação.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="text-sm font-semibold leading-6 text-gray-900">Por Whatsapp</legend>
-                            <div class="mt-6 space-y-6">
-                                <div class="flex items-center gap-x-3">
-                                    <input id="push-todas" name="push-notifications" type="radio"
-                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    <label for="push-todas"
-                                        class="block text-sm font-medium leading-6 text-gray-900">Todas as
-                                        notificações</label>
-                                </div>
-                                <div class="flex items-center gap-x-3">
-                                    <input id="push-email" name="push-notifications" type="radio"
-                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    <label for="push-email"
-                                        class="block text-sm font-medium leading-6 text-gray-900">Igual ao
-                                        e-mail</label>
-                                </div>
-                                <div class="flex items-center gap-x-3">
-                                    <input id="push-nenhuma" name="push-notifications" type="radio"
-                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                    <label for="push-nenhuma"
-                                        class="block text-sm font-medium leading-6 text-gray-900">Nenhuma
-                                        notificação</label>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
-                </div>
-                <div class="ml-10 mr-10 border-b border-gray-900/10 pb-12">
                     <button type="button" id="cancelar"
                         class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-white hover:bg-orange-500 focus:ring-4 focus:ring-gray-400"
                         name="cancelar">Cancelar</button>
                     <button type="button" id="salvar"
-                        class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-green-300 hover:bg-green-300 focus:ring-4 focus:ring-gray-400"
+                        class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-green-500 hover:bg-green-500 focus:ring-4 focus:ring-green-500"
                         name="salvar">Salvar</button>
                 </div>
             </div>

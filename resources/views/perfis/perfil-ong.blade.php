@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="icon" href="./icone_cv.ico" type="image/ico">
-    <title>Conexão Voluntária</title>
+    <title>Perfil Ong</title>
 </head>
 
 <body class="h-full">
     @vite('resources/css/app.css')
 
     <div class="bg-gray-200 min-h-full">
+        {{-- ---------------Nav bar----------------------- --}}
         <nav class="bg-white drop-shadow-xl">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
@@ -42,7 +43,7 @@
                                 <form>
                                     <div class="flex">
                                         <div class="relative w-full space-x-2">
-                                            <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 focus:ring-blue-500 focus:border-blue-500 rounded-l-lg placeholder-gray-700 placeholder-opacity-50" placeholder="" required>
+                                            <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-100 rounded-r-lg border-l-gray-50 border-l-2 focus:ring-blue-500 focus:border-blue-500 rounded-l-lg placeholder-gray-700 placeholder-opacity-50" placeholder="" required>
                                             <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium h-full text-white bg-green-400 rounded-r-lg border hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
                                                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
@@ -53,7 +54,7 @@
                                     </div>
                                 </form>
                             <button type="button"
-                                class="relative rounded-full bg-green-400 p-1 text-gray-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 ">
+                                class="relative rounded-full bg-green-400 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-orange-500">
                                 <span class="absolute -inset-1.5"></span>
                                 <span class="sr-only">View notifications</span>
                                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -99,13 +100,16 @@
 
 
         <div class="items-center my-6 flex flex-col 2xl:flex-row space-y-8 2xl:space-y-0 2xl:space-x-8 bg-gray-200">
-
-            <img class="h-auto max-w-md max-h-max rounded-lg shadow-xl dark:shadow-gray-800"
-                src="https://cruzaltaonline.com.br/portal/wp-content/uploads/2021/05/apae-new.jpg" alt="image description">
+            {{-- <img class="items-center h-30 w-30 rounded-lg shadow-xl dark:shadow-gray-800"
+        src="https://cruzaltaonline.com.br/portal/wp-content/uploads/2021/05/apae-new.jpg" alt="image description"> --}}
+            
 
             <div class="w-full flex flex-col 2xl:w-1/3">
-                <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
-                    <h4 class="text-xl text-gray-900 font-bold">Sobre Nós</h4>
+                <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
+                    <figure class="max-w-lg">
+                        <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-500" src="https://cruzaltaonline.com.br/portal/wp-content/uploads/2021/05/apae-new.jpg" alt="image description">
+                      </figure>
+                    <h4 class="mt-8 text-xl text-gray-900 font-bold">Sobre Nós</h4>
                     <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
                         voluptates obcaecati numquam error et ut fugiat asperiores. Sunt nulla ad incidunt
                         laboriosam,
@@ -123,7 +127,7 @@
 
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">Telefone:</span>
-                            <span class="text-gray-700">(123) 123-1234</span>
+                            <span class="text-gray-700">(17) 01123-1234</span>
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">E-mail:</span>
@@ -172,16 +176,15 @@
                 </div>
             </div>
 
-            <div class="mt-4 w-full flex flex-col 2xl:w-1/3">
+            <div class="mt-4 w-full flex flex-col 2xl:w-1/3 ">
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
                     <h4 class="text-xl text-gray-700 font-bold">Vagas</h4>
-
-                    <div
-                        class="mt-2 max-w-sm rounded-lg shadow-2xl  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-100 dark:hover:bg-gray-300">
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="mt-2 max-w-sm rounded-lg shadow-2xl  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-100 dark:hover:bg-gray-300">
                         <a href="#">
                             <img class="rounded-t-lg"
-                                src="https://editalconcursosbrasil.com.br/wp-content/uploads/2019/02/pedagogo.jpg"
-                                alt="" />
+                            src="https://editalconcursosbrasil.com.br/wp-content/uploads/2019/02/pedagogo.jpg"
+                            alt="" />    
                         </a>
                         <div class="p-5">
                             <a href="#">
@@ -191,7 +194,7 @@
                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Vaga para estágio voluntário.
                             </p>
                             <a href="#"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-orange-500 dark:hover:bg-green-300 dark:focus:ring-blue-800">
+                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-orange-500 dark:hover:bg-green-500 dark:focus:ring-green-500">
                                 Candidatar
                                 <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                     fill="none" viewBox="0 0 14 10">
@@ -201,6 +204,31 @@
                             </a>
                         </div>
                     </div>
+                    <div class="mt-2 max-w-sm rounded-lg shadow-2xl  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-100 dark:hover:bg-gray-300">
+                        <a href="#">
+                            <img class="rounded-t-lg"
+                            src="https://editalconcursosbrasil.com.br/wp-content/uploads/2019/02/pedagogo.jpg"
+                            alt="" />    
+                        </a>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-700">
+                                    Estágio Pedagogo</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Vaga para estágio voluntário.
+                            </p>
+                            <a href="#"
+                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-orange-500 dark:hover:bg-green-500 dark:focus:ring-green-500">
+                                Candidatar
+                                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
 
                 </div>
@@ -209,7 +237,19 @@
             <div class="w-full flex flex-col 2xl:w-1/3">
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
                     <h4 class="text-xl text-gray-700 font-bold">Campanhas</h4>
-
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <a href="#"
+                        class="mt-2 flex flex-col items-center bg-white border-separate rounded-lg shadow-2xl md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-100 dark:hover:bg-gray-300">
+                        <img class="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSagpRE5VICaqtU2LNW9v8sugUY_X8YFSMH3A&usqp=CAU"
+                            alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-700">
+                                Campanha do Agasalho</h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Campanha de doação de
+                                agasalho.</p>
+                        </div>
+                    </a> 
                     <a href="#"
                         class="mt-2 flex flex-col items-center bg-white border-separate rounded-lg shadow-2xl md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-100 dark:hover:bg-gray-300">
                         <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
@@ -221,10 +261,9 @@
                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Campanha de doação de
                                 agasalho.</p>
                         </div>
-                    </a>
-
+                    </a> 
                 </div>
-
+                </div>
             </div>
             <div class="w-full flex flex-col 2xl:w-1/3">
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
@@ -241,7 +280,12 @@
 
             
         </div>
-
+        <footer class="bg-white">
+            <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-400 lg:my-8" />
+                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">Conexão Voluntária © 2023</span>
+            </div>
+        </footer>
 </body>
 
 </html>

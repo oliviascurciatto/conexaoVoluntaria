@@ -49,6 +49,14 @@ Route::get('/edit-perfil-ong', function () {
     return view('perfis/edit-perfil-ong');
 })->name('edit-perfil-ong');
 
-Route::get('/create-vaga', function () {
-    return view('vagas/create-vaga');
-})->name('create-vaga');
+Route::get('/criar-vaga', function () {
+    return view('vagas/criar-vaga');
+})->name('criar-vaga');
+
+Route::get('/vaga-layout', function () {
+    return view('vagas/vaga-layout');
+})->name('vaga-layout');
+
+Route::get('/criar-campanha', function () {
+    return view('campanhas/criar-campanha');
+})->name('criar-campanha');
