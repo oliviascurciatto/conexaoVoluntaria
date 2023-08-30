@@ -23,13 +23,13 @@
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex-  items-baseline space-x-4">
-                                <a href="{{ route('home-user', ['id'=>1]) }}"
-                                    class="bg-orange-500 text-white hover:bg-green-300 rounded-md px-3 py-2 text-sm font-medium"
+                                <a href="#"
+                                    class="bg-orange-500 text-white hover:bg-green-400 rounded-md px-3 py-2 text-sm font-medium"
                                     aria-current="page">Início</a>
                                 <a href="#"
-                                    class="text-gray-700 hover:bg-orange-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
+                                    class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
                                 <a href="#"
-                                    class="text-gray-700 hover:bg-orange-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Vagas</a>
+                                    class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Vagas</a>
 
                             </div>
                         </div>
@@ -37,8 +37,10 @@
                     <div class="hidden md:block">
                         <div class="ml-4 flex items-center md:ml-10 space-x-2">
                             <a href="#"
-                                class="text-gray-700 hover:bg-orange-500 hover:text-white rounded-md px-3 py-2 text-sm font-medium ml-2">Perguntas
+                                class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium ml-2">Perguntas
                                 Frequentes</a>
+                            
+
                                 <form>
                                     <div class="flex">
                                         <div class="relative w-full space-x-2">
@@ -52,9 +54,26 @@
                                         </div>
                                     </div>
                                 </form>
-                            <a href="#" class="bg-orange-500 text-white rounded-md px-3 py-2 text-sm font-medium"
-                                aria-current="page">Login</a>
+                                
 
+
+                            <div x-data="{ isOpen: false }" class="relative inline-block text-left">
+                                <button @click="isOpen = !isOpen"
+                                    class="px-4 py-2 font-semibold text-white bg-orange-500 rounded-md hover:bg-green-400 focus:outline-none focus:ring">Login
+                                </button>
+                                <div x-show="isOpen" @click.away="isOpen = false"
+                                    class="absolute right-0 mt-2 origin-top-right bg-white border rounded-md shadow-lg">
+                                    <div class="py-1" role="menu" aria-orientation="vertical"
+                                        aria-labelledby="options-menu">
+                                        <a href="{{ route('login-ong', ['id'=>1]) }}"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                            role="menuitem">Ong</a>
+                                        <a href="{{ route('login-voluntario', ['id'=>1]) }}"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                            role="menuitem">Voluntário</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

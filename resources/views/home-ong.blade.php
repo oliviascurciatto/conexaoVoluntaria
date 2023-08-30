@@ -13,7 +13,7 @@
 <body class="h-full">
     @vite('resources/css/app.css')
 
-    <div class="min-h-full">
+    <div class="mt-5 min-h-full">
         <nav class="bg-white drop-shadow-xl">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
@@ -53,7 +53,7 @@
                                     </div>
                                 </form>
                             <button type="button"
-                                class="relative rounded-full bg-green-400 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800  hover:bg-orange-500">
+                                class="relative rounded-full bg-green-400 p-1 text-gray-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                 <span class="absolute -inset-1.5"></span>
                                 <span class="sr-only">View notifications</span>
                                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -84,7 +84,7 @@
                                         tabindex="-1" id="user-menu-item-0">Perfil</a>
 
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-1">Configurçõea</a>
+                                        tabindex="-1" id="user-menu-item-1">Mais opções</a>
 
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="user-menu-item-2">Sair</a>

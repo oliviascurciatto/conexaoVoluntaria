@@ -10,7 +10,7 @@
     <title>Conexão Voluntária</title>
 </head>
 
-<body class="h-full embed-responsive">
+<body class="h-full">
     @vite('resources/css/app.css')
 
     <div class="min-h-full">
@@ -39,8 +39,6 @@
                             <a href="#"
                                 class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium ml-2">Perguntas
                                 Frequentes</a>
-                            
-
                                 <form>
                                     <div class="flex">
                                         <div class="relative w-full space-x-2">
@@ -49,32 +47,51 @@
                                                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                                                 </svg>
-                                                <span class="sr-only">Search</span>
+                                                <span class="sr-only">Busca</span>
                                             </button>
                                         </div>
                                     </div>
                                 </form>
-                                
+                            <button type="button"
+                                class="relative rounded-full bg-green-400 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-orange-500">
+                                <span class="absolute -inset-1.5"></span>
+                                <span class="sr-only">Notificações</span>
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                                </svg>
+                            </button>
 
+                            <!-- Profile dropdown -->
+                            <div class="ml-3 relative" x-data="{ dropdown: false }">
+                                <div>
+                                    <button x-on:click="dropdown = ! dropdown" type="button"
+                                        class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                        id="user-menu-button" aria-expanded="false" aria-haspopup="false">
+                                        <span class="sr-only">Open user menu</span>
+                                        <img class="h-8 w-8 rounded-full"
+                                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                            alt="">
+                                    </button>
+                                </div>
+                                <div x-show="dropdown"
+                                    class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                    role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
+                                    tabindex="-1">
+                                    <!-- Active: "bg-gray-100", Not Active: "" -->
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="user-menu-item-0">Perfil</a>
 
-                            <div x-data="{ isOpen: false }" class="relative inline-block text-left">
-                                <button @click="isOpen = !isOpen"
-                                    class="px-4 py-2 font-semibold text-white bg-orange-500 rounded-md hover:bg-green-400 focus:outline-none focus:ring">Login
-                                </button>
-                                <div x-show="isOpen" @click.away="isOpen = false"
-                                    class="absolute right-0 mt-2 origin-top-right bg-white border rounded-md shadow-lg">
-                                    <div class="py-1" role="menu" aria-orientation="vertical"
-                                        aria-labelledby="options-menu">
-                                        <a href="{{ route('login-ong', ['id'=>1]) }}"
-                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                                            role="menuitem">Ong</a>
-                                        <a href="{{ route('login-voluntario', ['id'=>1]) }}"
-                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                                            role="menuitem">Voluntário</a>
-                                        <a href="#"
-                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                                            role="menuitem">Cadastro</a>
-                                    </div>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="user-menu-item-1">Editar perfil</a>
+
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="user-menu-item-1">Minhas Vagas</a>
+
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="user-menu-item-2">Sair</a>
+
                                 </div>
                             </div>
                         </div>
@@ -91,8 +108,8 @@
             </div>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                 <a href="#"
-                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg bg-green-400 hover:bg-orange-500 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                    Junte-se a nós!
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg bg-green-400 hover:bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                    Vagas Abertas!
                     <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -108,7 +125,6 @@
                 <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">Conexão Voluntária © 2023</span>
             </div>
         </footer>
-
 
 </body>
 

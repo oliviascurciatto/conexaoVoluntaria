@@ -84,7 +84,7 @@
                                         tabindex="-1" id="user-menu-item-0">Perfil</a>
 
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-1">Configurçõea</a>
+                                        tabindex="-1" id="user-menu-item-1">Mais opções</a>
 
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="user-menu-item-2">Sair</a>
@@ -97,9 +97,9 @@
             </div>
         </nav>
         <form>
-            <div class="bg-white space-y-12">
+            <div class="bg-white space-y-12 ">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <h2 class="text-base font-semibold leading-7 text-gray-900">Editar Perfil</h2>
+                    <h2 class="mt-4 text-base font-semibold leading-7 text-gray-900">Editar Perfil</h2>
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 

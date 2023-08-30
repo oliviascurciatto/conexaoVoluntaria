@@ -47,7 +47,7 @@
                                                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                                                 </svg>
-                                                <span class="sr-only">Search</span>
+                                                <span class="sr-only">Busca</span>
                                             </button>
                                         </div>
                                     </div>
@@ -55,7 +55,7 @@
                             <button type="button"
                                 class="relative rounded-full bg-green-400 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-orange-500">
                                 <span class="absolute -inset-1.5"></span>
-                                <span class="sr-only">View notifications</span>
+                                <span class="sr-only">Notificações</span>
                                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                     stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -84,7 +84,7 @@
                                         tabindex="-1" id="user-menu-item-0">Perfil</a>
 
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-1">Configurções</a>
+                                        tabindex="-1" id="user-menu-item-1">Editar perfil</a>
 
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="user-menu-item-1">Minhas Vagas</a>

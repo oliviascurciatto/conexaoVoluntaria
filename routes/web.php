@@ -20,9 +20,14 @@ Route::get('/welcome', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/home-user/{id?}', function () {
-    return view('home-user');
-})->name('home-user');
+
+Route::get('/home-voluntario/{id?}', function () {
+    return view('home-voluntario');
+})->name('home-voluntario');
+
+Route::get('/home-ong/{id?}', function () {
+    return view('home-ong');
+})->name('home-ong');
 
 Route::get('/login-voluntario/{id?}', function () {
     return view('logins/login-voluntario');
@@ -60,3 +65,7 @@ Route::get('/vaga-layout', function () {
 Route::get('/criar-campanha', function () {
     return view('campanhas/criar-campanha');
 })->name('criar-campanha');
+
+Route::get('/campanha-layout', function () {
+    return view('campanhas/campanha-layout');
+})->name('campanha-layout');
