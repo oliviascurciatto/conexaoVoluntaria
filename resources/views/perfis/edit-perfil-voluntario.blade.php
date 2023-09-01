@@ -99,6 +99,7 @@
                 </div>
             </div>
         </nav>
+
         <form>
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
@@ -146,6 +147,22 @@
                                 class="block text-sm font-medium leading-6 text-gray-900">Sobrenome</label>
                             <div class="mt-2">
                                 <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="mt-4 sm:col-span-2">
+                            <label for="ddd" class="block text-sm font-medium leading-6 text-gray-900">DDD</label>
+                            <div class="mt-2">
+                                <input type="number" name="ddd" id="ddd" autocomplete=""
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="mt-4 sm:col-span-2">
+                            <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Telefone</label>
+                            <div class="mt-2">
+                                <input type="number" name="phone" id="phone" autocomplete="tel-local"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
