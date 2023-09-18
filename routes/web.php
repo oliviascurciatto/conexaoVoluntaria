@@ -58,14 +58,30 @@ Route::get('/criar-vaga', function () {
     return view('vagas/criar-vaga');
 })->name('criar-vaga');
 
-Route::get('/vaga-layout', function () {
-    return view('vagas/vaga-layout');
-})->name('vaga-layout');
+Route::get('/vaga', function () {
+    return view('vagas/vaga');
+})->name('vaga');
+
+Route::get('/vaga-ong', function () {
+    return view('vagas/vaga-ong');
+})->name('vaga-ong');
+
+Route::get('/vaga-voluntario', function () {
+    return view('vagas/vaga-voluntario');
+})->name('vaga-voluntario');
 
 Route::get('/criar-campanha', function () {
     return view('campanhas/criar-campanha');
 })->name('criar-campanha');
 
-Route::get('/campanha-layout', function () {
-    return view('campanhas/campanha-layout');
-})->name('campanha-layout');
+Route::get('/campanha', function () {
+    return view('campanhas/campanha');
+})->name('campanha');
+
+Route::get('/campanha-ong', function () {
+    return view('campanhas/campanha-ong');
+})->name('campanha-ong');
+
+Route::get('/campanha-voluntario', function () {
+    return view('campanhas/campanha-voluntario');
+})->name('campanha-voluntario');
