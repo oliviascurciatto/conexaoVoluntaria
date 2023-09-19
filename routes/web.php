@@ -85,3 +85,11 @@ Route::get('/campanha-ong', function () {
 Route::get('/campanha-voluntario', function () {
     return view('campanhas/campanha-voluntario');
 })->name('campanha-voluntario');
+
+Route::get('/criar-cadastro-ong', function () {
+    return view('cadastros/criar-cadastro-ong');
+})->name('criar-cadastro-ong');
+
+Route::get('/criar-cadastro-voluntario', function () {
+    return view('cadastros/criar-cadastro-voluntario');
+})->name('criar-cadastro-voluntario');

@@ -3,7 +3,7 @@
 @section('title', 'Perfil Ong')
 
 @section('content')
-        <div class="items-center my-6 flex flex-col 2xl:flex-row space-y-8 2xl:space-y-0 2xl:space-x-8 bg-gray-200">
+        <div class="items-center my-6 flex flex-col 2xl:flex-row space-y-8 2xl:space-y-0 2xl:space-x-8 bg-white">
             <div class="w-full flex flex-col 2xl:w-1/3">
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
                     <figure class="max-w-lg">
@@ -203,17 +203,6 @@
                 </div>
                 </div>
             </div>
-            <div class="w-full flex flex-col 2xl:w-1/3">
-                <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
-                    <h4 class="mb-4 text-xl text-gray-700 font-bold">Empresas Parceiras</h4>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                      <img class="mb-4 h-auto max-w-xs" src="/images/logo_funec.png" alt="image description">
-                      <img class="mb-4 h-auto max-w-xs" src="/images/sakashita_logo.jpeg" alt="image description">
-                    </div>
-                    
-
-                </div>
-
             </div>    
         </div>
 @endsection
