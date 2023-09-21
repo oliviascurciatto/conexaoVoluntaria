@@ -3,7 +3,8 @@
 @section('title', 'Editar Perfil')
 
 @section('content')
-        <form>
+@method('POST')
+        <form method="POST">
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
                     <h2 class="mt-4 text-base font-semibold leading-7 text-gray-900">Editar Perfil</h2>
@@ -222,5 +223,4 @@
                 </div>
             </div>
         </form>
- 
 @endsection

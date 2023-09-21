@@ -12,8 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('campanhas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id_campanha');
             $table->timestamps();
+            $table->string('nomeCampanha');
+            $table->date('criada_em');
+            $table->text('descricaoCampanha');
+            $table->integer('causa_id')->unsigned();
+            $table->foreign('causa_id')->references('id_causa')->on('causas')->onUpdate('cascade');
+            $table->integer('ong_id')->unsigned();
+            $table->foreign('ong_id')->references('id_ong')->on('ongs')->onUpdate('cascade');
         });
     }
 

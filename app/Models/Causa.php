@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Causa extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'tipoCausa'
+    ];
 }

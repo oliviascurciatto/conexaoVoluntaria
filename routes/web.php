@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\VoluntarioController;
+use App\Models\Voluntario;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,17 +40,40 @@ Route::get('/login-ong/{id?}', function () {
 })->name('login-ong');
 
 
-Route::get('/perfil-voluntario/{id?}', function () {
-    return view('perfis/perfil-voluntario');
-})->name('perfil-voluntario');
+// Route::get('/perfil-voluntario/{id?}', function () {
+//     return view('perfis/perfil-voluntario');
+// })->name('perfil-voluntario');
+
+ Route::get('/edit-perfil-voluntario/', function () {
+    return view('perfis/edit-perfil-voluntario');
+ })->name('edit-perfil-voluntario');
+
+Route::get('/perfil-voluntario/', [VoluntarioController::class, 'index'])->name('perfil-voluntario');
+//Route::get('/edit-perfil-voluntario/', [VoluntarioController::class, 'index'])->name('edit-perfil-voluntario');
+
+
 
 Route::get('/perfil-ong/{id?}', function () {
     return view('perfis/perfil-ong');
 })->name('perfil-ong');
 
-Route::get('/edit-perfil-voluntario', function () {
-    return view('perfis/edit-perfil-voluntario');
-})->name('edit-perfil-voluntario');
+
+
+// Route::get('/edit-perfil-voluntario', function () {
+//     return view('perfis/edit-perfil-voluntario');
+// })->name('edit-perfil-voluntario');
+
+// Route::get('/edit-perfil-voluntario', function () {
+//     return view('perfis/edit-perfil-voluntario');
+// })->name('edit-perfil-voluntario');
+
+// Route::get('/edit-perfil-voluntario', function () {
+//     return view('perfis/edit-perfil-voluntario');
+// })->name('edit-perfil-voluntario');
+
+// Route::get('/edit-perfil-voluntario', function () {
+//     return view('perfis/edit-perfil-voluntario');
+// })->name('edit-perfil-voluntario');
 
 Route::get('/edit-perfil-ong', function () {
     return view('perfis/edit-perfil-ong');

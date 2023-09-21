@@ -12,8 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('vagas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id_vaga');
             $table->timestamps();
+            $table->string('nomeVaga');
+            $table->integer('quantidade');
+            $table->date('criada_em');
+            $table->text('descricaoVaga');
+            $table->integer('habilidade_id')->unsigned()->nullable();
+            $table->foreign('habilidade_id')->references('id_habilidade')->on('habilidades')->onUpdate('cascade');
         });
     }
 

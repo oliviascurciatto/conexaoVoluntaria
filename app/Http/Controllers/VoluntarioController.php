@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Voluntario;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class VoluntarioController extends Controller
 {
@@ -12,7 +13,9 @@ class VoluntarioController extends Controller
      */
     public function index()
     {
-        //
+        return view('perfis/perfil-voluntario');
+        //return view('perfis/edit-perfil-voluntario');
+        
     }
 
     /**
@@ -28,15 +31,16 @@ class VoluntarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Voluntario $voluntario)
+    public function show(Voluntario $id)
     {
-        //
+        
     }
 
     /**
