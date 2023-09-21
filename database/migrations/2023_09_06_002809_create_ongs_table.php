@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('nome');
             $table->string('email');
             $table->string('cnpj');
+            $table->string('senha');
+            $table->string('imagem');
             $table->text('descricaoOng');
             $table->integer('endereco_id')->unsigned();
             $table->foreign('endereco_id')->references('id_endereco')->on('enderecos')->onUpdate('cascade');

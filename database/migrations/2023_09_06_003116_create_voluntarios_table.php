@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nome');
             $table->string('email');
             $table->string('senha');
+            $table->string('imagem');
             $table->integer('telefone_id')->unsigned();
             $table->foreign('telefone_id')->references('id_telefone')->on('telefones')->onUpdate('cascade');
             $table->integer('genero_id')->unsigned();
