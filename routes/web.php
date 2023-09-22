@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\Voluntario\PerfilVoluntario;
-use App\Http\Controllers\VoluntarioController;
-use App\Models\Voluntario;
+use App\Http\Controllers\Voluntario\PerfilVoluntarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,10 +22,11 @@ Route::get('/welcome', function () {
 
 /*----- Rotas Voluntario -----*/
 
-Route::namespace(value:'Voluntario')->group(function(){
-    Route::get('/perfil-voluntario/', PerfilVoluntario::class);
-});
 
+Route::controller(PerfilVoluntarioController::class)->group(function () {
+    Route::get('/perfil-voluntario/', 'index')->name('perfil-voluntario');
+    //Route::post('/orders', 'store');
+});
 
 Route::get('/home-voluntario/{id?}', function () {
     return view('home-voluntario');
