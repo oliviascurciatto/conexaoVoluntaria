@@ -12,7 +12,7 @@ class LoginVoluntarioController extends Controller
      */
     public function index()
     {
-        
+        return view('voluntario.login-voluntario');
     }
 
     /**
@@ -28,7 +28,7 @@ class LoginVoluntarioController extends Controller
      */
     public function store(Request $request)
     {
-        return view('voluntario.login-voluntario');
+        
     }
 
     /**

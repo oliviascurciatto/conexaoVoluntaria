@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Voluntario\LoginVoluntarioController;
 use App\Http\Controllers\Voluntario\PerfilVoluntarioController;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
@@ -30,7 +31,7 @@ Route::controller(PerfilVoluntarioController::class)->group(function () {
 });
 
 Route::controller(LoginVoluntarioController::class)->group(function () {
-    Route::post('/login-voluntario/{id?}', 'index')->name('login-voluntario');
+    Route::get('/login-voluntario/{id?}', 'index')->name('login-voluntario');
     //Route::post('criar-cadastro-voluntario', 'store')->name('criar-cadastro-voluntario');
 });
 
