@@ -41,7 +41,8 @@
                                 Frequentes</a>
                             
 
-                                <form>
+                                <form method="POST">
+                                    @method('POST')
                                     <div class="flex">
                                         <div class="relative w-full space-x-2">
                                             <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-100 rounded-r-lg border-l-gray-50 border-l-2 focus:ring-blue-500 focus:border-blue-500 rounded-l-lg placeholder-gray-700 placeholder-opacity-50" placeholder="" required>

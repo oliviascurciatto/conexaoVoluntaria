@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Voluntario\PerfilVoluntarioController;
+use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,17 +25,27 @@ Route::get('/welcome', function () {
 
 
 Route::controller(PerfilVoluntarioController::class)->group(function () {
-    Route::get('/perfil-voluntario/', 'index')->name('perfil-voluntario');
-    //Route::post('/orders', 'store');
+    Route::get('/perfil-voluntario/{id?}', 'index')->name('perfil-voluntario');
+    //Route::post('edit-perfil-voluntario', 'store')->name('edit-perfil-voluntario');
+});
+
+Route::controller(LoginVoluntarioController::class)->group(function () {
+    Route::post('/login-voluntario/{id?}', 'index')->name('login-voluntario');
+    //Route::post('criar-cadastro-voluntario', 'store')->name('criar-cadastro-voluntario');
 });
 
 Route::get('/home-voluntario/{id?}', function () {
     return view('home-voluntario');
 })->name('home-voluntario');
 
-Route::get('/login-voluntario/{id?}', function () {
-    return view('logins/login-voluntario');
-})->name('login-voluntario');
+Route::get('/ong-voluntario/{id?}', function () {
+    return view('voluntario/ong-voluntario');
+})->name('ong-voluntario');
+
+
+// Route::get('/login-voluntario/{id?}', function () {
+//     return view('logins/login-voluntario');
+// })->name('login-voluntario');
 
 // Route::get('/perfil-voluntario/{id?}', function () {
 //     return view('perfis/perfil-voluntario');

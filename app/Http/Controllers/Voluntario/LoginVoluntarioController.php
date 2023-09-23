@@ -1,17 +1,18 @@
 <?php
 
 namespace App\Http\Controllers\Voluntario;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class PerfilVoluntarioController extends Controller
+class LoginVoluntarioController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('voluntario.perfil-voluntario');
+        
     }
 
     /**
@@ -27,7 +28,7 @@ class PerfilVoluntarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view('voluntario.login-voluntario');
     }
 
     /**

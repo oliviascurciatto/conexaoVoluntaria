@@ -4,6 +4,7 @@
 
 @section('content')
 
+@method('POST')
         <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                 <img class="mx-auto h-40 w-40" src="/images/logo_cv.png" alt="Your Company">
@@ -12,7 +13,7 @@
             </div>
 
             <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-white">
-                <form class="space-y-6" action="{{ route('perfil-voluntario', ['id'=>1]) }}" method="GET">
+                <form class="space-y-6" action="{{ route('perfil-voluntario', ['id'=>1]) }}" method="POST">
                     <div>
                         <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
                         <div class="mt-2">
