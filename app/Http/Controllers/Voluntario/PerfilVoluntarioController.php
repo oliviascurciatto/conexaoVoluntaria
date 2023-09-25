@@ -14,12 +14,10 @@ class PerfilVoluntarioController extends Controller
         return view('voluntario.perfil-voluntario');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+   
     public function create()
     {
-        //
+    
     }
 
     /**
@@ -41,9 +39,9 @@ class PerfilVoluntarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit()
     {
-        //
+        return view('voluntario.edit-perfil-voluntario');
     }
 
     /**

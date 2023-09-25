@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Voluntario\LoginVoluntarioController;
 use App\Http\Controllers\Voluntario\PerfilVoluntarioController;
+use App\Http\Controllers\Voluntario\VagaVoluntarioController;
+use App\Http\Controllers\Voluntario\VoluntarioController;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
@@ -22,89 +24,67 @@ Route::get('/welcome', function () {
     return view('welcome');
 })->name('welcome');
 
-/*----- Rotas Voluntario -----*/
 
+/*----- Rotas Voluntario -----*/
 
 Route::controller(PerfilVoluntarioController::class)->group(function () {
     Route::get('/perfil-voluntario/{id?}', 'index')->name('perfil-voluntario');
-    //Route::post('edit-perfil-voluntario', 'store')->name('edit-perfil-voluntario');
+    Route::get('/edit-perfil-voluntario/{id?}', 'edit')->name('edit-perfil-voluntario');
 });
 
 Route::controller(LoginVoluntarioController::class)->group(function () {
     Route::get('/login-voluntario/{id?}', 'index')->name('login-voluntario');
-    //Route::post('criar-cadastro-voluntario', 'store')->name('criar-cadastro-voluntario');
+    Route::get('criar-cadastro-voluntario', 'store')->name('criar-cadastro-voluntario');
 });
 
-Route::get('/home-voluntario/{id?}', function () {
-    return view('home-voluntario');
-})->name('home-voluntario');
+Route::controller(VagaVoluntarioController::class)->group(function () {
+    Route::get('/vaga-voluntario/{id?}', 'index')->name('vaga-voluntario');
+});
 
-Route::get('/ong-voluntario/{id?}', function () {
-    return view('voluntario/ong-voluntario');
-})->name('ong-voluntario');
-
-
-// Route::get('/login-voluntario/{id?}', function () {
-//     return view('logins/login-voluntario');
-// })->name('login-voluntario');
-
-// Route::get('/perfil-voluntario/{id?}', function () {
-//     return view('perfis/perfil-voluntario');
-// })->name('perfil-voluntario');
-
-Route::get('/edit-perfil-voluntario/{id?}', function () {
-    return view('perfis/edit-perfil-voluntario');
- })->name('edit-perfil-voluntario');
-
-Route::get('/vaga-voluntario', function () {
-    return view('vagas/vaga-voluntario');
-})->name('vaga-voluntario');
-
-Route::get('/campanha-voluntario', function () {
-    return view('campanhas/campanha-voluntario');
-})->name('campanha-voluntario');
-
-Route::get('/criar-cadastro-voluntario', function () {
-    return view('cadastros/criar-cadastro-voluntario');
-})->name('criar-cadastro-voluntario');
+Route::controller(VoluntarioController::class)->group(function(){
+    Route::get('/home-voluntario/{id?}', 'home')->name('home-voluntario');
+    Route::get('/ong-voluntario/{id?}', 'verOng')->name('ong-voluntario');
+    Route::get('/campanha-voluntario/{id?}', 'verCampanha')->name('campanha-voluntario');
+});
 
 
 /*----- Rotas Ong -----*/
+
 
 Route::get('/home-ong/{id?}', function () {
     return view('home-ong');
 })->name('home-ong');
 
 Route::get('/login-ong/{id?}', function () {
-    return view('logins/login-ong');
+    return view('ong/login-ong');
 })->name('login-ong');
 
 Route::get('/perfil-ong/{id?}', function () {
-    return view('perfis/perfil-ong');
+    return view('ong/perfil-ong');
 })->name('perfil-ong');
 
 Route::get('/edit-perfil-ong', function () {
-    return view('perfis/edit-perfil-ong');
+    return view('ong/edit-perfil-ong');
 })->name('edit-perfil-ong');
 
 Route::get('/criar-vaga', function () {
-    return view('vagas/criar-vaga');
+    return view('ong/criar-vaga');
 })->name('criar-vaga');
 
 Route::get('/vaga-ong', function () {
-    return view('vagas/vaga-ong');
+    return view('ong/vaga-ong');
 })->name('vaga-ong');
 
 Route::get('/criar-campanha', function () {
-    return view('campanhas/criar-campanha');
+    return view('ong/criar-campanha');
 })->name('criar-campanha');
 
 Route::get('/campanha-ong', function () {
-    return view('campanhas/campanha-ong');
+    return view('ong/campanha-ong');
 })->name('campanha-ong');
 
 Route::get('/criar-cadastro-ong', function () {
-    return view('cadastros/criar-cadastro-ong');
+    return view('ong/criar-cadastro-ong');
 })->name('criar-cadastro-ong');
 
 

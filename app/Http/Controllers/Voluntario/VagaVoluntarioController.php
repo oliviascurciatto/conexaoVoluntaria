@@ -5,14 +5,14 @@ namespace App\Http\Controllers\Voluntario;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class LoginVoluntarioController extends Controller
+class VagaVoluntarioController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('voluntario.login-voluntario');
+        return view('voluntario.vaga-voluntario');
     }
 
     /**
@@ -28,7 +28,7 @@ class LoginVoluntarioController extends Controller
      */
     public function store(Request $request)
     {
-        return view('voluntario.criar-cadastro-voluntario');
+        //
     }
 
     /**
