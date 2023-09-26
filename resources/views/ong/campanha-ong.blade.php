@@ -79,7 +79,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>        
+                    </div> 
+                    <a href="#"
+                                class="mt-8 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-orange-500 dark:hover:bg-green-500 dark:focus:ring-green-500">
+                                Editar
+                            </a>       
                 </div>
             </div>
         </div>
