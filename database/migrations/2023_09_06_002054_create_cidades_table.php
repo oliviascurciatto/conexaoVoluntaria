@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('nomeCidade');
             $table->integer('estado_id')->unsigned();
-            $table->foreign('estado_id')->references('id_estado')->on('estados')->onUpdate('cascade');
+            $table->foreign('estado_id')->references('id_estado')->on('estados')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

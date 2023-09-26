@@ -19,17 +19,18 @@ return new class extends Migration
             $table->string('cnpj');
             $table->string('senha');
             $table->string('imagem');
+            $table->string('pix');
             $table->text('descricaoOng');
             $table->integer('endereco_id')->unsigned();
-            $table->foreign('endereco_id')->references('id_endereco')->on('enderecos')->onUpdate('cascade');
+            $table->foreign('endereco_id')->references('id_endereco')->on('enderecos')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('causa_id')->unsigned();
-            $table->foreign('causa_id')->references('id_causa')->on('causas')->onUpdate('cascade');
-            $table->integer('vaga_id')->unsigned()->nullable();
-            $table->foreign('vaga_id')->references('id_vaga')->on('vagas')->onUpdate('cascade');
-            $table->integer('campanha_id')->unsigned()->nullable();
-            $table->foreign('campanha_id')->references('id_campanha')->on('campanhas')->onUpdate('cascade');
-            $table->integer('telefone_id');
-            $table->foreign('telefone_id')->references('id_telefone')->on('telefones')->onUpdate('cascade');
+            $table->foreign('causa_id')->references('id_causa')->on('causas')->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('telefone_id')->unsigned();
+            $table->foreign('telefone_id')->references('id_telefone')->on('telefones')->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('vaga_id')->unsigned();
+            $table->foreign('vaga_id')->references('id_vaga')->on('vagas')->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('campanha_id')->unsigned();
+            $table->foreign('campanha_id')->references('id_campanha')->on('campanhas')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

@@ -16,19 +16,19 @@ return new class extends Migration
             $table->timestamps();
             $table->string('nome');
             $table->string('email');
+            $table->string('cpf');
             $table->string('senha');
             $table->string('imagem');
             $table->integer('telefone_id')->unsigned();
-            $table->foreign('telefone_id')->references('id_telefone')->on('telefones')->onUpdate('cascade');
+            $table->foreign('telefone_id')->references('id_telefone')->on('telefones')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('genero_id')->unsigned();
-            $table->foreign('genero_id')->references('id_genero')->on('generos')->onUpdate('cascade');
+            $table->foreign('genero_id')->references('id_genero')->on('generos')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('endereco_id')->unsigned();
-            $table->foreign('endereco_id')->references('id_endereco')->on('enderecos')->onUpdate('cascade');
-            $table->string('cpf');
+            $table->foreign('endereco_id')->references('id_endereco')->on('enderecos')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('habilidade_id')->unsigned();
-            $table->foreign('habilidade_id')->references('id_habilidade')->on('habilidades')->onUpdate('cascade');
+            $table->foreign('habilidade_id')->references('id_habilidade')->on('habilidades')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('causa_id')->unsigned();
-            $table->foreign('causa_id')->references('id_causa')->on('causas')->onUpdate('cascade');
+            $table->foreign('causa_id')->references('id_causa')->on('causas')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

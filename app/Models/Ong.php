@@ -12,9 +12,12 @@ class Ong extends Model
     protected $fillable = [
         'nome',
         'email',
+        'cnpj',
+        'senha',
+        'imagem',
+        'pix',
         'telefone_id',
         'endereco_id',
-        'cnpj',
         'causa_id',
         'campanha_id',
         'vaga_id',

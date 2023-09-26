@@ -18,8 +18,8 @@ return new class extends Migration
             $table->integer('quantidade');
             $table->date('criada_em');
             $table->text('descricaoVaga');
-            $table->integer('habilidade_id')->unsigned()->nullable();
-            $table->foreign('habilidade_id')->references('id_habilidade')->on('habilidades')->onUpdate('cascade');
+            $table->integer('habilidade_id')->unsigned();
+            $table->foreign('habilidade_id')->references('id_habilidade')->on('habilidades')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('enderecos', function (Blueprint $table) {
             $table->increments('id_endereco');
             $table->timestamps();
-            $table->integer('cidade_id')->unsigned()->nullable();
-            $table->foreign('cidade_id')->references('id_cidade')->on('cidades')->onUpdate('cascade');
-            $table->integer('estado_id')->unsigned()->nullable();
-            $table->foreign('estado_id')->references('id_estado')->on('estados')->onUpdate('cascade');
-            $table->integer('rua_id')->unsigned()->nullable();
-            $table->foreign('rua_id')->references('id_rua')->on('ruas')->onUpdate('cascade');
-            $table->string('complemento')->nullable();
-            $table->string('numero')->nullable();
+            $table->integer('cidade_id')->unsigned();
+            $table->foreign('cidade_id')->references('id_cidade')->on('cidades')->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('estado_id')->unsigned();
+            $table->foreign('estado_id')->references('id_estado')->on('estados')->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('rua_id')->unsigned();
+            $table->foreign('rua_id')->references('id_rua')->on('ruas')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('complemento');
+            $table->string('numero');
         });
     }
 
