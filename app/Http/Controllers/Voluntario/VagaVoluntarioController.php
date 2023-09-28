@@ -15,13 +15,9 @@ class VagaVoluntarioController extends Controller
         return view('voluntario.vaga-voluntario');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+    
+ 
+    
 
     /**
      * Store a newly created resource in storage.
@@ -34,9 +30,13 @@ class VagaVoluntarioController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        return view('voluntario.minhas-vagas');
+    }
+    public function listar()
+    {
+        return view('voluntario.listar-vagas');
     }
 
     /**

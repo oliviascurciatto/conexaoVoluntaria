@@ -44,6 +44,8 @@ Route::controller(LoginVoluntarioController::class)->group(function () {
 
 Route::controller(VagaVoluntarioController::class)->group(function () {
     Route::get('/vaga-voluntario/{id?}', 'index')->name('vaga-voluntario');
+    Route::get('/minhas-vagas/{id?}', 'show')->name('minhas-vagas');
+    Route::get('/listar-vagas/{id?}', 'listar')->name('listar-vagas');
 });
 
 Route::controller(VoluntarioController::class)->group(function(){

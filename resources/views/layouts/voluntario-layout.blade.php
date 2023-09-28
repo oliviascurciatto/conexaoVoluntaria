@@ -28,7 +28,7 @@
                                     aria-current="page">Início</a>
                                 <a href="#"
                                     class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
-                                <a href="#"
+                                <a href="{{ route('listar-vagas', ['id'=>1]) }}"
                                     class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Vagas</a>
 
                             </div>
@@ -86,7 +86,7 @@
                                     <a href="{{ route('edit-perfil-voluntario', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="edit-perfil">Editar perfil</a>
 
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                    <a href="{{ route('minhas-vagas', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="vagas">Minhas Vagas</a>
 
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"

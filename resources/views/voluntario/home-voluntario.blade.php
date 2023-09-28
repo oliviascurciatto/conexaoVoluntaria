@@ -11,7 +11,7 @@
                 
             </div>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                <a href="#"
+                <a href="{{ route('listar-vagas', ['id'=>1]) }}"
                     class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg bg-green-400 hover:bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                     Vagas Abertas!
                     <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
