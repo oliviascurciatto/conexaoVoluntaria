@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Ong\CampanhaOngController;
+use App\Http\Controllers\Ong\CriarCampanhaController;
 use App\Http\Controllers\Ong\LoginOngController;
 use App\Http\Controllers\Ong\OngController;
 use App\Http\Controllers\Ong\PerfilOngController;
@@ -78,6 +79,7 @@ Route::controller(CampanhaOngController::class)->group(function(){
     Route::get('/criar-campanha/{id?}', 'create')->name('criar-campanha');
     Route::get('/edit-campanha/{id?}', 'edit')->name('edit-campanha');
 });
+
 
 Route::controller(OngController::class)->group(function(){
     Route::get('/home-ong/{id?}', 'index')->name('home-ong');

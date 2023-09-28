@@ -3,25 +3,25 @@
 namespace App\Http\Controllers\Ong;
 
 use App\Http\Controllers\Controller;
-
+use App\Models\Campanha;
 use Illuminate\Http\Request;
 
-class CampanhaOngController extends Controller
+class CriarCampanhaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('ong.campanha-ong');
+        
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create()
     {
-        return view('ong.criar-campanha');
+        //
     }
 
     /**
@@ -29,9 +29,15 @@ class CampanhaOngController extends Controller
      */
     public function store(Request $request)
     {
-        
-    }
+        // $campanha = new Campanha();
 
+        // $campanha->nomeCampanha = $request->input('nomeCampanha');
+        // $campanha->criada_em = $request->input('criada_em');
+        // $campanha->descricaoCampanha = $request->input('descricaoCampanha');
+        // $campanha->causa_id = $request->input('causa_id');
+
+        // $campanha->save();
+    }
 
     /**
      * Display the specified resource.
@@ -44,9 +50,9 @@ class CampanhaOngController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function edit(string $id)
     {
-        return view('ong.edit-campanha');
+        //
     }
 
     /**
