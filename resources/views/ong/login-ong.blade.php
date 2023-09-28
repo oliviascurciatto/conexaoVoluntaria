@@ -1,9 +1,9 @@
-@extends('layouts.ong-layout')
+@extends('layouts.layout-geral')
 @section('title', 'Login Ong')
 
 @section('content')
 
-        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-white">
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                 <img class="mx-auto h-40 w-40" src="/images/logo_cv.png" alt="Your Company">
                 <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Entrar como ong
@@ -36,17 +36,19 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="bg-white">
                         <button x-click='{{ route('perfil-ong', ['id'=>1]) }}' type="submit"
                             class="flex w-full justify-center rounded-md bg-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-300">Entrar</button>
                     </div>
+                    <div class="">
+                        <p class="mt-10 text-center text-sm text-gray-500">
+                            Não tem cadastro?
+                            <a href="{{ route('criar-cadastro-ong', ['id'=>1]) }}"
+                                class="font-semibold leading-6 text-gray-500 hover:text-green-300">Cadastre-se!</a>
+                        </p>
+                    </div>
+                    
                 </form>
-
-                <p class="mt-10 text-center text-sm text-gray-500">
-                    Não tem cadastro?
-                    <a href="#"
-                        class="font-semibold leading-6 text-gray-500 hover:text-green-300">Cadastre-se!</a>
-                </p>
-            </div>
+           </div>
         </div>
 @endsection

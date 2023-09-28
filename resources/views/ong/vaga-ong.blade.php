@@ -31,10 +31,11 @@
                                 adipisicing elit. Ut, magni odio magnam commodi sunt ipsum eum! Voluptas eveniet aperiam at
                                 maxime, iste id dicta autem odio laudantium eligendi commodi distinctio!</p>
 
-                                <a href="#"
-                                class="mt-8 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-orange-500 dark:hover:bg-green-500 dark:focus:ring-green-500">
-                                Editar
-                            </a>
+                                <div class="mt-5 ml-0 mr-0 border-b border-gray-900/10 pb-12">
+                                    <a href="#" id="editar"
+                                        class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-orange-500 hover:bg-orange-500 focus:ring-4 focus:ring-orange-500"
+                                        name="editar">Editar</a>
+                                </div>  
                         </div>
                     </div>
                 </div>

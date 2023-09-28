@@ -1,11 +1,11 @@
 @extends('layouts.ong-layout')
-@section('title', 'Criar Vaga')
+@section('title', 'Editar Vaga')
 
 @section('content')
 <form>
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <h2 class="mt-4 text-base font-semibold leading-7 text-gray-900">Criar Vaga</h2>
+                    <h2 class="mt-4 text-base font-semibold leading-7 text-gray-900">Editar Vaga</h2>
 
                 </div>
 
@@ -68,12 +68,15 @@
                 </div>
 
                 <div class="ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <button type="button" id="cancelar"
-                        class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-white hover:bg-orange-500 focus:ring-4 focus:ring-gray-400"
-                        name="cancelar">Cancelar</button>
-                    <button type="button" id="salvar"
+                    <a href="#" id="cancelar"
+                        class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-orange-500 hover:bg-orange-500 focus:ring-4 focus:ring-gray-400"
+                        name="cancelar">Cancelar</a>
+                    <a href="#" id="salvar"
                         class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-green-500 hover:bg-green-500 focus:ring-4 focus:ring-green-500"
-                        name="salvar">Salvar</button>
+                        name="salvar">Salvar</a>
+                    <a href="#" id="delete"
+                        class="inline-flex justify-center hover:text-gray-400 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-red-600 hover:bg-red-600 focus:ring-4 focus:ring-green-500"
+                        name="delete">Deletar</a>
                 </div>
             </div>
         </form>

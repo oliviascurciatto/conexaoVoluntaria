@@ -27,8 +27,6 @@ return new class extends Migration
             $table->foreign('endereco_id')->references('id_endereco')->on('enderecos')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('habilidade_id')->unsigned();
             $table->foreign('habilidade_id')->references('id_habilidade')->on('habilidades')->onUpdate('cascade')->onDelete('cascade');
-            $table->integer('causa_id')->unsigned();
-            $table->foreign('causa_id')->references('id_causa')->on('causas')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

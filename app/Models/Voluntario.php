@@ -12,11 +12,12 @@ class Voluntario extends Model
     protected $fillable = [
         'nome',
         'email',
+        'cpf',
+        'senha',
+        'imagem',
         'telefone-id',
         'genero_id',
         'endereco_id',
-        'cpf',
-        'habilidade_id',
-        'causa_id'
+        'habilidade_id'
     ];
 }

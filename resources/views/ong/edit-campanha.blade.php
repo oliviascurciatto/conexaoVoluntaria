@@ -82,6 +82,9 @@
                     <button type="button" id="salvar"
                         class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-green-500 hover:bg-green-500 focus:ring-4 focus:ring-green-500"
                         name="salvar">Salvar</button>
+                    <button type="button" id="delete"
+                        class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-green-500 hover:bg-green-500 focus:ring-4 focus:ring-green-500"
+                        name="delete">Excluir</button>
                 </div>
             </div>
         </form>

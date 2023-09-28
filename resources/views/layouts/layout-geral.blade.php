@@ -23,7 +23,7 @@
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex-  items-baseline space-x-4">
-                                <a href="#"
+                                <a href="{{ route('welcome', ['id'=>1]) }}"
                                     class="bg-orange-500 text-white hover:bg-green-400 rounded-md px-3 py-2 text-sm font-medium"
                                     aria-current="page">Início</a>
                                 <a href="#"
@@ -71,9 +71,6 @@
                                         <a href="{{ route('login-voluntario', ['id'=>1]) }}"
                                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                                             role="menuitem">Voluntário</a>
-                                        <a href="#"
-                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                                            role="menuitem">Cadastro</a>
                                     </div>
                                 </div>
                             </div>

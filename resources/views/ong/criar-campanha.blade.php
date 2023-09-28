@@ -2,7 +2,8 @@
 @section('title', 'Criar Campanha')
 
 @section('content')
-        <form>
+        <form method="POST" action="">
+            @csrf
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
                     <h2 class="mt-4 text-base font-semibold leading-7 text-gray-900">Criar Campanha</h2>
@@ -76,12 +77,12 @@
                 </div>
 
                 <div class="ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <button type="button" id="cancelar"
+                    <a href="" id="cancelar"
                         class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-white hover:bg-orange-500 focus:ring-4 focus:ring-gray-400"
-                        name="cancelar">Cancelar</button>
-                    <button type="button" id="salvar"
+                        name="cancelar">Cancelar</a>
+                    <a href="" id="salvar"
                         class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-green-500 hover:bg-green-500 focus:ring-4 focus:ring-green-500"
-                        name="salvar">Salvar</button>
+                        name="salvar">Salvar</a>
                 </div>
             </div>
         </form>

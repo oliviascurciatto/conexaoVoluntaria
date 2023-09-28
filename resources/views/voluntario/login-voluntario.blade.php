@@ -1,11 +1,11 @@
-@extends('layouts.voluntario-layout')
+@extends('layouts.layout-geral')
 
 @section('title', 'Login Voluntário')
 
 @section('content')
 
 @method('POST')
-        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-white">
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                 <img class="mx-auto h-40 w-40" src="/images/logo_cv.png" alt="Your Company">
                 <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-700">Entrar como
@@ -46,7 +46,7 @@
 
                 <p class="mt-10 text-center text-sm text-gray-500">
                     Não tem cadastro?
-                    <a href="#" class="font-semibold leading-6 text-gray-500 hover:text-green-300">Cadastre-se</a>
+                    <a href="{{ route('criar-cadastro-voluntario', ['id'=>1]) }}" class="font-semibold leading-6 text-gray-500 hover:text-green-300">Cadastre-se</a>
                 </p>
             </div>
         </div>

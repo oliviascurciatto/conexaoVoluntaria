@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\Ong\CampanhaOngController;
+use App\Http\Controllers\Ong\LoginOngController;
+use App\Http\Controllers\Ong\OngController;
+use App\Http\Controllers\Ong\PerfilOngController;
+use App\Http\Controllers\Ong\VagaOngController;
 use App\Http\Controllers\Voluntario\LoginVoluntarioController;
 use App\Http\Controllers\Voluntario\PerfilVoluntarioController;
 use App\Http\Controllers\Voluntario\VagaVoluntarioController;
@@ -50,42 +55,35 @@ Route::controller(VoluntarioController::class)->group(function(){
 
 /*----- Rotas Ong -----*/
 
+Route::controller(LoginOngController::class)->group(function(){
+    Route::get('/login-ong/{id?}', 'index')->name('login-ong');
+    Route::get('/criar-cadastro-ong/{id?}', 'store')->name('criar-cadastro-ong');
+});
 
-Route::get('/home-ong/{id?}', function () {
-    return view('home-ong');
-})->name('home-ong');
+Route::controller(PerfilOngController::class)->group(function (){
+    Route::get('/perfil-ong/{id?}', 'index')->name('perfil-ong');
+    Route::get('/edit-perfil-ong/{id?}', 'edit')->name('edit-perfil-ong');
+});
 
-Route::get('/login-ong/{id?}', function () {
-    return view('ong/login-ong');
-})->name('login-ong');
+Route::controller(VagaOngController::class)->group(function(){
+    Route::get('/vaga-ong/{id?}', 'index')->name('vaga-ong');
+    Route::get('/criar-vaga/{id?}', 'create')->name('criar-vaga');
+    Route::get('/edit-vaga/{id?}', 'edit')->name('edit-vaga');
+});
 
-Route::get('/perfil-ong/{id?}', function () {
-    return view('ong/perfil-ong');
-})->name('perfil-ong');
+Route::controller(CampanhaOngController::class)->group(function(){
+    Route::get('/campanha-ong/{id?}', 'index')->name('campanha-ong');
+    Route::get('/criar-campanha/{id?}', 'create')->name('criar-campanha');
+    Route::get('/edit-campanha/{id?}', 'edit')->name('edit-campanha');
+});
 
-Route::get('/edit-perfil-ong', function () {
-    return view('ong/edit-perfil-ong');
-})->name('edit-perfil-ong');
+Route::controller(OngController::class)->group(function(){
+    Route::get('/home-ong/{id?}', 'index')->name('home-ong');
+});
 
-Route::get('/criar-vaga', function () {
-    return view('ong/criar-vaga');
-})->name('criar-vaga');
 
-Route::get('/vaga-ong', function () {
-    return view('ong/vaga-ong');
-})->name('vaga-ong');
 
-Route::get('/criar-campanha', function () {
-    return view('ong/criar-campanha');
-})->name('criar-campanha');
 
-Route::get('/campanha-ong', function () {
-    return view('ong/campanha-ong');
-})->name('campanha-ong');
-
-Route::get('/criar-cadastro-ong', function () {
-    return view('ong/criar-cadastro-ong');
-})->name('criar-cadastro-ong');
 
 
 /*----- Outas Rotas -----*/

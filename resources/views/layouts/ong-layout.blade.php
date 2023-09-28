@@ -23,7 +23,7 @@
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex-  items-baseline space-x-4">
-                                <a href="#"
+                                <a href="{{ route('home-ong', ['id'=>1]) }}"
                                     class="bg-orange-500 text-white hover:bg-green-400 rounded-md px-3 py-2 text-sm font-medium"
                                     aria-current="page">Início</a>
                                 <a href="#"
@@ -80,17 +80,20 @@
                                     role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
                                     tabindex="-1">
                                     <!-- Active: "bg-gray-100", Not Active: "" -->
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-0">Perfil</a>
+                                    <a href="{{ route('perfil-ong', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="perfil">Perfil</a>
 
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-1">Criar Vaga</a>
+                                    <a href="{{ route('edit-perfil-ong', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="edit-perfil">Editar Perfil</a>
+
+                                    <a href="{{ route('criar-vaga', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="criar-vaga">Criar Vaga</a>
                                     
-                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-1">Criar Campanha</a>
+                                        <a href="{{ route('criar-campanha', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="criar-campanha">Criar Campanha</a>
 
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-2">Sair</a>
+                                        tabindex="-1" id="sair">Sair</a>
 
                                 </div>
                             </div>
