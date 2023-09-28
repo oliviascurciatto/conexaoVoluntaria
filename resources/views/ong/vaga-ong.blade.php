@@ -32,7 +32,7 @@
                                 maxime, iste id dicta autem odio laudantium eligendi commodi distinctio!</p>
 
                                 <div class="mt-5 ml-0 mr-0 border-b border-gray-900/10 pb-12">
-                                    <a href="#" id="editar"
+                                    <a href="{{ route('edit-vaga', ['id'=>1]) }}" id="editar"
                                         class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-orange-500 hover:bg-orange-500 focus:ring-4 focus:ring-orange-500"
                                         name="editar">Editar</a>
                                 </div>  
