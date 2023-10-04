@@ -46,7 +46,7 @@
 
                 <p class="mt-10 text-center text-sm text-gray-500">
                     Não tem cadastro?
-                    <a href="{{ route('criar-cadastro-voluntario', ['id'=>1]) }}" class="font-semibold leading-6 text-gray-500 hover:text-green-300">Cadastre-se</a>
+                    <a href="{{ route('criar-cadastro-voluntario.store', ['id'=>1]) }}" class="font-semibold leading-6 text-gray-500 hover:text-green-300">Cadastre-se</a>
                 </p>
             </div>
         </div>

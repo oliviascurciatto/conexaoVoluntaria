@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('causas', function (Blueprint $table) {
             $table->increments('id_causa');
             $table->timestamps();
-            $table->string('tipoCausa');
+            $table->string('tipoCausa')->nullable();
         });
     }
 

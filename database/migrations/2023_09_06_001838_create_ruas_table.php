@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('ruas', function (Blueprint $table) {
             $table->increments('id_rua');;
             $table->timestamps();
-            $table->string('nomeRua');
+            $table->string('nomeRua')->nullable();
         });
     }
 

@@ -22,6 +22,10 @@
                                             <span class="font-bold w-25">Inscrições até:</span>
                                             <span class="text-gray-700">10/09/2023</span>
                                         </li>
+                                        <li class="flex border-b py-2">
+                                            <span class="font-bold w-25">Habilidades:</span>
+                                            <span class="text-gray-700">Educação</span>
+                                        </li>
                                     </ul>
                                     <h4 class="mt-8 text-xl text-gray-700 font-bold">Descrição</h4>   
                             <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt

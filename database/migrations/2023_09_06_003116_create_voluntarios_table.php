@@ -18,14 +18,15 @@ return new class extends Migration
             $table->string('email');
             $table->string('cpf');
             $table->string('senha');
-            $table->string('imagem');
-            $table->integer('telefone_id')->unsigned();
+            $table->string('imagem')->nullable();
+            $table->text('descricaoVoluntario')->nullable();
+            $table->integer('telefone_id')->unsigned()->nullable();
             $table->foreign('telefone_id')->references('id_telefone')->on('telefones')->onUpdate('cascade')->onDelete('cascade');
-            $table->integer('genero_id')->unsigned();
+            $table->integer('genero_id')->unsigned()->nullable();
             $table->foreign('genero_id')->references('id_genero')->on('generos')->onUpdate('cascade')->onDelete('cascade');
-            $table->integer('endereco_id')->unsigned();
+            $table->integer('endereco_id')->unsigned()->nullable();
             $table->foreign('endereco_id')->references('id_endereco')->on('enderecos')->onUpdate('cascade')->onDelete('cascade');
-            $table->integer('habilidade_id')->unsigned();
+            $table->integer('habilidade_id')->unsigned()->nullable();
             $table->foreign('habilidade_id')->references('id_habilidade')->on('habilidades')->onUpdate('cascade')->onDelete('cascade');
         });
     }

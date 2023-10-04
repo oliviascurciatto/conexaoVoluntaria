@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('cidades', function (Blueprint $table) {
             $table->increments('id_cidade');
             $table->timestamps();
-            $table->string('nomeCidade');
-            $table->integer('estado_id')->unsigned();
+            $table->string('nomeCidade')->nullable();
+            $table->integer('estado_id')->unsigned()->nullable();
             $table->foreign('estado_id')->references('id_estado')->on('estados')->onUpdate('cascade')->onDelete('cascade');
         });
     }

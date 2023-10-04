@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="icon" href="./icone_cv.ico" type="image/ico">
-    <title>Conexão Voluntária</title>
+    <title>Início</title>
 </head>
 
 <body class="h-full embed-responsive">
@@ -72,9 +72,6 @@
                                         <a href="{{ route('login-voluntario', ['id'=>1]) }}"
                                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                                             role="menuitem">Voluntário</a>
-                                        <a href="#"
-                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                                            role="menuitem">Cadastro</a>
                                     </div>
                                 </div>
                             </div>

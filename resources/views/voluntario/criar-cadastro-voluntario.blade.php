@@ -2,7 +2,8 @@
 @section('title', 'Criar Cadastro')
 
 @section('content')
-        <form>
+        <form action="{{ route('criar-cadastro-voluntario.store', ['id'=>1]) }}" method="POST">
+            @csrf
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
                     <h2 class="mt-4 text-base font-semibold leading-7 text-gray-900">Criar cadastro de Voluntário</h2>
@@ -35,20 +36,11 @@
                     </p>
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                        <div class="sm:col-span-3">
+                        <div class="mt-4 sm:col-span-3">
                             <label for="first-name"
                                 class="block text-sm font-medium leading-6 text-gray-900">Nome</label>
                             <div class="mt-2">
-                                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                            </div>
-                        </div>
-
-                        <div class="sm:col-span-3">
-                            <label for="last-name"
-                                class="block text-sm font-medium leading-6 text-gray-900">Sobrenome</label>
-                            <div class="mt-2">
-                                <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                <input type="text" name="nome"  id="first-name" autocomplete="given-name"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
@@ -60,23 +52,16 @@
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
-                        <div class="mt-4 sm:col-span-2">
-                            <label for="ddd" class="block text-sm font-medium leading-6 text-gray-900">DDD</label>
-                            <div class="mt-2">
-                                <input type="number" name="ddd" id="ddd" autocomplete=""
-                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                            </div>
-                        </div>
 
                         <div class="mt-4 sm:col-span-2">
                             <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Telefone</label>
                             <div class="mt-2">
-                                <input type="number" name="phone" id="phone" autocomplete="tel-local"
+                                <input type="number" name="telefone" id="phone" autocomplete="tel-local"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
 
-                        <div class="sm:col-span-4">
+                        <div class=" mt-4 sm:col-span-4">
                             <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Endereço
                                 de e-mail</label>
                             <div class="mt-2">
@@ -95,9 +80,9 @@
                     </div>
 
                     <div class="mt-4 sm:col-span-2">
-                        <label for="region" class="block text-sm font-medium leading-6 text-gray-900">Estado</label>
+                        <label for="estado" class="block text-sm font-medium leading-6 text-gray-900">Estado</label>
                         <div class="mt-2">
-                            <input type="text" name="region" id="region" autocomplete="address-level1"
+                            <input type="text" name="estado" id="estado" autocomplete="address-level1"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
@@ -107,11 +92,30 @@
                             <label for="Sobre" class="block text-sm font-medium leading-6 text-gray-900">Sobre
                                 você</label>
                             <div class="mt-2">
-                                <textarea id="Sobre" name="Sobre" rows="3"
+                                <textarea id="Sobre" name="sobre" rows="3"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                             </div>
                             <p class="mt-3 text-sm leading-6 text-gray-600">Escreva um pouco sobre você!
                             </p>
+                        </div>
+                        <div class="mt-4 sm:col-span-3">
+                            <label for="genero"
+                                class="block text-sm font-medium leading-6 text-gray-900">Gênero</label>
+                            <div class="mt-2">
+                                <select id="genero" name="genero" 
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                                    <option></option>
+                                    <option>Não especificado</option>
+                                    <option>Prefiro não responder</option>
+                                    <option>Mulher cis</option>
+                                    <option>Homem cis</option>
+                                    <option>Mulher transexual/transgênero</option>
+                                    <option>Homem transexual/transgênero</option>
+                                    <option>Travesti</option>
+                                    <option>Não binárie</option>
+                                    <option>Outro</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="mt-4 sm:col-span-3">
                             <label for="habilidades"
@@ -143,9 +147,9 @@
                 </div>
 
                 <div class="ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <button type="button" id="cadastrar"
+                    <a href="" id="cadastrar"
                     class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-green-300 hover:bg-green-300 focus:ring-4 focus:ring-gray-400"
-                    name="cadastrar">Cadastrar</button>
+                    name="cadastrar">Cadastrar</a>
                 </div>
             </div>
         </form>
