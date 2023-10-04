@@ -6,6 +6,7 @@ use App\Http\Controllers\Ong\LoginOngController;
 use App\Http\Controllers\Ong\OngController;
 use App\Http\Controllers\Ong\PerfilOngController;
 use App\Http\Controllers\Ong\VagaOngController;
+use App\Http\Controllers\Voluntario\CadastroVoluntarioController;
 use App\Http\Controllers\Voluntario\LoginVoluntarioController;
 use App\Http\Controllers\Voluntario\PerfilVoluntarioController;
 use App\Http\Controllers\Voluntario\VagaVoluntarioController;
@@ -40,8 +41,11 @@ Route::controller(PerfilVoluntarioController::class)->group(function () {
 
 Route::controller(LoginVoluntarioController::class)->group(function () {
     Route::get('/login-voluntario/{id?}', 'index')->name('login-voluntario');
-    Route::get('criar-cadastro-voluntario', 'create')->name('criar-cadastro-voluntario');
-    Route::post('criar-cadastro-voluntario', 'store')->name('criar-cadastro-voluntario.store');
+});
+
+Route::controller(CadastroVoluntarioController::class)->group(function () {
+    Route::get('/criar-cadastro-voluntario/{id?}', 'index')->name('criar-cadastro-voluntario.index');
+    Route::post('/criar-cadastro-voluntario/{id?}', 'store')->name('criar-cadastro-voluntario.store');
 });
 
 Route::controller(VagaVoluntarioController::class)->group(function () {

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Voluntario;
 
 use App\Http\Controllers\Controller;
-use App\Models\Voluntario;
 use Illuminate\Http\Request;
 
 class LoginVoluntarioController extends Controller
@@ -21,7 +20,7 @@ class LoginVoluntarioController extends Controller
      */
     public function create()
     {
-        return view('voluntario.criar-cadastro-voluntario');
+        
     }
 
     /**
@@ -30,27 +29,7 @@ class LoginVoluntarioController extends Controller
     public function store(Request $request)
     {
          
-        $validatedData = $request->validate([
-            'nome' => 'required|string',
-            'email' => 'required|email',
-            'cpf' => 'required|string',
-            'senha' => 'required|string',
-            'image' => 'equired|max:10000|mimes:jpg, jpeg, png',
-            'telefone_id' => 'required|integer',
-            'genero_id' => 'required|integer',
-            'endereco_id' => 'required|interger',
-            'habilidade_id' => 'required|integer'
-            
-        ]);
-    
         
-        $voluntario = new Voluntario($validatedData);
-    
-        
-        $voluntario->save();
-    
-        
-        return redirect()->route('login-voluntario');
     }
 
     /**
