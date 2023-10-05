@@ -19,17 +19,17 @@ class CadastroVoluntarioController extends Controller
  
     public function store(Request $request)
     {
-        $request->validate([
-            'nome' => 'required|string|max:255',
-            'email' => 'required|email|unique:voluntarios,email',
-            'cpf' => 'required|string|max:14|unique:voluntarios,cpf',
-            'senha' => 'required|string|min:8|confirmed',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
-            'telefone_id' => 'nullable|required|integer',
-            'genero_id' => 'nullable|required|integer',
-            'endereco_id' => 'nullable|required|integer',
-            'habilidade_id' => 'nullable|required|integer',
-        ]);
+        // $request->validate([
+        //     'nome' => 'required|string|max:255',
+        //     'email' => 'required|email|unique:voluntarios,email',
+        //     'cpf' => 'required|string|max:14|unique:voluntarios,cpf',
+        //     'senha' => 'required|string|min:8|confirmed',
+        //     'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
+        //     'telefone_id' => 'nullable|required|integer',
+        //     'genero_id' => 'nullable|required|integer',
+        //     'endereco_id' => 'nullable|required|integer',
+        //     'habilidade_id' => 'nullable|required|integer',
+        // ]);
         
         
         Voluntario::create([

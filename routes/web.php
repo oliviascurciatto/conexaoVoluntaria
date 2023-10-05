@@ -46,8 +46,10 @@ Route::controller(LoginVoluntarioController::class)->group(function () {
 
 Route::controller(CadastroVoluntarioController::class)->group(function () {
     Route::get('/criar-cadastro-voluntario', 'index')->name('criar-cadastro-voluntario.index');
-    Route::post('/criar-cadastro-voluntario', 'store')->name('criar-cadastro-voluntario.store');
+    //Route::post('/criar-cadastro-voluntario', 'store')->name('criar-cadastro-voluntario.store');
 });
+
+Route::post('/criar-cadastro-voluntario', [CadastroVoluntarioController::class, 'store'])->name('criar-cadastro-voluntario.store');
 
 Route::controller(VagaVoluntarioController::class)->group(function () {
     Route::get('/vaga-voluntario/{id?}', 'index')->name('vaga-voluntario');
