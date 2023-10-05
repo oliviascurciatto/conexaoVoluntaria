@@ -2,7 +2,7 @@
 @section('title', 'Criar Cadastro')
 
 @section('content')
-        <form action="/criar-cadastro-voluntario/" method="POST">
+        <form action="{{ route('criar-cadastro-voluntario.store') }}" method="POST">
             @csrf
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
@@ -74,7 +74,7 @@
                     <div class="mt-4 sm:col-span-2 sm:col-start-1">
                         <label class="block text-sm font-medium leading-6 text-gray-900">Cidade</label>
                         <div class="mt-2">
-                            <input type="text" name="Cidade" id="Cidade" autocomplete="address-level2"
+                            <input type="text" name="cidade" id="cidade" autocomplete="address-level2"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                             <label  class="block text-sm font-medium leading-6 text-gray-900">Sobre
                                 você</label>
                             <div class="mt-2">
-                                <textarea id="Sobre" name="sobre" rows="3"
+                                <textarea id="descricaoVoluntario" name="descricaoVoluntario" rows="3"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                             </div>
                             <p class="mt-3 text-sm leading-6 text-gray-600">Escreva um pouco sobre você!

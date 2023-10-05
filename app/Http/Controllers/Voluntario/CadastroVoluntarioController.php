@@ -32,18 +32,19 @@ class CadastroVoluntarioController extends Controller
         ]);
         
         
-        $voluntario = new Voluntario;
-        $voluntario->nome = $request ->nome; 
-        $voluntario->email = $request ->email;
-        $voluntario->cpf = $request ->cpf;
-        $voluntario->senha = $request ->senha; 
-        $voluntario->image = $request ->image;
-        $voluntario->telefone_id = $request ->telefone_id;
-        $voluntario->genero_id = $request ->genero_id; 
-        $voluntario->endereco_id = $request ->endereco_id; 
-        $voluntario->habilidade_id = $request ->habilidade_id;
+        Voluntario::create([
+        'nome' => $request -> nome, 
+        'email' => $request ->email,
+        'cpf' => $request ->cpf,
+        'senha' => $request ->senha,
+        'image' => $request ->image,
+        'telefone_id' => $request ->telefone,
+        'genero_id' => $request ->genero,
+        'endereco_id' => $request ->estado,
+        'descricaoVoluntario' => $request -> sobre,
+        'habilidade_id' => $request ->habilidades]);
+        
 
-        $voluntario->save();
 
         return redirect()->route('login-voluntario');
     }
