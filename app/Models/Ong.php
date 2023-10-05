@@ -15,7 +15,6 @@ class Ong extends Model
         'cnpj',
         'senha',
         'imagem',
-        'pix',
         'telefone_id',
         'endereco_id',
         'causa_id',
@@ -23,4 +22,9 @@ class Ong extends Model
         'vaga_id',
         'descricaoOng'
     ];
+
+    public function telefone()
+    {
+        return $this->hasOne(Telefone::class);
+    }
 }

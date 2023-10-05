@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Ong;
 
 use App\Http\Controllers\Controller;
+use App\Models\Vaga;
 use Illuminate\Http\Request;
 
 class VagaOngController extends Controller
@@ -28,7 +29,23 @@ class VagaOngController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nomeVaga' => 'required|string|max:80',
+            'descricaoVaga' => 'required|text|max:255'
+        ]);
+        
+        
+        Vaga::create([
+        'nomeVaga' => $request -> nomeVaga,
+        'quantidade' => $request ->quantidade, 
+        'termina_em' => $request ->termina_em,
+        'descricaoVaga' => $request ->descricaoVaga,
+        'habilidade_id' => $request ->habilidades
+        ]);
+        
+
+
+        return redirect()->route('vaga-ong');
     }
 
     /**

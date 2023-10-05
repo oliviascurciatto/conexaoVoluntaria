@@ -13,11 +13,7 @@
                             <h4 class="text-xl text-gray-700 font-bold">Informações</h4>
                             <ul class="mt-2 text-gray-700">
                                 <li class="flex border-b py-2">
-                                    <span class="font-bold w-25">Início:</span>
-                                    <span class="text-gray-700">10/09/2023</span>
-                                </li>
-                                <li class="flex border-b py-2">
-                                    <span class="font-bold w-25">Fim:</span>
+                                    <span class="font-bold w-25">Termina em:</span>
                                     <span class="text-gray-700">10/10/2023</span>
                                 </li>
                             </ul>

@@ -102,6 +102,13 @@
                         </div>
                     </div>
                     <div class="mt-4 sm:col-span-2">
+                        <label  class="block text-sm font-medium leading-6 text-gray-900">Complemento</label>
+                        <div class="mt-2">
+                            <input type="text" name="complemento" id="complemento" autocomplete="#"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                    <div class="mt-4 sm:col-span-2">
                         <label for="region" class="block text-sm font-medium leading-6 text-gray-900">Bairro</label>
                         <div class="mt-2">
                             <input type="text" name="region" id="region" autocomplete="address-level3"

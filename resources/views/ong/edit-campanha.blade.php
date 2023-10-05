@@ -20,28 +20,14 @@
                                     class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
-
-
                         <div class="sm:col-span-4">
-                            <label for="date" class="block text-sm font-medium leading-6 text-gray-900">Início:</label>
-                            <div class="mt-2">
-                                <input id="date" name="date" type="date" autocomplete="date"
-                                    class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                            </div>
-                        </div>
-                        <div class="sm:col-span-4">
-                            <label for="date" class="block text-sm font-medium leading-6 text-gray-900">Fim:</label>
+                            <label for="date" class="block text-sm font-medium leading-6 text-gray-900">Termina em:</label>
                             <div class="mt-2">
                                 <input id="date" name="date" type="date" autocomplete="date"
                                     class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                     <div class="sm:col-span-2">
                         <div class="mt-4 col-span-full">
                             <label for="Sobre" class="block text-sm font-medium leading-6 text-gray-900">Sobre a campanha</label>
@@ -77,13 +63,13 @@
 
                 <div class="ml-10 mr-10 border-b border-gray-900/10 pb-12">
                     <a href="#" id="cancelar"
-                        class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-orange-500 hover:bg-orange-500 focus:ring-4 focus:ring-gray-400"
+                        class="inline-flex justify-center hover:text-white items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-orange-500 hover:bg-orange-500 focus:ring-4 focus:ring-gray-400"
                         name="cancelar">Cancelar</a>
                     <a href="#" id="salvar"
-                        class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-green-500 hover:bg-green-500 focus:ring-4 focus:ring-green-500"
+                        class="inline-flex justify-center hover:text-white items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-green-500 hover:bg-green-500 focus:ring-4 focus:ring-green-500"
                         name="salvar">Salvar</a>
                     <a href="#" id="delete"
-                        class="inline-flex justify-center hover:text-gray-400 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-red-600 hover:bg-red-600 focus:ring-4 focus:ring-green-500"
+                        class="inline-flex justify-center hover:text-white items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-red-600 hover:bg-red-600 focus:ring-4 focus:ring-green-500"
                         name="delete">Deletar</a>
                 </div>
             </div>

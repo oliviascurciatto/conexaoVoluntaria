@@ -13,6 +13,7 @@ class Campanha extends Model
         'nomeCampanha',
         'criada_em',
         'descricaoCampanha',
+        'pix',
         'causa_id'
     ];
 }

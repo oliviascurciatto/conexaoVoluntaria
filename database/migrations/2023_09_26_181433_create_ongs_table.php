@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('cnpj');
             $table->string('senha');
             $table->string('imagem')->nullable();
-            $table->string('pix')->nullable();
             $table->text('descricaoOng')->nullable();
             $table->integer('endereco_id')->unsigned()->nullable();
             $table->foreign('endereco_id')->references('id_endereco')->on('enderecos')->onUpdate('cascade')->onDelete('cascade');

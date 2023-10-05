@@ -85,10 +85,10 @@
                                     <a href="{{ route('edit-perfil-ong', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="edit-perfil">Editar Perfil</a>
 
-                                    <a href="{{ route('criar-vaga', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                    <a href="{{ route('criar-vaga.create') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="criar-vaga">Criar Vaga</a>
                                     
-                                        <a href="{{ route('criar-campanha', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        <a href="{{ route('criar-campanha.create') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="criar-campanha">Criar Campanha</a>
 
                                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"

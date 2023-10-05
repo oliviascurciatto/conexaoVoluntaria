@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Ong\CadastroOngController;
 use App\Http\Controllers\Ong\CampanhaOngController;
 use App\Http\Controllers\Ong\CriarCampanhaController;
 use App\Http\Controllers\Ong\LoginOngController;
@@ -44,7 +45,7 @@ Route::controller(LoginVoluntarioController::class)->group(function () {
 });
 
 Route::controller(CadastroVoluntarioController::class)->group(function () {
-    Route::get('/criar-cadastro-voluntario/{id?}', 'index')->name('criar-cadastro-voluntario.index');
+    Route::get('/criar-cadastro-voluntario', 'index')->name('criar-cadastro-voluntario.index');
     Route::post('/criar-cadastro-voluntario', 'store')->name('criar-cadastro-voluntario.store');
 });
 
@@ -65,7 +66,11 @@ Route::controller(VoluntarioController::class)->group(function(){
 
 Route::controller(LoginOngController::class)->group(function(){
     Route::get('/login-ong/{id?}', 'index')->name('login-ong');
-    Route::get('/criar-cadastro-ong/{id?}', 'store')->name('criar-cadastro-ong');
+});
+
+Route::controller(CadastroOngController::class)->group(function(){
+    Route::get('/criar-cadastro-ong', 'create')->name('criar-cadastro-ong.create');
+    Route::post('/criar-cadastro-ong', 'store')->name('criar-cadastro-ong.store');
 });
 
 Route::controller(PerfilOngController::class)->group(function (){
@@ -75,14 +80,16 @@ Route::controller(PerfilOngController::class)->group(function (){
 
 Route::controller(VagaOngController::class)->group(function(){
     Route::get('/vaga-ong/{id?}', 'index')->name('vaga-ong');
-    Route::get('/criar-vaga/{id?}', 'create')->name('criar-vaga');
+    Route::get('/criar-vaga', 'create')->name('criar-vaga.create');
+    Route::post('/criar-vaga', 'store')->name('criar-vaga.store');
     Route::get('/edit-vaga/{id?}', 'edit')->name('edit-vaga');
 });
 
 Route::controller(CampanhaOngController::class)->group(function(){
     Route::get('/campanha-ong/{id?}', 'index')->name('campanha-ong');
-    Route::get('/criar-campanha/{id?}', 'create')->name('criar-campanha');
-    Route::get('/edit-campanha/{id?}', 'edit')->name('edit-campanha');
+    Route::get('/criar-campanha', 'create')->name('criar-campanha.create');
+    Route::post('/criar-campanha', 'store')->name('criar-campanha.create.store');
+    Route::get('/edit-campanha', 'edit')->name('edit-campanha');
 });
 
 

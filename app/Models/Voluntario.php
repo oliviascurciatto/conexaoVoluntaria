@@ -20,4 +20,9 @@ class Voluntario extends Model
         'endereco_id',
         'habilidade_id'
     ];
+
+    public function telefone()
+    {
+        return $this->hasOne(Telefone::class);
+    }
 }

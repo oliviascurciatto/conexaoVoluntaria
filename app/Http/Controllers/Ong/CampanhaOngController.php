@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Ong;
 
 use App\Http\Controllers\Controller;
-
+use App\Models\Campanha;
 use Illuminate\Http\Request;
 
 class CampanhaOngController extends Controller
@@ -29,7 +29,23 @@ class CampanhaOngController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nomeCampanha' => 'required|string|max:80',
+            'descricaoCampanha' => 'required|text|max:255'
+        ]);
         
+        
+        Campanha::create([
+        'nomeCampanha' => $request -> nome, 
+        'termina_em' => $request ->termina,
+        'descricaoCampanha' => $request ->descricaoCampanha,
+        'pixCampanha' => $request ->pix,
+        'causa_id' => $request ->causa
+        ]);
+        
+
+
+        return redirect()->route('campanha-ong');
     }
 
 
