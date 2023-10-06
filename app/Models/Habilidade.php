@@ -12,4 +12,8 @@ class Habilidade extends Model
     protected $fillable = [
         'tipoHabilidade'
     ];
+
+    public function voluntario(){
+        return $this-> belongsTo(Voluntario::class);
+    }
 }

@@ -13,4 +13,8 @@ class Cidade extends Model
         'nomeCidade',
         'estado_id'
     ];
+
+    public function endereco(){
+        return $this-> belongsTo(Endereco::class);
+    }
 }

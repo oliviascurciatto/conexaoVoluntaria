@@ -12,4 +12,8 @@ class Rua extends Model
     protected $fillable = [
         'nomeRua'
     ];
+
+    public function endereco(){
+        return $this-> belongsTo(Endereco::class);
+    }
 }

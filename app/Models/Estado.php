@@ -13,4 +13,8 @@ class Estado extends Model
         'UF',
         'nomeEstado'
     ];
+
+    public function endereco(){
+        return $this-> belongsTo(Endereco::class);
+    }
 }
