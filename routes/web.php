@@ -12,6 +12,8 @@ use App\Http\Controllers\Voluntario\LoginVoluntarioController;
 use App\Http\Controllers\Voluntario\PerfilVoluntarioController;
 use App\Http\Controllers\Voluntario\VagaVoluntarioController;
 use App\Http\Controllers\Voluntario\VoluntarioController;
+use App\Models\Cidade;
+use App\Models\Genero;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +31,16 @@ Route::get('/', function(){
     return redirect()->route('welcome');
 });
 Route::get('/welcome', function () {
-    return view('welcome');
+    
+    $genero = Genero::all();
+
+    return $genero;
+
+    // $cidade = Cidade::all();
+
+    // return $cidade;
+
+    //return view('welcome');
 })->name('welcome');
 
 

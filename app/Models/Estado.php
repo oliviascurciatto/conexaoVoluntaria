@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Estado extends Model
 {
@@ -14,7 +15,8 @@ class Estado extends Model
         'nomeEstado'
     ];
 
-    public function endereco(){
+    public function endereco() :BelongsTo
+    {
         return $this-> belongsTo(Endereco::class);
     }
 }

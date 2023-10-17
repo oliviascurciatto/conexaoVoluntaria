@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Voluntario;
 
 use App\Http\Controllers\Controller;
+use App\Models\Genero;
 use App\Models\Voluntario;
 use Illuminate\Http\Request;
 
@@ -46,10 +47,16 @@ class CadastroVoluntarioController extends Controller
         'habilidade_id' => $request ->habilidades]);
         
 
+            $generos = Genero::all();
+            return view ('voluntario.criar-cadastro-voluntario',compact('generos'));
+        
+        
+        
 
         return redirect()->route('login-voluntario');
     }
 
+   
     /**
      * Display the specified resource.
      */
