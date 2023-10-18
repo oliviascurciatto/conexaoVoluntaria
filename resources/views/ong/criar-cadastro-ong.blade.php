@@ -3,6 +3,7 @@
 
 @section('content')
         <form action="{{ route('criar-cadastro-ong.store') }}" method="POST">
+            @csrf
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
                     <h2 class="mt-4 text-base font-semibold leading-7 text-gray-900">Criar cadastro de Ong</h2>

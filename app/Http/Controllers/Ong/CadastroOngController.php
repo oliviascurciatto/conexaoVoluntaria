@@ -29,16 +29,16 @@ class CadastroOngController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nome' => 'required|string|max:255',
-            'email' => 'required|email|unique:ongs,email',
-            'cnpj' => 'required|string|max:18|unique:ongs,cnpj',
-            'senha' => 'required|string|min:8|confirmed',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
-            'telefone_id' => 'nullable|required|integer',
-            'causa_id' => 'nullable|required|integer',
-            'endereco_id' => 'nullable|required|integer'
-        ]);
+        // $request->validate([
+        //     'nome' => 'required|string|max:255',
+        //     'email' => 'required|email|unique:ongs,email',
+        //     'cnpj' => 'required|string|max:18|unique:ongs,cnpj',
+        //     'senha' => 'required|string|min:8|confirmed',
+        //     'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
+        //     'telefone_id' => 'nullable|required|integer',
+        //     'causa_id' => 'nullable|required|integer',
+        //     'endereco_id' => 'nullable|required|integer'
+        // ]);
         
         
         Ong::create([
