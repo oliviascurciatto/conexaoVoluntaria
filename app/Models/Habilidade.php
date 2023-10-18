@@ -18,4 +18,8 @@ class Habilidade extends Model
     {
         return $this-> belongsTo(Voluntario::class);
     }
+
+    public function vagas() : BelongsTo {
+        return $this -> belongsTo(vagas::class);
+    }
 }

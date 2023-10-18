@@ -2,7 +2,8 @@
 @section('title', 'Criar Vaga')
 
 @section('content')
-<form>
+<form action="{{ route('criar-vaga.store') }}" method="POST">
+    @csrf
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
                     <h2 class="mt-4 text-base font-semibold leading-7 text-gray-900">Criar Vaga</h2>
@@ -59,9 +60,16 @@
                         <div class="mt-2">
                             <select id="habilidades" name="habilidades" autocomplete="habilidades-name"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                                <option value="1">#</option>
-                                <option value="2">#</option>
-                                <option value="3">#</option>
+                                <option value="1">Administração</option>
+                                <option value="2">Artes</option>
+                                <option value="3">Comunicação</option>
+                                <option value="4">Cozinha</option>
+                                <option value="5">Direito</option>
+                                <option value="6">Educação</option>
+                                <option value="7">Esportes</option>
+                                <option value="8">Saúde</option>
+                                <option value="8">Tecnologia</option>
+                                <option value="9">Outros</option>
                             </select>
                         </div>
                     </div>

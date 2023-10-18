@@ -29,10 +29,10 @@ class VagaOngController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nomeVaga' => 'required|string|max:80',
-            'descricaoVaga' => 'required|text|max:255'
-        ]);
+        // $request->validate([
+        //     'nomeVaga' => 'required|string|max:80',
+        //     'descricaoVaga' => 'required|text|max:255'
+        // ]);
         
         
         Vaga::create([

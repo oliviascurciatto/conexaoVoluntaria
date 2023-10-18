@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 
 class Endereco extends Model
 {
@@ -17,12 +19,12 @@ class Endereco extends Model
         'numero'
     ];
 
-    public function ong()
+    public function ong() :BelongsTo
     {
-        return $this->hasMany(Ong::class);
+        return $this->belongsTo(Ong::class);
     }
-    public function voluntario()
+    public function voluntario() :BelongsTo
     {
-        return $this->hasMany(Voluntario::class);
+        return $this->belongsTo(Voluntario::class);
     }
 }

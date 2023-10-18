@@ -32,15 +32,15 @@ Route::get('/', function(){
 });
 Route::get('/welcome', function () {
     
-    $genero = Genero::all();
+    // $genero = Genero::all();
 
-    return $genero;
+    // return $genero;
 
     // $cidade = Cidade::all();
 
     // return $cidade;
 
-    //return view('welcome');
+    return view('welcome');
 })->name('welcome');
 
 
@@ -101,7 +101,7 @@ Route::controller(VagaOngController::class)->group(function(){
 Route::controller(CampanhaOngController::class)->group(function(){
     Route::get('/campanha-ong/{id?}', 'index')->name('campanha-ong');
     Route::get('/criar-campanha', 'create')->name('criar-campanha.create');
-    Route::post('/criar-campanha', 'store')->name('criar-campanha.create.store');
+Route::post('/criar-campanha', 'store')->name('criar-campanha.store');
     Route::get('/edit-campanha', 'edit')->name('edit-campanha');
 });
 

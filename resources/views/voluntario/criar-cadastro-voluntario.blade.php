@@ -105,17 +105,17 @@
                                 <select id="genero" name="genero" 
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
                                     
-                                    @foreach ($generos as $genero)
-                                    <option value="{{ $genero->id }}">{{ $genero->nomeGenero }}</option>
-                                    <option value="{{ $genero->id }}">{{ $genero->nomeGenero }}</option>
-                                    <option value="{{ $genero->id }}">{{ $genero->nomeGenero }}</option>
-                                    <option value="{{ $genero->id }}">{{ $genero->nomeGenero }}</option>
-                                    <option value="{{ $genero->id }}">{{ $genero->nomeGenero }}</option>
-                                    <option value="{{ $genero->id }}">{{ $genero->nomeGenero }}</option>
-                                    <option value="{{ $genero->id }}">{{ $genero->nomeGenero }}</option>
-                                    <option value="{{ $genero->id }}">{{ $genero->nomeGenero }}</option>
-                                    <option value="{{ $genero->id }}">{{ $genero->nomeGenero }}</option>
-                                    @endforeach
+                                    
+                                    <option value="2">Prefiro não responder</option>
+                                    <option value="3">Não especificado</option>
+                                    <option value="4">Mulher Cis</option>
+                                    <option value="5">Homem Cis</option>
+                                    <option value="6">Mulher Transsexual/transgenero</option>
+                                    <option value="7">Homem Transsexual/transgenero</option>
+                                    <option value="8">Travesti</option>
+                                    <option value="9">Não Binarie</option>
+                                    <option value="10">Outro</option>
+                                    
                                 </select>
                             </div>
                         </div>
@@ -125,9 +125,16 @@
                             <div class="mt-2">
                                 <select id="habilidades" name="habilidades" autocomplete="habilidades-name"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                                    <option value="habilidade_1">Habilidade 1</option>
-                                    <option value="habilidade_2">Habilidade 2</option>
-                                    <option value="habilidade_3">Habilidade 3</option>
+                                    <option value="1">Administração</option>
+                                <option value="2">Artes</option>
+                                <option value="3">Comunicação</option>
+                                <option value="4">Cozinha</option>
+                                <option value="5">Direito</option>
+                                <option value="6">Educação</option>
+                                <option value="7">Esportes</option>
+                                <option value="8">Saúde</option>
+                                <option value="8">Tecnologia</option>
+                                <option value="9">Outros</option>
                                 </select>
                             </div>
                         </div>

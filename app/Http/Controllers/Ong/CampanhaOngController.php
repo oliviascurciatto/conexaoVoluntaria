@@ -29,14 +29,14 @@ class CampanhaOngController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nomeCampanha' => 'required|string|max:80',
-            'descricaoCampanha' => 'required|text|max:255'
-        ]);
+        // $request->validate([
+        //     'nomeCampanha' => 'required|string|max:80',
+        //     'descricaoCampanha' => 'required|text|max:255'
+        // ]);
         
         
         Campanha::create([
-        'nomeCampanha' => $request -> nome, 
+        'nomeCampanha' => $request -> nomeCampanha, 
         'termina_em' => $request ->termina,
         'descricaoCampanha' => $request ->descricaoCampanha,
         'pixCampanha' => $request ->pix,
