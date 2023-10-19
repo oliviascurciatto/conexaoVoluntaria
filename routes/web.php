@@ -14,6 +14,7 @@ use App\Http\Controllers\Voluntario\VagaVoluntarioController;
 use App\Http\Controllers\Voluntario\VoluntarioController;
 use App\Models\Cidade;
 use App\Models\Genero;
+use App\Models\Vaga;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
@@ -39,8 +40,12 @@ Route::get('/welcome', function () {
     // $cidade = Cidade::all();
 
     // return $cidade;
+    
+    $vaga = Vaga::all();
 
-    return view('welcome');
+    return $vaga;
+
+    //return view('welcome');
 })->name('welcome');
 
 
@@ -92,7 +97,7 @@ Route::controller(PerfilOngController::class)->group(function (){
 });
 
 Route::controller(VagaOngController::class)->group(function(){
-    Route::get('/vaga-ong/{id?}', 'index')->name('vaga-ong');
+    Route::get('/vaga-ong/{id}', 'show')->name('vaga-ong');
     Route::get('/criar-vaga', 'create')->name('criar-vaga.create');
     Route::post('/criar-vaga', 'store')->name('criar-vaga.store');
     Route::get('/edit-vaga/{id?}', 'edit')->name('edit-vaga');

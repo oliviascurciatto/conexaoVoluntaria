@@ -43,9 +43,9 @@ class VagaOngController extends Controller
         'habilidade_id' => $request ->habilidades
         ]);
         
+        $vaga = Vaga::all();
 
-
-        return redirect()->route('vaga-ong');
+        return redirect()->route('vaga-ong', compact('vaga'));
     }
 
     /**
@@ -53,7 +53,8 @@ class VagaOngController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // $vaga = Vaga::find($id);
+        // return view('ong.vaga-ong', ['vaga'=>$vaga]);
     }
 
     /**

@@ -72,12 +72,13 @@
                     </div>
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                    <div class="mt-4 sm:col-span-2 sm:col-start-1">
+                    <div class="mt-6 sm:col-span-2 sm:col-start-1">
                         <label  class="block text-sm font-medium leading-6 text-gray-900">Cidade</label>
-                        <div class="mt-2">
-                            <input type="text" name="cidade" id="cidade" autocomplete="address-level2"
+                        <select id="cidade" name="cidade" 
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
+                                <option value="9361">Santa Fé do sul</option>
+                                
+                            </select>
                     </div>
 
                     {{-- <div class="mt-4 sm:col-span-2">
@@ -93,7 +94,7 @@
                         <div class="mt-2">
                             <select id="estado" name="estado" 
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                <option value="1"></option>
+                                <option value="26">São Paulo</option>
                                 
                             </select>
                         </div>
