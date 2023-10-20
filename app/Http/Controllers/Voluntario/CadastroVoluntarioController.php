@@ -41,7 +41,7 @@ class CadastroVoluntarioController extends Controller
         'image' => $request ->image,
         'telefone_id' => $request ->telefone,
         'genero_id' => $request ->genero,
-        'endereco_id' => $request ->cidade,
+        // 'endereco_id' => $request ->cidade,
         'endereco_id' => $request ->estado,
         'descricaoVoluntario' => $request -> sobre,
         'habilidade_id' => $request ->habilidades]);
