@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('causas', function (Blueprint $table) {
-            $table->increments('id_causa');
+        Schema::create('ong_campanhas', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('ong_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('campanha_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
-            $table->string('tipoCausa')->nullable();
         });
     }
 
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('causas');
+        Schema::dropIfExists('ong_campanhas');
     }
 };

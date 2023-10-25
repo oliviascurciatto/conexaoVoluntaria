@@ -12,14 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('campanhas', function (Blueprint $table) {
-            $table->increments('id_campanha');
-            $table->timestamps();
+            $table->id();
             $table->string('nomeCampanha');
-            $table->date('criada_em');
-            $table->string('pix')->nullable();
-            $table->text('descricaoCampanha')->nullable();
-            $table->integer('causa_id')->unsigned()->nullable();
-            $table->foreign('causa_id')->references('id_causa')->on('causas')->onUpdate('cascade')->onDelete('cascade');
+            $table->text('descricaoCampanha');
+            $table->date('encerra_em');
+            $table->timestamps();
         });
     }
 

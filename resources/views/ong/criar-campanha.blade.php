@@ -24,9 +24,9 @@
 
 
                         <div class="sm:col-span-4">
-                            <label class="block text-sm font-medium leading-6 text-gray-900">Termina em:</label>
+                            <label class="block text-sm font-medium leading-6 text-gray-900">Encerra em:</label>
                             <div class="mt-2">
-                                <input id="termina" name="termina" type="date" autocomplete="date"
+                                <input id="encerra_em" name="encerra_em" type="date" autocomplete="date"
                                     class="block w-7/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>

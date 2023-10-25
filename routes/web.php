@@ -41,11 +41,11 @@ Route::get('/welcome', function () {
 
     // return $cidade;
     
-    $vaga = Vaga::all();
+    // $vaga = Vaga::all();
 
-    return $vaga;
+    // return $vaga;
 
-    //return view('welcome');
+    return view('welcome');
 })->name('welcome');
 
 

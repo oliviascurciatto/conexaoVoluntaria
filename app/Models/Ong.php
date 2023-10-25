@@ -4,32 +4,24 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Ong extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'nome',
-        'email',
+        'nomeOng',
         'cnpj',
+        'email',
         'senha',
         'imagem',
-        'telefone_id',
-        'endereco_id',
-        'causa_id',
-        'campanha_id',
-        'vaga_id',
-        'descricaoOng'
+        'sobre',
+        'telefone',
+        'rua',
+        'numero',
+        'complemento',
+        'bairro',
+        'cidade',
+        'estado'
     ];
-
-    public function telefone()
-    {
-        return $this->hasOne(Telefone::class);
-    }
-
-    public function campanha() : HasMany {
-        return $this-> hasMany(Campanha::class);
-    }
 }

@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cidades', function (Blueprint $table) {
-            $table->increments('id_cidade');
+        Schema::create('habilidades', function (Blueprint $table) {
+            $table->id();
+            $table->string('nomeHabilidade');
             $table->timestamps();
-            $table->string('nomeCidade')->nullable();
-            $table->integer('estado_id')->unsigned()->nullable();
-            $table->foreign('estado_id')->references('id_estado')->on('estados')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
@@ -25,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cidades');
+        Schema::dropIfExists('habilidades');
     }
 };
