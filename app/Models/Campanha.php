@@ -8,10 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Campanha extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'nomeCampanha',
-        'descricaoCampanha',
-        'encerra_em'
-    ];
 }
