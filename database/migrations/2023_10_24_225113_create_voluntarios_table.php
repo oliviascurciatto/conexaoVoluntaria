@@ -17,11 +17,13 @@ return new class extends Migration
             $table->string('cpf');
             $table->string('email');
             $table->string('senha');
-            $table->string('imagem');
-            $table->text('sobre');
+            $table->string('imagem')->nullable();
+            $table->text('sobre')->nullable();
             $table->string('telefone');
-            $table->string('cidade');
-            $table->string('estado');
+            $table->string('cidade')->nullable();
+            $table->string('estado')->nullable();
+            $table->foreignId('genero_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('habilidade_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

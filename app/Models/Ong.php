@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Ong extends Model
 {
@@ -22,6 +23,11 @@ class Ong extends Model
         'complemento',
         'bairro',
         'cidade',
-        'estado'
+        'estado',
+        'causa_id'
     ];
+
+    public function causa() : HasOne {
+        return $this -> hasOne(Causa::class);
+    }
 }

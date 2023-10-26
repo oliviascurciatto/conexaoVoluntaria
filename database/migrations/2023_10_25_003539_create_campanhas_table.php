@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('campanhas', function (Blueprint $table) {
             $table->id();
             $table->string('nomeCampanha');
-            $table->text('descricaoCampanha');
+            $table->text('descricaoCampanha')->nullable();
             $table->date('encerra_em');
             $table->foreignId('ong_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();

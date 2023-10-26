@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ong_vagas', function (Blueprint $table) {
+        Schema::create('vagas', function (Blueprint $table) {
             $table->id();
+            $table->string('nomeVaga');
+            $table->text('descricaoVaga')->nullable();
+            $table->integer('quantidade')->nullable();
+            $table->date('encerra_em');
             $table->foreignId('ong_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('vaga_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('habilidade_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -24,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ong_vagas');
+        Schema::dropIfExists('vagas');
     }
 };

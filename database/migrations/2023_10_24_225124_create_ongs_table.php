@@ -17,15 +17,16 @@ return new class extends Migration
             $table->string('cnpj');
             $table->string('email');
             $table->string('senha');
-            $table->string('imagem');
-            $table->text  ('sobre');
+            $table->string('imagem')->nullable();
+            $table->text  ('sobre')->nullable();
             $table->string('telefone');
-            $table->string('rua');
-            $table->string('numero');
-            $table->string('complemento');
-            $table->string('bairro');
+            $table->string('rua')->nullable();
+            $table->string('numero')->nullable();
+            $table->string('complemento')->nullable();
+            $table->string('bairro')->nullable();
             $table->string('cidade');
             $table->string('estado');
+            $table->foreignId('causa_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

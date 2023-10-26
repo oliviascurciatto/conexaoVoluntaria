@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Genero extends Model
 {
@@ -13,4 +14,7 @@ class Genero extends Model
         'nomeGenero'
     ];
 
+    public function voluntario() : BelongsTo {
+        return $this -> belongsTo(Voluntario::class);
+    }
 }

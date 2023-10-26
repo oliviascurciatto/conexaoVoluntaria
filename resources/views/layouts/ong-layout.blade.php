@@ -71,7 +71,7 @@
                                         id="user-menu-button" aria-expanded="false" aria-haspopup="false">
                                         <span class="sr-only">Open user menu</span>
                                         <img class="h-8 w-8 rounded-full"
-                                            src="https://cruzaltaonline.com.br/portal/wp-content/uploads/2021/05/apae-new.jpg">
+                                            src="/images/apae_perfil.png">
                                     </button>
                                 </div>
                                 <div x-show="dropdown"

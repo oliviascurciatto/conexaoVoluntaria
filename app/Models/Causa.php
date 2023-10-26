@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Causa extends Model
 {
@@ -12,4 +13,8 @@ class Causa extends Model
     protected $fillable = [
         'nomeCausa'
     ];
+
+    public function ong() : BelongsTo {
+        return $this -> belongsTo(Ong::class);
+    }
 }
