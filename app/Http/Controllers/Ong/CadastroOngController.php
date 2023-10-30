@@ -8,13 +8,11 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Redirect;
+
 
 class CadastroOngController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
         
@@ -26,9 +24,7 @@ class CadastroOngController extends Controller
         return view('ong.criar-cadastro-ong');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    
     public function store(Request $request)
     {
         
@@ -53,10 +49,6 @@ class CadastroOngController extends Controller
 
         return redirect()->route('login-ong');
     }
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function loginOng(){
         return view('ong.login-ong');
@@ -64,20 +56,17 @@ class CadastroOngController extends Controller
 
     public function loginOngAuth(Request $request): RedirectResponse{
         
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
-            'senha' => ['required'],
-        ]);
- 
-        if (Auth::guard('ong')->attempt($credentials)) {
-            $request->session()->regenerate();
- 
-            return view('ong.perfil-ong');
+        {
+            $field = filter_var($request->get('identifier'), FILTER_VALIDATE_EMAIL) ? 'email' : 'cnpj';
+     
+            if (Auth::attempt([$field => $request->get('identifier'), 'senha' => $request->get('senha')])) {
+                
+                return redirect()->route('edit-perfil-ong');
+            }
+     
+            
+            return redirect()->route('login-ong');
         }
- 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
     }
     
    

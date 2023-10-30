@@ -15,23 +15,30 @@ class LoginOngController extends Controller
         
     }
 
-    // public function authenticate(Request $request): RedirectResponse
-    // {
-    //     $ong = $request->validate([
-    //         'email' => ['required', 'email'],
-    //         'password' => ['required'],
-    //     ]);
+    public function loginOng(){
+        //return view('ong.login-ong');
+    }
+
+    public function loginOngAuth(Request $request) //:RedirectResponse 
+    {
+        
+        
+        
+        
+        // $credentials = $request->validate([
+        //     'email' => ['required', 'email'],
+        //     'senha' => ['required'],
+        // ]);
  
-    //     if (Auth::($ong)) {
-    //         $request->session()->regenerate();
+        // if (Auth::guard('ong')->attempt($credentials)) {
+        //     $request->session()->regenerate();
  
-    //         return redirect()->route('perfil-ong');
-    //     }
+        //     return view('ong.perfil-ong');
+        // }
  
-    //     return back()->withErrors([
-    //         'email' => 'E-mail inválido!',
-    //     ])->onlyInput('email');
-    // }
-   
+        // return back()->withErrors([
+        //     'email' => 'The provided credentials do not match our records.',
+        // ])->onlyInput('email');
+    }
     
 }
