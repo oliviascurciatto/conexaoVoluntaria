@@ -10,6 +10,7 @@ class Ong extends Model
 {
     use HasFactory;
 
+    protected $guard = ['ongs'];
     protected $fillable = [
         'nomeOng',
         'cnpj',
@@ -25,6 +26,14 @@ class Ong extends Model
         'cidade',
         'estado',
         'causa_id'
+    ];
+
+    protected $hidden = [
+        'senha',
+    ];
+
+    protected $casts = [
+        'senha' => 'hashed',
     ];
 
     public function causa() : HasOne {

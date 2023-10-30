@@ -82,13 +82,16 @@ Route::controller(VoluntarioController::class)->group(function(){
 
 /*----- Rotas Ong -----*/
 
-Route::controller(LoginOngController::class)->group(function(){
-    Route::get('/login-ong/{id?}', 'index')->name('login-ong');
-});
+// Route::controller(LoginOngController::class)->group(function(){
+//     Route::get('/login-ong/{id?}', 'index')->name('login-ong');
+//     Route::post('/login-ong', 'authenticate')->name('login-ong.authenticate');
+// });
 
 Route::controller(CadastroOngController::class)->group(function(){
     Route::get('/criar-cadastro-ong', 'create')->name('criar-cadastro-ong.create');
     Route::post('/criar-cadastro-ong', 'store')->name('criar-cadastro-ong.store');
+    Route::get('/login-ong', 'loginOng')->name('login-ong');
+    Route::post('/login-ong', 'loginOngAuth')->name('login-ong.loginOngAuth');
 });
 
 Route::controller(PerfilOngController::class)->group(function (){

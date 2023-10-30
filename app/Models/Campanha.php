@@ -14,6 +14,7 @@ class Campanha extends Model
         'nomeCampanha',
         'descricaoCampanha',
         'encerra_em',
+        'chavePix',
         'ong_id'
     ];
 

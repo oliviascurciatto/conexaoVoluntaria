@@ -14,11 +14,11 @@ class Vaga extends Model
     protected $fillable = [
         'nomeVaga',
         'quantidade',
-        'criada_em',
+        'encerra_em',
         'descricaoVaga',
-        'habilidade_id',
-        'ong_id'
+        'habilidade_id'
     ];
+
 
     public function habilidade() : HasOne {
         return $this-> hasOne(Habilidade::class);

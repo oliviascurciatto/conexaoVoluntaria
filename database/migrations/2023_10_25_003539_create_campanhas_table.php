@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nomeCampanha');
             $table->text('descricaoCampanha')->nullable();
-            $table->date('encerra_em');
+            $table->dateTime('encerra_em');
+            $table->string('chavePix');
             $table->foreignId('ong_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

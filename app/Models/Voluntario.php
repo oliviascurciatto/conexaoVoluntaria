@@ -11,7 +11,7 @@ class Voluntario extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nomeVoluntario',
+        'nome',
         'cpf',
         'email',
         'senha',

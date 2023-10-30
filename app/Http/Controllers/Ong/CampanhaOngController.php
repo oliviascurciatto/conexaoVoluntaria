@@ -37,10 +37,9 @@ class CampanhaOngController extends Controller
         
         Campanha::create([
         'nomeCampanha' => $request -> nomeCampanha, 
-        'termina_em' => $request ->termina,
+        'encerra_em' => $request ->encerra_em,
         'descricaoCampanha' => $request ->descricaoCampanha,
-        'pixCampanha' => $request ->pix,
-        'causa_id' => $request ->causa
+        'chavePix' => $request ->chavePix
         ]);
         
 

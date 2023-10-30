@@ -11,7 +11,8 @@
             </div>
 
             <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-white">
-                <form class="space-y-6" action="#" method="GET">
+                <form class="space-y-6" action="{{ route('login-ong.loginOngAuth') }}" method="POST">
+                    @csrf
                     <div>
                         <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
                         <div class="mt-2">
@@ -37,7 +38,7 @@
                     </div>
 
                     <div class="bg-white">
-                        <button x-click='{{ route('perfil-ong', ['id'=>1]) }}' type="submit"
+                        <button  type="submit"
                             class="flex w-full justify-center rounded-md bg-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-300">Entrar</button>
                     </div>
                     <div class="">

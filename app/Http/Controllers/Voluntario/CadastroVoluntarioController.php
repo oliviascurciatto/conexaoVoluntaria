@@ -20,38 +20,22 @@ class CadastroVoluntarioController extends Controller
  
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'nome' => 'required|string|max:255',
-        //     'email' => 'required|email|unique:voluntarios,email',
-        //     'cpf' => 'required|string|max:14|unique:voluntarios,cpf',
-        //     'senha' => 'required|string|min:8|confirmed',
-        //     'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
-        //     'telefone_id' => 'nullable|required|integer',
-        //     'genero_id' => 'nullable|required|integer',
-        //     'endereco_id' => 'nullable|required|integer',
-        //     'habilidade_id' => 'nullable|required|integer',
-        // ]);
         
         
         Voluntario::create([
         'nome' => $request -> nome, 
-        'email' => $request ->email,
         'cpf' => $request ->cpf,
+        'email' => $request ->email,
         'senha' => $request ->senha,
-        'image' => $request ->image,
-        'telefone_id' => $request ->telefone,
+        'imagem' => $request ->imagem,
+        'sobre' => $request -> sobre,
+        'telefone' => $request ->telefone,
+        'cidade' => $request ->cidade,
+        'estado' => $request ->estado,
         'genero_id' => $request ->genero,
-        // 'endereco_id' => $request ->cidade,
-        'endereco_id' => $request ->estado,
-        'descricaoVoluntario' => $request -> sobre,
-        'habilidade_id' => $request ->habilidades]);
-        
-
-            $generos = Genero::all();
-            return view ('voluntario.criar-cadastro-voluntario',compact('generos'));
-        
-        
-        
+        'habilidade_id' => $request ->habilidade
+        ]);
+                
 
         return redirect()->route('login-voluntario');
     }

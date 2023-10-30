@@ -71,28 +71,28 @@
                         </div>
                     </div>
 
-                {{-- <div class="mt-4 sm:col-span-2 sm:col-start-1">
+                <div class="mt-4 sm:col-span-2 sm:col-start-1">
                     <label class="block text-sm font-medium leading-6 text-gray-900">Cidade</label>
                     <div class="mt-2">
                         <input type="text" name="cidade" id="cidade" autocomplete="address-level2"
                             class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                     </div>
-                </div> --}}
+                </div>
 
-                    {{-- <div class="mt-4 sm:col-span-2">
+                    <div class="mt-4 sm:col-span-2">
                         <label  class="block text-sm font-medium leading-6 text-gray-900">Estado</label>
                         <div class="mt-2">
                             <input type="text" name="estado" id="estado" autocomplete="address-level1"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
-                    </div> --}}
+                    </div>
 
                     <div class="sm:col-span-2">
                         <div class="mt-4 col-span-full">
                             <label  class="block text-sm font-medium leading-6 text-gray-900">Sobre
                                 você</label>
                             <div class="mt-2">
-                                <textarea id="descricaoVoluntario" name="descricaoVoluntario" rows="3"
+                                <textarea id="sobre" name="sobre" rows="3"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                             </div>
                             <p class="mt-3 text-sm leading-6 text-gray-600">Escreva um pouco sobre você!
@@ -102,7 +102,7 @@
                             <label 
                                 class="block text-sm font-medium leading-6 text-gray-900">Gênero</label>
                             <div class="mt-2">
-                                <select id="genero" name="genero" 
+                                <select id="genero" name="genero" required
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
                                     
                                     
@@ -123,18 +123,18 @@
                             <label 
                                 class="block text-sm font-medium leading-6 text-gray-900">Habilidades</label>
                             <div class="mt-2">
-                                <select id="habilidades" name="habilidades" autocomplete="habilidades-name"
+                                <select id="habilidade" name="habilidade" autocomplete="habilidades-name" required
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
                                     <option value="1">Administração</option>
-                                <option value="2">Artes</option>
-                                <option value="3">Comunicação</option>
-                                <option value="4">Cozinha</option>
-                                <option value="5">Direito</option>
-                                <option value="6">Educação</option>
-                                <option value="7">Esportes</option>
-                                <option value="8">Saúde</option>
-                                <option value="8">Tecnologia</option>
-                                <option value="9">Outros</option>
+                                    <option value="2">Artes</option>
+                                    <option value="3">Comunicação</option>
+                                    <option value="4">Cozinha</option>
+                                    <option value="5">Direito</option>
+                                    <option value="6">Educação</option>
+                                    <option value="7">Esportes</option>
+                                    <option value="8">Saúde</option>
+                                    <option value="8">Tecnologia</option>
+                                    <option value="9">Outros</option>
                                 </select>
                             </div>
                         </div>
