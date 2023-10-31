@@ -49,25 +49,26 @@ class CadastroOngController extends Controller
 
         return redirect()->route('login-ong');
     }
-
     public function loginOng(){
         return view('ong.login-ong');
     }
 
-    public function loginOngAuth(Request $request): RedirectResponse{
-        
-        {
-            $field = filter_var($request->get('identifier'), FILTER_VALIDATE_EMAIL) ? 'email' : 'cnpj';
-     
-            if (Auth::attempt([$field => $request->get('identifier'), 'senha' => $request->get('senha')])) {
-                
-                return redirect()->route('edit-perfil-ong');
-            }
-     
-            
-            return redirect()->route('login-ong');
+    public function loginOngAuth(Request $request) :RedirectResponse 
+    {
+        $credentials = $request->only('cnpj', 'senha');
+ 
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+ 
+            return redirect()->route('perfil-ong');
         }
+ 
+        return back()->withErrors([
+            'cnpj' => 'The provided credentials do not match our records.',
+            'senha' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email', 'senha');
     }
+    
     
    
     public function edit(string $id)

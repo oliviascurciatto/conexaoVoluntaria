@@ -36,10 +36,10 @@ return [
     */
 
     'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
+        // 'web' => [
+        //     'driver' => 'session',
+        //     'provider' => 'ongs',
+        // ],
 
         'ong' => [
             'driver' => 'session',
@@ -49,10 +49,10 @@ return [
 
 
     'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\User::class,
-        ],
+        // 'users' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\User::class,
+        // ],
         'ongs' => [
             'driver' => 'eloquent',
             'model' => App\Models\Ong::class,
@@ -86,9 +86,9 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'table' => 'password_reset_tokens',
+        'ongs' => [
+            'provider' => 'ongs',
+            'table' => 'ongs',
             'expire' => 60,
             'throttle' => 60,
         ],
