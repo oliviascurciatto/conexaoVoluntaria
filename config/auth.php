@@ -23,15 +23,15 @@ return [
 
 
     'providers' => [
-        // 'users' => [
-        //     'driver' => 'eloquent',
-        //     'model' => App\Models\User::class,
-        // ],
         'ongs' => [
             'driver' => 'eloquent',
             'model' => App\Models\Ong::class,
         ],
-
+        
+        // 'users' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\User::class,
+        // ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

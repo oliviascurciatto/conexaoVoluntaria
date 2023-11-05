@@ -100,7 +100,7 @@ Route::controller(PerfilOngController::class)->group(function (){
 });
 
 Route::controller(VagaOngController::class)->group(function(){
-    Route::get('/vaga-ong/{id}', 'show')->name('vaga-ong');
+    Route::get('/vaga-ong', 'index')->name('vaga-ong.index');
     Route::get('/criar-vaga', 'create')->name('criar-vaga.create');
     Route::post('/criar-vaga', 'store')->name('criar-vaga.store');
     Route::get('/edit-vaga/{id?}', 'edit')->name('edit-vaga');
