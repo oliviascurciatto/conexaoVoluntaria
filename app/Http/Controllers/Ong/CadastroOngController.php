@@ -57,7 +57,7 @@ class CadastroOngController extends Controller
     {
  
         if (Auth::attempt(['cnpj' => $request->cnpj, 'senha' =>$request->senha])){
-            dd('você está logado');
+            return redirect()->route('perfil-ong');
         }
  
         

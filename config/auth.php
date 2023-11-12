@@ -15,7 +15,7 @@ return [
         //     'provider' => 'ongs',
         // ],
 
-        'ong' => [
+        'web' => [
             'driver' => 'session',
             'provider' => 'ongs',
         ],
@@ -23,9 +23,9 @@ return [
 
 
     'providers' => [
-        'ongs' => [
+        'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Ong::class,
+            'model' => App\Models\User::class,
         ],
         
         // 'users' => [
