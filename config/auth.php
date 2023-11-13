@@ -10,10 +10,10 @@ return [
    
 
     'guards' => [
-        // 'web' => [
-        //     'driver' => 'session',
-        //     'provider' => 'ongs',
-        // ],
+        'ongs' => [
+            'driver' => 'session',
+            'provider' => 'ongs',
+        ],
 
         'web' => [
             'driver' => 'session',
@@ -23,9 +23,13 @@ return [
 
 
     'providers' => [
-        'users' => [
+        // 'users' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\User::class,
+        // ],
+        'ongs' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\Ong::class,
         ],
         
         // 'users' => [

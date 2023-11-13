@@ -24,7 +24,11 @@ class CadastroOngController extends Controller
         return view('ong.criar-cadastro-ong');
     }
 
-    
+    public function __construct()
+    {
+        $this->middleware('guest');
+        $this->middleware('guest:ongs');
+    }
     public function store(Request $request)
     {
         
@@ -49,19 +53,7 @@ class CadastroOngController extends Controller
 
         return redirect()->route('login-ong');
     }
-    public function loginOng(){
-        return view('ong.login-ong');
-    }
-
-    public function loginOngAuth(Request $request) 
-    {
- 
-        if (Auth::attempt(['cnpj' => $request->cnpj, 'senha' =>$request->senha])){
-            return redirect()->route('perfil-ong');
-        }
- 
-        
-    }
+    
     
     
    

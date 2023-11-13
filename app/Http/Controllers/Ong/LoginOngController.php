@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Ong;
 
 class LoginOngController extends Controller
 {
@@ -16,29 +17,33 @@ class LoginOngController extends Controller
     }
 
     public function loginOng(){
-        //return view('ong.login-ong');
+        return view('ong.login-ong');
     }
 
-    public function loginOngAuth(Request $request) //:RedirectResponse 
+    public function __construct()
+        {
+            $this->middleware('guest')->except('logout');
+            $this->middleware('guest:ongs')->except('logout');
+            
+        }
+
+    public function loginOngAuth(Request $request) :RedirectResponse 
     {
         
-        
-        
-        
-        // $credentials = $request->validate([
-        //     'email' => ['required', 'email'],
-        //     'senha' => ['required'],
-        // ]);
+        $credentials = $request->only([
+            'cnpj' => ['required', 'cnpj'],
+            'senha' => ['required'],
+        ]);
  
-        // if (Auth::guard('ong')->attempt($credentials)) {
-        //     $request->session()->regenerate();
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
  
-        //     return view('ong.perfil-ong');
-        // }
+            return redirect()->route('perfil-ong');
+        }
  
-        // return back()->withErrors([
-        //     'email' => 'The provided credentials do not match our records.',
-        // ])->onlyInput('email');
-    }
+        return back()->withErrors([
+            'cnpj' => 'The provided credentials do not match our records.',
+        ])->onlyInput('cnpj');
     
+}
 }
