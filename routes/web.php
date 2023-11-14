@@ -31,6 +31,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return redirect()->route('welcome');
 });
+Route::get('/criar-login', function(){
+    return view('criar-login');
+})->name('criar-login');
 Route::get('/welcome', function () {
     
     // $genero = Genero::all();

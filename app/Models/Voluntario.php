@@ -14,7 +14,7 @@ class Voluntario extends Model
         'nome',
         'cpf',
         'email',
-        'senha',
+        'password',
         'imagem',
         'sobre',
         'telefone',

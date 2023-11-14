@@ -2,22 +2,26 @@
 
 namespace App\Models;
 
+
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Notifications\Notifiable;
 
-class Ong extends Model
+class Ong extends Authenticatable
 {
     use HasFactory;
     use Notifiable;
+    
+    
 
     protected $guard = 'ongs';
     protected $fillable = [
         'nomeOng',
         'cnpj',
         'email',
-        'senha',
+        'password',
         'imagem',
         'sobre',
         'telefone',

@@ -41,7 +41,7 @@ class VagaOngController extends Controller
         
         
 
-        return redirect()->route('vaga-ong', compact('vaga'));
+        return redirect()->route('vaga-ong.index');
     }
 
     /**

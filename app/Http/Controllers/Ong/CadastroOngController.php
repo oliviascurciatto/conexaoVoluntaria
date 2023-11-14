@@ -24,11 +24,7 @@ class CadastroOngController extends Controller
         return view('ong.criar-cadastro-ong');
     }
 
-    public function __construct()
-    {
-        $this->middleware('guest');
-        $this->middleware('guest:ongs');
-    }
+    
     public function store(Request $request)
     {
         
@@ -36,7 +32,7 @@ class CadastroOngController extends Controller
         'nomeOng' => $request -> nomeOng, 
         'email' => $request ->email,
         'cnpj' => $request ->cnpj,
-        'senha' => Hash::make($request->senha),
+        'password' => Hash::make($request->password),
         'image' => $request ->image,
         'sobre' => $request ->sobre,
         'telefone' => $request ->telefone,

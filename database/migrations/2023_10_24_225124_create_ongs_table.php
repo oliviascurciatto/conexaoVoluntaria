@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nomeOng');
             $table->string('cnpj');
             $table->string('email');
-            $table->string('senha');
+            $table->string('password');
             $table->string('imagem')->nullable();
             $table->text  ('sobre')->nullable();
             $table->string('telefone');

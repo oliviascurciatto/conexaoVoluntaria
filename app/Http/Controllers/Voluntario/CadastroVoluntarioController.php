@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Genero;
 use App\Models\Voluntario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class CadastroVoluntarioController extends Controller
 {
@@ -26,7 +27,7 @@ class CadastroVoluntarioController extends Controller
         'nome' => $request -> nome, 
         'cpf' => $request ->cpf,
         'email' => $request ->email,
-        'senha' => $request ->senha,
+        'password' => Hash::make($request->password),
         'imagem' => $request ->imagem,
         'sobre' => $request -> sobre,
         'telefone' => $request ->telefone,

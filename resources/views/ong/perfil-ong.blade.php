@@ -56,7 +56,7 @@
                             </a>
                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Vaga para estágio voluntário.
                             </p>
-                            <a href="{{ route('vaga-ong', ['id'=>1]) }}"
+                            <a href="{{ route('vaga-ong.index') }}"
                                 class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-orange-500 dark:hover:bg-green-500 dark:focus:ring-green-500">
                                 Ver vaga
                                 <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"

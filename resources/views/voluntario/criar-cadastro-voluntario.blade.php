@@ -141,7 +141,7 @@
                         <div class="mt-4 sm:col-span-2">
                             <label  class="block text-sm font-medium leading-6 text-gray-900">Criar senha</label>
                             <div class="mt-2">
-                                <input type="password" required name="senha" id="senha" autocomplete="password"
+                                <input type="password" required name="password" id="password" autocomplete="password"
                                     class="block w-32 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>

@@ -20,30 +20,27 @@ class LoginOngController extends Controller
         return view('ong.login-ong');
     }
 
-    public function __construct()
-        {
-            $this->middleware('guest')->except('logout');
-            $this->middleware('guest:ongs')->except('logout');
-            
-        }
+    
 
     public function loginOngAuth(Request $request) :RedirectResponse 
     {
         
-        $credentials = $request->only([
-            'cnpj' => ['required', 'cnpj'],
-            'senha' => ['required'],
+        $credentials = $request->validate([
+            'email',
+            'password',
         ]);
  
-        if (Auth::attempt($credentials)) {
+        if (Auth::guard('ong')->attempt($credentials)) {
             $request->session()->regenerate();
  
-            return redirect()->route('perfil-ong');
+            return redirect()->intended('/perfil-ong');
         }
  
         return back()->withErrors([
-            'cnpj' => 'The provided credentials do not match our records.',
-        ])->onlyInput('cnpj');
+            'email' => 'E-mail inválido!',
+        ])->onlyInput('E-mail');
     
-}
+    }
+
+
 }
