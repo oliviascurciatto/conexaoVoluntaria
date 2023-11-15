@@ -15,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('nomeOng');
             $table->string('cnpj');
-            $table->string('email');
-            $table->string('password');
             $table->string('imagem')->nullable();
             $table->text  ('sobre')->nullable();
             $table->string('telefone');
@@ -27,6 +25,7 @@ return new class extends Migration
             $table->string('cidade');
             $table->string('estado');
             $table->foreignId('causa_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

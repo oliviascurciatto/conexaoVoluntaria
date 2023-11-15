@@ -15,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->string('cpf');
-            $table->string('email');
-            $table->string('password');
             $table->string('imagem')->nullable();
             $table->text('sobre')->nullable();
             $table->string('telefone');
@@ -24,6 +22,7 @@ return new class extends Migration
             $table->string('estado')->nullable();
             $table->foreignId('genero_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('habilidade_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

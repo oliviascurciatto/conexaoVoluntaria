@@ -20,8 +20,6 @@ class Ong extends Authenticatable
     protected $fillable = [
         'nomeOng',
         'cnpj',
-        'email',
-        'password',
         'imagem',
         'sobre',
         'telefone',
@@ -31,7 +29,8 @@ class Ong extends Authenticatable
         'bairro',
         'cidade',
         'estado',
-        'causa_id'
+        'causa_id',
+        'user_id'
     ];
 
     protected $hidden = [

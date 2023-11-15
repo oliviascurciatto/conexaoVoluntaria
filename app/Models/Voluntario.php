@@ -13,15 +13,14 @@ class Voluntario extends Model
     protected $fillable = [
         'nome',
         'cpf',
-        'email',
-        'password',
         'imagem',
         'sobre',
         'telefone',
         'cidade',
         'estado',
         'genero_id',
-        'habilidade_id'
+        'habilidade_id',
+        'user_id'
     ];
 
     public function genero() : HasOne {

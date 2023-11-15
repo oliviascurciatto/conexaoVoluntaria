@@ -25,7 +25,7 @@ class LoginOngController extends Controller
     public function loginOngAuth(Request $request) :RedirectResponse 
     {
         
-        $credentials = $request->validate([
+        $credentials = $request->only([
             'email',
             'password',
         ]);
