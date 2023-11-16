@@ -7,6 +7,7 @@ use App\Http\Controllers\Ong\LoginOngController;
 use App\Http\Controllers\Ong\OngController;
 use App\Http\Controllers\Ong\PerfilOngController;
 use App\Http\Controllers\Ong\VagaOngController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Voluntario\CadastroVoluntarioController;
 use App\Http\Controllers\Voluntario\LoginVoluntarioController;
 use App\Http\Controllers\Voluntario\PerfilVoluntarioController;
@@ -31,25 +32,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return redirect()->route('welcome');
 });
-Route::get('/criar-login', function(){
-    return view('criar-login');
-})->name('criar-login');
-Route::get('/welcome', function () {
-    
-    // $genero = Genero::all();
-
-    // return $genero;
-
-    // $cidade = Cidade::all();
-
-    // return $cidade;
-    
-    // $vaga = Vaga::all();
-
-    // return $vaga;
-
+Route::get('/welcome', function () {   
     return view('welcome');
 })->name('welcome');
+
+Route::controller(UserController::class)->group(function(){
+    Route::get('/criar-login', 'create')->name('criar-login.create');
+    Route::post('/criar-login', 'store')->name('criar-login.store');
+    Route::post('/login-ong', 'auth')->name('login-ong.auth');
+});
 
 
 /*----- Rotas Voluntario -----*/
@@ -87,19 +78,22 @@ Route::controller(VoluntarioController::class)->group(function(){
 
 Route::controller(LoginOngController::class)->group(function(){
     Route::get('/login-ong', 'loginOng')->name('login-ong');
-    Route::post('/login-ong', 'loginOngAuth')->name('login-ong.loginOngAuth');
+    
  });
 
 Route::controller(CadastroOngController::class)->group(function(){
-    Route::get('/criar-cadastro-ong', 'create')->name('criar-cadastro-ong.create');
-    Route::post('/criar-cadastro-ong', 'store')->name('criar-cadastro-ong.store');
+    Route::get('/criar-perfil-ong', 'create')->name('criar-cadastro-ong.create');
+    
     
     
 });
 
 Route::controller(PerfilOngController::class)->group(function (){
     Route::get('/perfil-ong/{id?}', 'index')->name('perfil-ong');
-    Route::get('/edit-perfil-ong/{id?}', 'edit')->name('edit-perfil-ong');
+    Route::get('/edit-perfil-ong/{id?}', 'show')->name('edit-perfil-ong.show');
+    Route::post('/edit-perfil-ong/{id?}', 'edit')->name('edit-perfil-ong.edit');
+    Route::get('/criar-perfil-ong', 'create')->name('criar-cadastro-ong.create');
+    Route::post('/criar-perfil-ong', 'store')->name('criar-cadastro-ong.store');
 });
 
 Route::controller(VagaOngController::class)->group(function(){

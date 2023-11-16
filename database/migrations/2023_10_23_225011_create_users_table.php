@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('campanhas', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('nomeCampanha');
-            $table->text('descricaoCampanha')->nullable();
-            $table->dateTime('encerra_em');
-            $table->string('chavePix');
-            $table->foreignIdFor(\App\Models\Ong::class)->constrained();
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->foreignIdFor(\App\Models\TipoUser::class);
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('campanhas');
+        Schema::dropIfExists('users');
     }
 };

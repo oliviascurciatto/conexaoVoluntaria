@@ -17,8 +17,8 @@ return new class extends Migration
             $table->text('descricaoVaga')->nullable();
             $table->integer('quantidade')->nullable();
             $table->dateTime('encerra_em');
-            $table->foreignId('ong_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('habilidade_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignIdFor(\App\Models\Ong::class)->constrained();
+            $table->foreignIdFor(\App\Models\Habilidade::class)->nullable()->constrained();
             $table->timestamps();
         });
     }

@@ -16,9 +16,20 @@ class OngAccessMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // if(Auth::guard('ong')->check() == false){
-        //     return redirect()->route('login-ong');
-        // }
+        
+        if (Auth::check()) {
+            
+            $user = Auth::user();
+
+            
+            if ($user->tipo_user_id == $role) {
+                return $next($request);
+            }
+        }
+
+        
+        return redirect()->route('pagina-de-nao-autorizado');
+        
         return $next($request);
     }
 }

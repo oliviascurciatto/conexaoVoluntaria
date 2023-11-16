@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Ong;
 
 use App\Http\Controllers\Controller;
+use App\Models\Ong;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PerfilOngController extends Controller
@@ -20,7 +22,7 @@ class PerfilOngController extends Controller
      */
     public function create()
     {
-        //
+        return view('ong.criar-perfil-ong');
     }
 
     /**
@@ -28,15 +30,36 @@ class PerfilOngController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $users = User::all();
+    
+        foreach ($users as $user);
+        Ong::create([
+        'nomeOng' => $request -> nomeOng, 
+        'cnpj' => $request ->cnpj,
+        'image' => $request ->image,
+        'sobre' => $request ->sobre,
+        'telefone' => $request ->telefone,
+        'rua' => $request ->rua,
+        'numero' => $request ->numero,
+        'complemento' => $request ->complemento,
+        'bairro' => $request ->bairro,
+        'cidade' => $request ->cidade,
+        'estado' => $request ->estado,
+        'causa_id' => $request ->causa,
+        'user_id' => $user->id
+        ]);
+        
+       
+
+        return redirect()->route('perfil-ong');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        return view('ong.edit-perfil-ong');
     }
 
     /**
@@ -44,7 +67,7 @@ class PerfilOngController extends Controller
      */
     public function edit()
     {
-        return view('ong.edit-perfil-ong');
+        
     }
 
     /**

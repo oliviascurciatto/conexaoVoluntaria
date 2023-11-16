@@ -15,8 +15,6 @@ class Ong extends Authenticatable
     use Notifiable;
     
     
-
-    protected $guard = 'ongs';
     protected $fillable = [
         'nomeOng',
         'cnpj',
@@ -43,7 +41,10 @@ class Ong extends Authenticatable
 
     public function causa() : HasOne {
         return $this -> hasOne(Causa::class);
-}
+    }
+    public function user() : HasOne {
+        return $this -> hasOne(User::class);
+    }
 
         
 }

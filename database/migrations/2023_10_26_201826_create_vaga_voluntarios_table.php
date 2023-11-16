@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('vaga_voluntarios', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('voluntario_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('vaga_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignIdFor(\App\Models\Voluntario::class)->constrained();
+            $table->foreignIdFor(\App\Models\Vaga::class)->constrained();
             $table->timestamps();
         });
     }

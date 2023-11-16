@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('telefone');
             $table->string('cidade')->nullable();
             $table->string('estado')->nullable();
-            $table->foreignId('genero_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('habilidade_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignIdFor(\App\Models\Genero::class)->nullable()->constrained();
+            $table->foreignIdFor(\App\Models\Habilidade::class)->nullable()->constrained();
+            $table->foreignIdFor(\App\Models\User::class)->constrained();
             $table->timestamps();
         });
     }
