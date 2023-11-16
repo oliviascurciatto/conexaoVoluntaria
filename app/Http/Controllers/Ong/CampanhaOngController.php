@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Ong;
 
 use App\Http\Controllers\Controller;
 use App\Models\Campanha;
+use App\Models\Ong;
 use Illuminate\Http\Request;
 
 class CampanhaOngController extends Controller
@@ -29,17 +30,15 @@ class CampanhaOngController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'nomeCampanha' => 'required|string|max:80',
-        //     'descricaoCampanha' => 'required|text|max:255'
-        // ]);
+        $campanhas = Ong::all();
         
-        
+        foreach ($campanhas as $campanha)
         Campanha::create([
         'nomeCampanha' => $request -> nomeCampanha, 
         'encerra_em' => $request ->encerra_em,
         'descricaoCampanha' => $request ->descricaoCampanha,
-        'chavePix' => $request ->chavePix
+        'chavePix' => $request ->chavePix,
+        'ong_id' => $campanha ->id
         ]);
         
 

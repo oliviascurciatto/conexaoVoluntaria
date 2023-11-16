@@ -11,7 +11,7 @@
             </div>
 
             <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-white">
-                <form class="space-y-6" action="{{ route('login-ong.auth') }}" method="POST">
+                <form class="space-y-6" action="{{ route('login-ong.authOng')}}" method="POST">
                     @csrf
                     <div>
                         <label  class="block text-sm font-medium leading-6 text-gray-900">E-mail</label>

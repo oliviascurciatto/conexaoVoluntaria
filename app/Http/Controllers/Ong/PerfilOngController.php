@@ -51,7 +51,7 @@ class PerfilOngController extends Controller
         
        
 
-        return redirect()->route('perfil-ong');
+        return redirect()->route('login-ong');
     }
 
     /**

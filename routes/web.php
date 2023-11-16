@@ -39,7 +39,8 @@ Route::get('/welcome', function () {
 Route::controller(UserController::class)->group(function(){
     Route::get('/criar-login', 'create')->name('criar-login.create');
     Route::post('/criar-login', 'store')->name('criar-login.store');
-    Route::post('/login-ong', 'auth')->name('login-ong.auth');
+    
+    
 });
 
 
@@ -51,12 +52,12 @@ Route::controller(PerfilVoluntarioController::class)->group(function () {
 });
 
 Route::controller(LoginVoluntarioController::class)->group(function () {
-    Route::get('/login-voluntario/{id?}', 'index')->name('login-voluntario');
+    Route::get('/login-voluntario', 'create')->name('login-voluntario.create');
+    Route::post('/login-voluntario', 'authVoluntario')->name('login-voluntario.authVoluntario');
 });
 
 Route::controller(CadastroVoluntarioController::class)->group(function () {
-    Route::get('/criar-cadastro-voluntario', 'index')->name('criar-cadastro-voluntario.index');
-    //Route::post('/criar-cadastro-voluntario', 'store')->name('criar-cadastro-voluntario.store');
+    Route::get('/criar-perfil-voluntario', 'index')->name('criar-perfil-voluntario.index');
 });
 
 Route::post('/criar-cadastro-voluntario', [CadastroVoluntarioController::class, 'store'])->name('criar-cadastro-voluntario.store');
@@ -76,19 +77,20 @@ Route::controller(VoluntarioController::class)->group(function(){
 
 /*----- Rotas Ong -----*/
 
-Route::controller(LoginOngController::class)->group(function(){
+Route::controller(LoginOngController::class)->middleware('ong')->group(function(){
     Route::get('/login-ong', 'loginOng')->name('login-ong');
+    Route::post('/login-ong', 'authOng')->name('login-ong.authOng');
     
  });
 
-Route::controller(CadastroOngController::class)->group(function(){
+Route::controller(CadastroOngController::class)->middleware('ong')->group(function(){
     Route::get('/criar-perfil-ong', 'create')->name('criar-cadastro-ong.create');
     
     
     
 });
 
-Route::controller(PerfilOngController::class)->group(function (){
+Route::controller(PerfilOngController::class)->middleware('ong')->group(function (){
     Route::get('/perfil-ong/{id?}', 'index')->name('perfil-ong');
     Route::get('/edit-perfil-ong/{id?}', 'show')->name('edit-perfil-ong.show');
     Route::post('/edit-perfil-ong/{id?}', 'edit')->name('edit-perfil-ong.edit');
@@ -96,14 +98,14 @@ Route::controller(PerfilOngController::class)->group(function (){
     Route::post('/criar-perfil-ong', 'store')->name('criar-cadastro-ong.store');
 });
 
-Route::controller(VagaOngController::class)->group(function(){
+Route::controller(VagaOngController::class)->middleware('ong')->group(function(){
     Route::get('/vaga-ong', 'index')->name('vaga-ong.index');
     Route::get('/criar-vaga', 'create')->name('criar-vaga.create');
     Route::post('/criar-vaga', 'store')->name('criar-vaga.store');
     Route::get('/edit-vaga/{id?}', 'edit')->name('edit-vaga');
 });
 
-Route::controller(CampanhaOngController::class)->group(function(){
+Route::controller(CampanhaOngController::class)->middleware('ong')->group(function(){
     Route::get('/campanha-ong/{id?}', 'index')->name('campanha-ong');
     Route::get('/criar-campanha', 'create')->name('criar-campanha.create');
 Route::post('/criar-campanha', 'store')->name('criar-campanha.store');
@@ -111,7 +113,7 @@ Route::post('/criar-campanha', 'store')->name('criar-campanha.store');
 });
 
 
-Route::controller(OngController::class)->group(function(){
+Route::controller(OngController::class)->middleware('ong')->group(function(){
     Route::get('/home-ong/{id?}', 'index')->name('home-ong');
 });
 

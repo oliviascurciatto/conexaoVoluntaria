@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Voluntario;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginVoluntarioController extends Controller
 {
@@ -12,7 +13,7 @@ class LoginVoluntarioController extends Controller
      */
     public function index()
     {
-        return view('voluntario.login-voluntario');
+       
     }
 
     /**
@@ -20,16 +21,28 @@ class LoginVoluntarioController extends Controller
      */
     public function create()
     {
-        
+        return view('voluntario.login-voluntario');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function authVoluntario(Request $request)
     {
-         
         
+        $credentials = $request->only(
+            'email',
+            'password');
+ 
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+ 
+            return redirect()->intended('/criar-perfil-voluntario');
+        }
+ 
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
     }
 
     /**

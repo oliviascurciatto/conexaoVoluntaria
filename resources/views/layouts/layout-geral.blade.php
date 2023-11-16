@@ -69,9 +69,12 @@
                                         <a href="{{ route('login-ong', ['id'=>1]) }}"
                                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                                             role="menuitem">Ong</a>
-                                        <a href="{{ route('login-voluntario', ['id'=>1]) }}"
+                                        <a href="{{ route('login-voluntario.create') }}"
                                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                                             role="menuitem">Voluntário</a>
+                                        <a href="{{ route('criar-login.create')}}"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                            role="menuitem">Criar Login</a>
                                     </div>
                                 </div>
                             </div>

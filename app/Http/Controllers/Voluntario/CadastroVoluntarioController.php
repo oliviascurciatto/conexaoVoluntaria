@@ -15,7 +15,7 @@ class CadastroVoluntarioController extends Controller
      */
     public function index()
     {
-        return view('voluntario.criar-cadastro-voluntario');
+        return view('voluntario.criar-perfil-voluntario');
     }
 
  

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Ong;
 
 use App\Http\Controllers\Controller;
+use App\Models\Ong;
 use App\Models\Vaga;
 use Illuminate\Http\Request;
 
@@ -30,13 +31,16 @@ class VagaOngController extends Controller
     public function store(Request $request)
     {
         
+        $ongs = Ong::all();
         
+        foreach ($ongs as $ong);
         Vaga::create([
         'nomeVaga' => $request -> nomeVaga,
         'quantidade' => $request ->quantidade, 
         'encerra_em' => $request ->encerra_em,
         'descricaoVaga' => $request ->descricaoVaga,
-        'habilidade_id' => $request ->habilidades
+        'habilidade_id' => $request ->habilidades,
+        'ong_id' => $ong->id
         ]);
         
         

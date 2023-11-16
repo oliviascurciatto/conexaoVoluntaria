@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Notifications\Notifiable;
 
@@ -46,5 +47,11 @@ class Ong extends Authenticatable
         return $this -> hasOne(User::class);
     }
 
-        
+    public function campanha() : HasMany{
+        return $this -> hasMany(Campanha::class);
+    }
+    public function vaga() : HasMany{
+        return $this -> hasMany(Vaga::class);
+    }
+    
 }

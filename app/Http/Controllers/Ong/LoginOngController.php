@@ -22,25 +22,24 @@ class LoginOngController extends Controller
 
     
 
-    public function loginOngAuth(Request $request) //:RedirectResponse 
+    public function authOng(Request $request)
     {
         
-        // $credentials = $request->only([
-        //     'email',
-        //     'password',
-        // ]);
+        $credentials = $request->only(
+            'email',
+            'password');
  
-        // if (Auth::guard('ong')->attempt($credentials)) {
-        //     $request->session()->regenerate();
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
  
-        //     return redirect()->intended('/perfil-ong');
-        // }
+            return redirect()->intended('/perfil-ong');
+        }
  
-        // return back()->withErrors([
-        //     'email' => 'E-mail inválido!',
-        // ])->onlyInput('E-mail');
-    
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
     }
+
 
 
 }
