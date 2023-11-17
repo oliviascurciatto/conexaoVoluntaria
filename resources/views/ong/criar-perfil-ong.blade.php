@@ -2,7 +2,7 @@
 @section('title', 'Criar Perfil')
 
 @section('content')
-        <form action="{{ route('criar-cadastro-ong.store') }}" method="POST">
+        <form action="{{ route('criar-perfil-ong.store') }}" method="POST">
             @csrf
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">

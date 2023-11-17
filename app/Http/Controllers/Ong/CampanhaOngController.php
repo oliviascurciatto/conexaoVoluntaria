@@ -9,12 +9,16 @@ use Illuminate\Http\Request;
 
 class CampanhaOngController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    // public function index(Vaga $vaga)
+    // {
+    //     $vagas = $vaga->all();
+
+    //     return view('ong.vaga-ong', compact('vagas'));
+    // }
+    public function index(Campanha $campanha)
     {
-        return view('ong.campanha-ong');
+        $campanhas = $campanha->all();
+        return view('ong.campanha-ong', compact('campanhas'));
     }
 
     /**

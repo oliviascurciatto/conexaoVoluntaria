@@ -17,13 +17,13 @@ class OngAccessMiddleware
     public function handle(Request $request, Closure $next): Response
     {
 
-        if(Auth::check() && Auth::user()-> tipo_user_id == 1){
+        // if(Auth::check() && Auth::user()-> tipo_user_id == 1){
             return $next($request);
-        }else{
-            if (!Auth::check()) {
-                return redirect()->route('login-ong');
-            }
-        }
+        // }else{
+        //     if (!Auth::check()) {
+        //         return redirect()->route('login-ong');
+        //     }
+        // }
         
     }
 }

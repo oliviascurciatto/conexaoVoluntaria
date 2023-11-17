@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Ong;
 
 use App\Http\Controllers\Controller;
+use App\Models\Campanha;
+use App\Models\Ong;
+use App\Models\Vaga;
+use App\Models\Voluntario;
 use Illuminate\Http\Request;
 
 class OngController extends Controller
@@ -18,48 +22,27 @@ class OngController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function listarCampanha(Campanha $campanha)
     {
-        //
+        $campanhas = $campanha->all();
+        return view('ong.listar-campanha', compact('campanhas'));
+    }
+    public function listarVaga(Vaga $vaga)
+    {
+        $vagas = $vaga->all();
+        return view('ong.listar-vagas', compact('vagas'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function listarVoluntarios(Voluntario $voluntario)
     {
-        //
+        $voluntarios = $voluntario->all();
+        return view('ong.listar-voluntario', compact('voluntarios'));
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function listarOngs(Ong $ong)
     {
-        //
+        $ongs = $ong->all();
+        return view('ong.listar-voluntario', compact('ongs'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }

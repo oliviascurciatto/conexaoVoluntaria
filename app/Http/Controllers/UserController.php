@@ -26,6 +26,8 @@ class UserController extends Controller
             'password' => $request -> password,
             'tipo_user_id' => $request -> tipoUser,
         ]);
+
+        return redirect()->route('criar-perfil-ong.create');
         
     }
 

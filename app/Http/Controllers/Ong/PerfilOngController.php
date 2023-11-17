@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Ong;
 
 use App\Http\Controllers\Controller;
+use App\Models\Campanha;
 use App\Models\Ong;
 use App\Models\User;
+use App\Models\Vaga;
 use Illuminate\Http\Request;
 
 class PerfilOngController extends Controller
@@ -12,9 +14,13 @@ class PerfilOngController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Ong $ong, Vaga $vaga, Campanha $campanha)
     {
-        return view('ong.perfil-ong');
+        $ongs = $ong->all();
+        $vagas = $vaga->all();
+        $campanhas = $campanha->all();
+        return view('ong.perfil-ong', compact('ongs', 'vagas', 'campanhas'));
+
     }
 
     /**

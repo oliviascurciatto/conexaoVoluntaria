@@ -7,27 +7,20 @@
         <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
             <div class="w-full flex flex-col 2xl:w-1/3">
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
-                    
-                    <h4 class="mt-0 mb-6 text-xl text-gray-700 underline font-bold text-center">Campanha</h4>
+                    @foreach ($campanhas as $campanha)
+                        
+                   
+                    <h4 class="mt-0 mb-6 text-xl text-gray-700 underline font-bold text-center">{{$campanha->nomeCampanha}}</h4>
                         
                             <h4 class="text-xl text-gray-700 font-bold">Informações</h4>
                             <ul class="mt-2 text-gray-700">
                                 <li class="flex border-b py-2">
-                                    <span class="font-bold w-25">Início:</span>
-                                    <span class="text-gray-700">10/09/2023</span>
-                                </li>
-                                <li class="flex border-b py-2">
                                     <span class="font-bold w-25">Fim:</span>
-                                    <span class="text-gray-700">10/10/2023</span>
+                                    <span class="text-gray-700">{{$campanha->encerra_em}}</span>
                                 </li>
                             </ul>
                             <h4 class="mt-8 text-xl text-gray-700 font-bold">Descrição</h4>   
-                    <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                        voluptates obcaecati numquam error et ut fugiat asperiores. Sunt nulla ad incidunt
-                        laboriosam,
-                        laudantium est unde natus cum numquam, neque facere. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Ut, magni odio magnam commodi sunt ipsum eum! Voluptas eveniet aperiam at
-                        maxime, iste id dicta autem odio laudantium eligendi commodi distinctio!
+                    <p class="mt-2 text-gray-700">{{$campanha->descricaoCampanha}}
                     </p>
                     <div x-data="{ modelOpen: false }">
                         <button @click="modelOpen =!modelOpen" class="mt-4 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-green-500 hover:bg-orange-500 focus:ring-4">
@@ -73,13 +66,14 @@
                                     <div class="flex flex-col w-full 2xl:w-2/3">
                                         <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
                                             <h4 class="text-center text-xl text-gray-700 font-bold">Chave-pix:</h4>
-                                            <p class="text-center mt-2 text-gray-700">OJNunljnOunOb624624IBbONobnUBjBBo6</p>
+                                            <p class="text-center mt-2 text-gray-700">{{$campanha->chavePix}}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>        
+                    </div> 
+                    @endforeach       
                 </div>
             </div>
         </div>

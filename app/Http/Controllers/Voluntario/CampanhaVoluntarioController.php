@@ -3,24 +3,23 @@
 namespace App\Http\Controllers\Voluntario;
 
 use App\Http\Controllers\Controller;
-use App\Models\Vaga;
+use App\Models\Campanha;
 use Illuminate\Http\Request;
 
-class VagaVoluntarioController extends Controller
+class CampanhaVoluntarioController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Vaga $vaga)
+    
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
     {
-        $vagas = $vaga->all();
-
-        return view('voluntario.vaga-voluntario', compact('vagas'));
+        //
     }
-
-    
- 
-    
 
     /**
      * Store a newly created resource in storage.
@@ -33,13 +32,9 @@ class VagaVoluntarioController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(string $id)
     {
-        return view('voluntario.minhas-vagas');
-    }
-    public function listar()
-    {
-        return view('voluntario.listar-vagas');
+        //
     }
 
     /**
