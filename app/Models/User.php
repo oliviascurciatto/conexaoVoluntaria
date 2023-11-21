@@ -39,6 +39,6 @@ class User extends Authenticatable
     }
 
     public function ong() : BelongsTo {
-        return $this->belongsTo(Ong::class);
+        return $this -> belongsTo(User::class);
     }
 }

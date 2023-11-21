@@ -9,16 +9,13 @@ use Illuminate\Http\Request;
 
 class CampanhaOngController extends Controller
 {
-    // public function index(Vaga $vaga)
-    // {
-    //     $vagas = $vaga->all();
 
-    //     return view('ong.vaga-ong', compact('vagas'));
-    // }
-    public function index(Campanha $campanha)
+    public function index()
     {
-        $campanhas = $campanha->all();
-        return view('ong.campanha-ong', compact('campanhas'));
+        $campanhas = Campanha::with('ong')->get();
+        return view('ong.campanha-ong', [
+            'campanhas' => $campanhas
+        ]);
     }
 
     /**
@@ -34,15 +31,15 @@ class CampanhaOngController extends Controller
      */
     public function store(Request $request)
     {
-        $campanhas = Ong::all();
+        $ongs = Ong::all();
         
-        foreach ($campanhas as $campanha)
+        foreach ($ongs as $ong)
         Campanha::create([
         'nomeCampanha' => $request -> nomeCampanha, 
         'encerra_em' => $request ->encerra_em,
         'descricaoCampanha' => $request ->descricaoCampanha,
         'chavePix' => $request ->chavePix,
-        'ong_id' => $campanha ->id
+        'ong_id' => $ong ->id
         ]);
         
 

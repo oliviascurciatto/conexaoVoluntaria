@@ -80,20 +80,20 @@ Route::controller(VoluntarioController::class)->group(function(){
 
 /*----- Rotas Ong -----*/
 
-Route::controller(LoginOngController::class)->middleware('ong')->group(function(){
+Route::controller(LoginOngController::class)->group(function(){
     Route::get('/login-ong', 'loginOng')->name('login-ong');
     Route::post('/login-ong', 'authOng')->name('login-ong.authOng');
     
  });
 
-Route::controller(CadastroOngController::class)->middleware('ong')->group(function(){
+Route::controller(CadastroOngController::class)->group(function(){
     Route::get('/criar-perfil-ong', 'create')->name('criar-cadastro-ong.create');
     
     
     
 });
 
-Route::controller(PerfilOngController::class)->middleware('ong')->group(function (){
+Route::controller(PerfilOngController::class)->group(function (){
     Route::get('/perfil-ong/{id?}', 'index')->name('perfil-ong');
     Route::get('/edit-perfil-ong/{id?}', 'show')->name('edit-perfil-ong.show');
     Route::post('/edit-perfil-ong/{id?}', 'edit')->name('edit-perfil-ong.edit');
@@ -101,14 +101,14 @@ Route::controller(PerfilOngController::class)->middleware('ong')->group(function
     Route::post('/criar-perfil-ong', 'store')->name('criar-perfil-ong.store');
 });
 
-Route::controller(VagaOngController::class)->middleware('ong')->group(function(){
+Route::controller(VagaOngController::class)->group(function(){
     Route::get('/vaga-ong/{id?}', 'index')->name('vaga-ong.index');
     Route::get('/criar-vaga', 'create')->name('criar-vaga.create');
     Route::post('/criar-vaga', 'store')->name('criar-vaga.store');
     Route::get('/edit-vaga/{id?}', 'edit')->name('edit-vaga');
 });
 
-Route::controller(CampanhaOngController::class)->middleware('ong')->group(function(){
+Route::controller(CampanhaOngController::class)->group(function(){
     Route::get('/campanha-ong/{id?}', 'index')->name('campanha-ong');
     Route::get('/criar-campanha', 'create')->name('criar-campanha.create');
 Route::post('/criar-campanha', 'store')->name('criar-campanha.store');
@@ -116,7 +116,7 @@ Route::post('/criar-campanha', 'store')->name('criar-campanha.store');
 });
 
 
-Route::controller(OngController::class)->middleware('ong')->group(function(){
+Route::controller(OngController::class)->group(function(){
     Route::get('/home-ong/{id?}', 'index')->name('home-ong');
     Route::get('/ong/listar-ongs', 'listarOng')->name('listar-ong-ong');
     Route::get('/ong/listar-campanha', 'listarCampanha')->name('listar-campanha-ong');

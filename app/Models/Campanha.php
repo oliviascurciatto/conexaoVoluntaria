@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
@@ -20,8 +21,8 @@ class Campanha extends Model
         'ong_id'
     ];
 
-    public function ong() : HasOne{
-        return $this -> hasOne(Ong::class);
+    public function ong() : BelongsTo{
+        return $this -> belongsTo(Ong::class);
     }
 
     

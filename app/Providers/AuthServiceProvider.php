@@ -3,6 +3,10 @@
 namespace App\Providers;
 
 // use Illuminate\Support\Facades\Gate;
+
+use App\Models\Ong;
+use App\Models\User;
+use Illuminate\Auth\Access\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -21,6 +25,12 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Gate::define('vaga-ong-user', function (User $user, Ong $ong){
+        //     return $user->id === $ong->id;
+        // });
+
+        // Gate::define('vaga-ong-user', function (User $user, Vaga $vaga) {
+        //     return $user->id === $vaga->ong_id;
+        // });
     }
 }

@@ -35,11 +35,15 @@ class VagaOngController extends Controller
     }
 
    
-    public function index(Vaga $vaga)
+    public function index()
     {
-        $vagas = $vaga->all();
+        $vagas = Vaga::with('ong')->get();
+        // $habilidades = Vaga::with('habilidade')->get();
 
-        return view('ong.vaga-ong', compact('vagas'));
+        return view('ong.vaga-ong', [
+            'vagas' => $vagas
+            // 'habilidades' => $habilidades
+        ]);
     }
 
     

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
@@ -21,11 +22,9 @@ class Vaga extends Model
     ];
 
 
-    public function habilidade() : HasOne {
-        return $this-> hasOne(Habilidade::class);
-    }
+  
 
-    public function ong() : HasOne{
-        return $this -> hasOne(Ong::class);
+    public function ong() : BelongsTo{
+    return $this -> belongsTo(Ong::class);
     }
 }
