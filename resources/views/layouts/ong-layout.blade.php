@@ -28,8 +28,10 @@
                                     aria-current="page">Início</a>
                                 <a href="#"
                                     class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
-                                <a href="#"
+                                <a href="{{ route('listar-vaga-ong') }}"
                                     class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Vagas</a>
+                                <a href="{{ route('listar-campanha-ong', ['id'=>1]) }}"
+                                    class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Campanhas</a>
 
                             </div>
                         </div>
@@ -90,9 +92,12 @@
                                     
                                         <a href="{{ route('criar-campanha.create') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="criar-campanha">Criar Campanha</a>
-
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        <form action="" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                        <a href="{{ route('login-ong.destroy', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="sair">Sair</a>
+                                        </form>
 
                                 </div>
                             </div>

@@ -10,14 +10,7 @@ use Illuminate\Http\Request;
 class CampanhaOngController extends Controller
 {
 
-    public function index()
-    {
-        $campanhas = Campanha::with('ong')->get();
-        return view('ong.campanha-ong', [
-            'campanhas' => $campanhas
-        ]);
-    }
-
+    
     /**
      * Show the form for creating a new resource.
      */
@@ -25,7 +18,7 @@ class CampanhaOngController extends Controller
     {
         return view('ong.criar-campanha');
     }
-
+    
     /**
      * Store a newly created resource in storage.
      */
@@ -34,26 +27,27 @@ class CampanhaOngController extends Controller
         $ongs = Ong::all();
         
         foreach ($ongs as $ong)
-        Campanha::create([
+        $campanha = Campanha::create([
         'nomeCampanha' => $request -> nomeCampanha, 
         'encerra_em' => $request ->encerra_em,
         'descricaoCampanha' => $request ->descricaoCampanha,
         'chavePix' => $request ->chavePix,
         'ong_id' => $ong ->id
         ]);
-        
 
-
-        return redirect()->route('campanha-ong');
+        return redirect()->route('campanha-ong', ['campanha' => $campanha->id]);
     }
+  
 
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function index(Campanha $campanha)
     {
-        //
+        $campanhas = $campanha->all();
+        return view('ong.listar-campanha', compact('campanhas'));
+    }
+    
+    public function show(Campanha $campanha)
+    {
+        return view('ong.campanha-ong', ['campanha' => $campanha]);
     }
 
     /**

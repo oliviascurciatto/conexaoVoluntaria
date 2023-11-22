@@ -11,21 +11,9 @@ use Illuminate\Http\Request;
 
 class PerfilOngController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index(Ong $ong, Vaga $vaga, Campanha $campanha)
-    {
-        $ongs = $ong->all();
-        $vagas = $vaga->all();
-        $campanhas = $campanha->all();
-        return view('ong.perfil-ong', compact('ongs', 'vagas', 'campanhas'));
+   
+    
 
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('ong.criar-perfil-ong');
@@ -57,23 +45,29 @@ class PerfilOngController extends Controller
         
        
 
-        return redirect()->route('login-ong');
+        return redirect()->route('/login-ong');
+    }
+
+    public function index(Ong $ong)
+    {
+        return view('ong.perfil-ong', ['ong' => $ong->id]);
+
     }
 
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(Ong $ong)
     {
-        return view('ong.edit-perfil-ong');
+        // return view('ong.perfil-ong', ['ong' => $ong->id]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function showEdit()
     {
-        
+        return view('ong.edit-perfil-ong');
     }
 
     /**

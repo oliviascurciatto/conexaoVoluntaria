@@ -22,7 +22,7 @@ class VagaOngController extends Controller
         $ongs = Ong::all();
         
         foreach ($ongs as $ong);
-        Vaga::create([
+        $vaga = Vaga::create([
         'nomeVaga' => $request -> nomeVaga,
         'quantidade' => $request ->quantidade, 
         'encerra_em' => $request ->encerra_em,
@@ -31,19 +31,19 @@ class VagaOngController extends Controller
         'ong_id' => $ong->id
         ]);
         
-        return redirect()->route('vaga-ong.index');
+        return redirect()->route('vaga-ong.index', ['vaga' => $vaga->id]);
     }
 
    
-    public function index()
+    public function index(Vaga $vaga)
     {
-        $vagas = Vaga::with('ong')->get();
-        // $habilidades = Vaga::with('habilidade')->get();
+        $vagas = $vaga->all();
+        return view('ong.listar-vagas', compact('vagas'));
+    }
 
-        return view('ong.vaga-ong', [
-            'vagas' => $vagas
-            // 'habilidades' => $habilidades
-        ]);
+    public function show(Vaga $vaga)
+    {
+        return view('ong.vaga-ong', ['vaga' => $vaga]);
     }
 
     
@@ -58,9 +58,4 @@ class VagaOngController extends Controller
         //
     }
 
-    
-    public function destroy(string $id)
-    {
-        //
-    }
 }

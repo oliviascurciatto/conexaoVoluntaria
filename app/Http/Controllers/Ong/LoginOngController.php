@@ -40,6 +40,16 @@ class LoginOngController extends Controller
         ])->onlyInput('email');
     }
 
+    public function destroy()
+{
+    Auth::logout();
+
+    request()->session()->invalidate();
+    request()->session()->regenerateToken();
+
+    return redirect('/login-ong');
+}
+
 
 
 }

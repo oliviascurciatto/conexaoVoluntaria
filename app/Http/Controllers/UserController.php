@@ -21,14 +21,20 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        User::create([
+        $user = User::create([
             'email' => $request -> email,
             'password' => $request -> password,
             'tipo_user_id' => $request -> tipoUser,
         ]);
 
+        
         return redirect()->route('criar-perfil-ong.create');
         
+        // if ($user->tipo_user_id = 1) {
+        //     return view('ong.criar-perfil-ong');
+        // }else{
+        //     return view('voluntario.criar-perfil-voluntario');
+        // }
     }
 
     

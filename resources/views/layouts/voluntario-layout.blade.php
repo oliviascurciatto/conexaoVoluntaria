@@ -26,7 +26,7 @@
                                 <a href="{{ route('home-voluntario', ['id'=>1]) }}"
                                     class="bg-orange-500 text-white hover:bg-green-400 rounded-md px-3 py-2 text-sm font-medium"
                                     aria-current="page">Início</a>
-                                <a href="#"
+                                <a href="{{ route('listar-ong-voluntario', ['id'=>1]) }}"
                                     class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
                                 <a href="{{ route('listar-vagas', ['id'=>1]) }}"
                                     class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Vagas</a>
@@ -88,9 +88,12 @@
 
                                     <a href="{{ route('minhas-vagas', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="vagas">Minhas Vagas</a>
-
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        <form action="" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                        <a href="{{ route('login-voluntario.destroy') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="sair">Sair</a>
+                                        </form>
 
                                 </div>
                             </div>

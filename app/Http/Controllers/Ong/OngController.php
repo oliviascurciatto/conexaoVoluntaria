@@ -22,16 +22,8 @@ class OngController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function listarCampanha(Campanha $campanha)
-    {
-        $campanhas = $campanha->all();
-        return view('ong.listar-campanha', compact('campanhas'));
-    }
-    public function listarVaga(Vaga $vaga)
-    {
-        $vagas = $vaga->all();
-        return view('ong.listar-vagas', compact('vagas'));
-    }
+    
+    
 
     public function listarVoluntarios(Voluntario $voluntario)
     {
