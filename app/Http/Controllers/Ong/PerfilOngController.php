@@ -45,17 +45,17 @@ class PerfilOngController extends Controller
         
        
 
-        return view('ong.login-ong');
+        return view('ong.perfil-ong');
     }
 
-    // public function index(Ong $ong)
-    // {
+    public function index(Ong $ong)
+    {
        
-    //     $ongs = $ong->all();
-    //     return view('ong.perfil-ong', compact('ongs'));
+        $ongs = $ong->all();
+        return view('ong.perfil-ong', compact('ongs'));
         
 
-    // }
+    }
 
     /**
      * Display the specified resource.

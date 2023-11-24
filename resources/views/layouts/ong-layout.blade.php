@@ -81,7 +81,7 @@
                                     role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
                                     tabindex="-1">
                                     <!-- Active: "bg-gray-100", Not Active: "" -->
-                                    <a href="{{ route('perfil-ong', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                    <a href="{{ route('perfil-ong.show', ['ong'=>$ong->id]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="perfil">Perfil</a>
 
                                     <a href="{{ route('edit-perfil-ong.show', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"

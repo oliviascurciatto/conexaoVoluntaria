@@ -32,7 +32,7 @@ class LoginOngController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
  
-            return redirect()->intended('/perfil-ong');
+            return redirect()->intended('/criar-perfil-ong');
         }
  
         return back()->withErrors([

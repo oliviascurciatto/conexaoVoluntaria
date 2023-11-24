@@ -28,7 +28,7 @@ class UserController extends Controller
         ]);
 
         
-        return redirect()->route('criar-perfil-ong.create');
+        return redirect()->route('login-ong');
         
         // if ($user->tipo_user_id = 1) {
         //     return view('ong.criar-perfil-ong');
