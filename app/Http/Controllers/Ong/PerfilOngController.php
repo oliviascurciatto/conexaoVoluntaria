@@ -27,7 +27,7 @@ class PerfilOngController extends Controller
         $users = User::all();
     
         foreach ($users as $user);
-        Ong::create([
+        $ong = Ong::create([
         'nomeOng' => $request -> nomeOng, 
         'cnpj' => $request ->cnpj,
         'image' => $request ->image,
@@ -45,29 +45,18 @@ class PerfilOngController extends Controller
         
        
 
-        return view('ong.perfil-ong');
+        return redirect()->route('perfil-ong.show', ['ong' => $ong->id]);
     }
 
-    public function index(Ong $ong)
-    {
-       
-        $ongs = $ong->all();
-        return view('ong.perfil-ong', compact('ongs'));
-        
-
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(Ong $ong, Vaga $vaga, Campanha $campanha)
     {
-        return view('ong.perfil-ong', ['ong' => $ong->id, 'vaga' => $vaga->id, 'campanha' => $campanha->id]);
+        $vagas = Vaga::all();
+        foreach ($vagas as $vaga)
+        $campanhas = Campanha::all();
+        foreach ($campanhas as $campanha)
+        return view('ong.perfil-ong', ['ong' => $ong], compact('vaga', 'campanha'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function showEdit()
     {
         return view('ong.edit-perfil-ong');

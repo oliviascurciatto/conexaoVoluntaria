@@ -12,9 +12,11 @@ class VagaOngController extends Controller
     
     public function create()
     {
-        return view('ong.criar-vaga');
+        $ongs = Ong::all();
+        
+        foreach ($ongs as $ong);
+        return view('ong.criar-vaga', compact('ong'));
     }
-
     
     public function store(Request $request)
     {
@@ -31,19 +33,21 @@ class VagaOngController extends Controller
         'ong_id' => $ong->id
         ]);
         
-        return redirect()->route('vaga-ong.index', ['vaga' => $vaga->id]);
+        return redirect()->route('vaga-ong.show', ['vaga' => $vaga->id]);
     }
-
-   
+    
     public function index(Vaga $vaga)
     {
         $vagas = $vaga->all();
         return view('ong.listar-vagas', compact('vagas'));
     }
 
-    public function show(Vaga $vaga)
+    public function show(Vaga $vaga, Ong $ong)
     {
-        return view('ong.vaga-ong', ['vaga' => $vaga]);
+        $ongs = Ong::all();
+        
+        foreach ($ongs as $ong);
+        return view('ong.vaga-ong', ['vaga' => $vaga], compact('ong'));
     }
 
     

@@ -97,7 +97,7 @@ Route::controller(CadastroOngController::class)->group(function(){
 });
 
 Route::controller(PerfilOngController::class)->group(function (){
-    Route::get('/perfil-ong/', 'index')->name('perfil-ong');
+    //Route::get('/perfil-ong', 'index')->name('perfil-ong');
     Route::get('/perfil-ong/{ong}', 'show')->name('perfil-ong.show');
     Route::get('/edit-perfil-ong/{id?}', 'showEdit')->name('edit-perfil-ong.show');
     Route::post('/edit-perfil-ong/{id?}', 'edit')->name('edit-perfil-ong.edit');
@@ -114,7 +114,7 @@ Route::controller(VagaOngController::class)->group(function(){
 });
 
 Route::controller(CampanhaOngController::class)->group(function(){
-    Route::get('/campanha-ong/{campanha}', 'show')->name('campanha-ong');
+    Route::get('/campanha-ong/{campanha?}', 'show')->name('campanha-ong');
     Route::get('/criar-campanha', 'create')->name('criar-campanha.create');
     Route::post('/criar-campanha', 'store')->name('criar-campanha.store');
     Route::get('/edit-campanha', 'edit')->name('edit-campanha');

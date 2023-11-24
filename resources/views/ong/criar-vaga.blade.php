@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="ml-10 mr-10 border-b border-gray-900/10 pb-12">
-                    <a href="{{ route('perfil-ong', ['id'=>1]) }}" id="cancelar"
+                    <a href="#" id="cancelar"
                         class="inline-flex justify-center hover:text-gray-700 items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg border border-orange-500 hover:bg-orange-500 focus:ring-4 focus:ring-gray-400"
                         name="cancelar">Cancelar</a>
                     <button type="submit" id="salvar"
