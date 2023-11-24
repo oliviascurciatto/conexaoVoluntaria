@@ -97,7 +97,7 @@ Route::controller(CadastroOngController::class)->group(function(){
 });
 
 Route::controller(PerfilOngController::class)->group(function (){
-    Route::get('/perfil-ong', 'index')->name('perfil-ong');
+    Route::get('/perfil-ong/{ong}', 'index')->name('perfil-ong.index');
     Route::get('/perfil-ong/{ong}', 'show')->name('perfil-ong.show');
     Route::get('/edit-perfil-ong/{id?}', 'showEdit')->name('edit-perfil-ong.show');
     Route::post('/edit-perfil-ong/{id?}', 'edit')->name('edit-perfil-ong.edit');

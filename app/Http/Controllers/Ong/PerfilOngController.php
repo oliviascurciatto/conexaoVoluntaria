@@ -45,21 +45,24 @@ class PerfilOngController extends Controller
         
        
 
-        return redirect()->route('/login-ong');
+        return view('ong.login-ong');
     }
 
-    public function index(Ong $ong)
-    {
-        return view('ong.perfil-ong', ['ong' => $ong->id]);
+    // public function index(Ong $ong)
+    // {
+       
+    //     $ongs = $ong->all();
+    //     return view('ong.perfil-ong', compact('ongs'));
+        
 
-    }
+    // }
 
     /**
      * Display the specified resource.
      */
-    public function show(Ong $ong)
+    public function show(Ong $ong, Vaga $vaga, Campanha $campanha)
     {
-        // return view('ong.perfil-ong', ['ong' => $ong->id]);
+        return view('ong.perfil-ong', ['ong' => $ong->id, 'vaga' => $vaga->id, 'campanha' => $campanha->id]);
     }
 
     /**

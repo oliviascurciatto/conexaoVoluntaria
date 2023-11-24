@@ -6,29 +6,30 @@
 
 
 
-        <div class="items-center my-6 flex flex-col 2xl:flex-row space-y-8 2xl:space-y-0 2xl:space-x-8 bg-white">
-            <div class="w-full flex flex-col 2xl:w-1/3">
-                <div class="flex-1 bg-white  p-8 items-center">
-                    <h4 class="mt-8 text-xl text-gray-900 font-bold">{{$ong->nomeOng}}</h4> 
-                </div>
-
-            </div>
-            <div class="w-full flex flex-col 2xl:w-1/3">
-                <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
+    
+<div class="items-center my-6 flex flex-col 2xl:flex-row space-y-8 2xl:space-y-0 2xl:space-x-8 bg-white">
+    <div class="w-full flex flex-col 2xl:w-1/3">
+        <div class="flex-1 bg-white  p-8 items-center">
+            <h4 class="mt-8 text-xl text-gray-900 font-bold">{{$ong->nomeOng}}</h4> 
+        </div>
+        
+    </div>
+    <div class="w-full flex flex-col 2xl:w-1/3">
+        <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
                     <figure class="max-w-lg">
                         <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-500" src="" alt="image description">
-                      </figure>
+                    </figure>
                     <h4 class="mt-8 text-xl text-gray-900 font-bold">Sobre Nós</h4>
                     <p class="mt-2 text-gray-700">{{$ong->sobre}}</p>
                 </div>
 
             </div>
-
+            
             <div class="w-full flex flex-col 2xl:w-1/3">
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
                     <h4 class="text-xl text-gray-900 font-bold">Informações</h4>
                     <ul class="mt-2 text-gray-700">
-
+                        
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">Telefone:</span>
                             <span class="text-gray-700">{{$ong->telefone}}</span>
@@ -47,20 +48,19 @@
                             <span class="text-gray-700">Estado: {{$ong->estado}} &nbsp;</span>
                         </li>
                     </ul>
-
-
+                    
+                    
                 </div>
             </div>
+ 
             
 
-            
-                
-            
+               
             <div class="mt-4 w-full flex flex-col 2xl:w-1/3 ">
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
                     <h4 class="text-xl text-gray-700 font-bold">Vagas</h4>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        @foreach ($vagas as $vaga)
+                        
                     <div class="mt-2 max-w-sm rounded-lg shadow-2xl  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-100 dark:hover:bg-gray-300">
                         <div class="p-5">
                             <a href="#">
@@ -78,7 +78,7 @@
                             </a>
                         </div>
                     </div>
-                    @endforeach
+                    
                 </div>
 
 
@@ -90,7 +90,7 @@
             <div class="w-full flex flex-col 2xl:w-1/3">
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
                     <h4 class="text-xl text-gray-700 font-bold">Campanhas</h4>
-                    @foreach ($campanhas as $campanha)
+                    
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             
                         <a href="{{ route('campanha-ong', ['campanha' => $campanha->id]) }}"
@@ -102,7 +102,7 @@
                                     </div>
                                 </a> 
                             </div>
-                            @endforeach
+                           
                             
                 </div>
             </div>
