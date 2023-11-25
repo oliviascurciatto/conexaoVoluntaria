@@ -1,4 +1,4 @@
-@extends('layouts.layout-geral')
+@extends('layouts.ong-layout')
 @section('title', 'Criar Perfil')
 
 @section('content')

@@ -50,11 +50,8 @@ class PerfilOngController extends Controller
 
     public function show(Ong $ong, Vaga $vaga, Campanha $campanha)
     {
-        $vagas = Vaga::all();
-        foreach ($vagas as $vaga)
-        $campanhas = Campanha::all();
-        foreach ($campanhas as $campanha)
-        return view('ong.perfil-ong', ['ong' => $ong], compact('vaga', 'campanha'));
+        
+        return view('ong.perfil-ong', ['ong' => $ong]);
     }
 
     public function showEdit()

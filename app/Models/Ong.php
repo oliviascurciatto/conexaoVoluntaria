@@ -44,10 +44,6 @@ class Ong extends Authenticatable
     public function causa() : HasOne {
         return $this -> hasOne(Causa::class);
     }
-    
-    public function user() : HasOne {
-        return $this -> hasOne(User::class);
-    }
 
     public function campanha() : HasMany{
         return $this -> hasMany(Campanha::class);

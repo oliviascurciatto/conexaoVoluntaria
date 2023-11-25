@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('ongs', function (Blueprint $table) {
             $table->id();
             $table->string('nomeOng');
-            $table->string('cnpj');
+            $table->string('cnpj')->unique();
             $table->string('imagem')->nullable();
             $table->text  ('sobre')->nullable();
             $table->string('telefone');

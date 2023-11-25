@@ -82,12 +82,10 @@
                                     class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                                     role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
                                     tabindex="-1">
-                                    {{-- @foreach ($ongs as $ong) --}}
-                                        
+                                    @if (isset($ong))
                                     <a href="{{ route('perfil-ong.show', ['ong'=>$ong->id]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                        tabindex="-1" id="perfil">Perfil</a>
-                                        {{-- @endforeach --}}
-                                        
+                                        tabindex="-1" id="perfil">Perfil</a> 
+                                        @endif 
                                     <a href="{{ route('edit-perfil-ong.show', ['id'=>1]) }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                         tabindex="-1" id="edit-perfil">Editar Perfil</a>
 

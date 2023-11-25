@@ -1,4 +1,4 @@
-@extends('layouts.ong-layout')
+@extends('layouts.ong-layout', ['ong' => $ong->id])
 @section('title')
 
 @section('content')

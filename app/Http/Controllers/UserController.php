@@ -28,13 +28,12 @@ class UserController extends Controller
         ]);
 
         
-        return redirect()->route('login-ong');
-        
-        // if ($user->tipo_user_id = 1) {
-        //     return view('ong.criar-perfil-ong');
-        // }else{
-        //     return view('voluntario.criar-perfil-voluntario');
-        // }
+        if ($user->tipo_user_id == 1) {
+            return redirect()->route('login-ong');
+        } else {
+            return redirect()->route('login-voluntario.create');
+        }
+    
     }
 
     
