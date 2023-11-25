@@ -60,6 +60,9 @@
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
                     <h4 class="text-xl text-gray-700 font-bold">Vagas</h4>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                       
+                        @foreach ($vagas as $vaga)
+                            
                         
                     <div class="mt-2 max-w-sm rounded-lg shadow-2xl  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-100 dark:hover:bg-gray-300">
                         <div class="p-5">
@@ -67,7 +70,7 @@
                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-700">
                                     {{$vaga->nomeVaga}}</h5>
                             </a>
-                            <a href="{{ route('vaga-ong.show', ['vaga'=>$vaga->id]) }}"
+                            <a href="{{ route('vaga-ong.show') }}"
                                 class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-orange-500 dark:hover:bg-green-500 dark:focus:ring-green-500">
                                 Ver vaga
                                 <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -78,6 +81,7 @@
                             </a>
                         </div>
                     </div>
+                    @endforeach
                     
                 </div>
 
@@ -91,19 +95,22 @@
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
                     <h4 class="text-xl text-gray-700 font-bold">Campanhas</h4>
                     
+                    @foreach ($campanhas as $campanhas)
+                        
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            
+                        
                         <a href="{{ route('campanha-ong', ['campanha' => $campanha->id]) }}"
                             class="mt-2 flex flex-col items-center bg-white border-separate rounded-lg shadow-2xl md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-100 dark:hover:bg-gray-300">
                             <div class="flex flex-col justify-between p-4 leading-normal">
                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-700">
                                     {{$campanha->nomeCampanha}}</h5>
                                     
-                                    </div>
-                                </a> 
-                            </div>
+                                </div>
+                            </a> 
+                        </div>
+                        @endforeach
                            
-                            
+                        
                 </div>
             </div>
         </div>    

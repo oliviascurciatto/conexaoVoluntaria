@@ -17,6 +17,7 @@ use App\Models\Cidade;
 use App\Models\Genero;
 use App\Models\Vaga;
 use Illuminate\Auth\Events\Login;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -97,7 +98,7 @@ Route::controller(CadastroOngController::class)->group(function(){
 });
 
 Route::controller(PerfilOngController::class)->group(function (){
-    Route::get('/perfil-ong/{ong}', 'show')->name('perfil-ong.show');
+    Route::get('/perfil-ong/{ong?}', 'show')->name('perfil-ong.show');
     Route::get('/edit-perfil-ong/{id?}', 'showEdit')->name('edit-perfil-ong.show');
     Route::post('/edit-perfil-ong/{id?}', 'edit')->name('edit-perfil-ong.edit');
     Route::get('/criar-perfil-ong', 'create')->name('criar-perfil-ong.create');
@@ -105,7 +106,7 @@ Route::controller(PerfilOngController::class)->group(function (){
 });
 
 Route::controller(VagaOngController::class)->group(function(){
-    Route::get('/vaga-ong/{vaga}', 'show')->name('vaga-ong.show');
+    Route::get('/vaga-ong/{vaga?}', 'show')->name('vaga-ong.show');
     Route::get('/criar-vaga', 'create')->name('criar-vaga.create');
     Route::post('/criar-vaga', 'store')->name('criar-vaga.store');
     Route::get('/edit-vaga/{id?}', 'edit')->name('edit-vaga');

@@ -21,9 +21,6 @@ class Vaga extends Model
         'ong_id'
     ];
 
-
-  
-
     public function ong() : BelongsTo{
     return $this -> belongsTo(Ong::class);
     }

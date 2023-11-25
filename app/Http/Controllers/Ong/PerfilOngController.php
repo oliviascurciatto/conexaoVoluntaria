@@ -50,8 +50,14 @@ class PerfilOngController extends Controller
 
     public function show(Ong $ong, Vaga $vaga, Campanha $campanha)
     {
-        
-        return view('ong.perfil-ong', ['ong' => $ong]);
+        $vagas = Vaga::where('ong_id', $ong->id)->get();
+        $campanhas = Campanha::where('ong_id', $ong->id)->get();
+
+        return view('ong.perfil-ong', [
+        'ong' => $ong,
+        'vagas' => $vagas,
+        'campanhas' => $campanhas
+    ]);
     }
 
     public function showEdit()
