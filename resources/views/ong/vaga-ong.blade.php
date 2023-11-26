@@ -1,6 +1,8 @@
 @extends('layouts.ong-layout')
 @section('title')
 @section('content')
+@foreach ($vagas as $vaga)
+    
 
         <div class="items-center my-0 flex flex-col 2xl:flex-row space-y- 2xl:space-y-0 2xl:space-x-4 bg-white">
             <div class="w-8/12 flex flex-col 2xl:w-1/3">
@@ -38,4 +40,5 @@
                     </div>
                 </div>
         </div>
+        @endforeach
 @endsection

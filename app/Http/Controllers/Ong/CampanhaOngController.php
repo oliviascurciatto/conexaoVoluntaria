@@ -50,9 +50,9 @@ class CampanhaOngController extends Controller
     
     public function show(Campanha $campanha)
     {
-        $ongs = Ong::all();
-        foreach($ongs as $ong);
-        return view('ong.campanha-ong', ['campanha' => $campanha], compact('ong'));
+        $ongs = Ong::find(1)->get();
+        $campanhas = Campanha::find(1)->get();
+        return view('ong.campanha-ong', ['campanha' => $campanha], compact('ongs', 'campanhas'));
     }
 
     /**
