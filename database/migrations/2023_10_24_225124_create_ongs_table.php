@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('bairro')->nullable();
             $table->string('cidade');
             $table->string('estado');
-            $table->foreignIdFor(\App\Models\Causa::class)->nullable()->constrained();
-            $table->foreignIdFor(\App\Models\User::class)->constrained();
+            $table->foreignIdFor(\App\Models\Causa::class)->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');;
+            $table->foreignIdFor(\App\Models\User::class)->constrained()->onDelete('cascade')->onUpdate('cascade');;
             $table->timestamps();
         });
     }

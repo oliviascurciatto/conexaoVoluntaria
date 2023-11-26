@@ -16,7 +16,10 @@ class CampanhaOngController extends Controller
      */
     public function create(Request $request)
     {
-        return view('ong.criar-campanha');
+        $ongs = Ong::all();
+        
+        foreach ($ongs as $ong);
+        return view('ong.criar-campanha', compact('ong'));
     }
     
     /**
@@ -47,7 +50,9 @@ class CampanhaOngController extends Controller
     
     public function show(Campanha $campanha)
     {
-        return view('ong.campanha-ong', ['campanha' => $campanha]);
+        $ongs = Ong::all();
+        foreach($ongs as $ong);
+        return view('ong.campanha-ong', ['campanha' => $campanha], compact('ong'));
     }
 
     /**

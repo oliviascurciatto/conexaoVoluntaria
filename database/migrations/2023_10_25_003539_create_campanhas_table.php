@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('descricaoCampanha')->nullable();
             $table->dateTime('encerra_em');
             $table->string('chavePix');
-            $table->foreignIdFor(\App\Models\Ong::class)->constrained();
+            $table->foreignIdFor(\App\Models\Ong::class)->constrained()->onDelete('cascade')->onUpdate('cascade');;
             $table->timestamps();
         });
     }

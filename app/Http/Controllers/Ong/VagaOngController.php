@@ -44,7 +44,9 @@ class VagaOngController extends Controller
 
     public function show(Vaga $vaga)
     {
-        $ong = Ong::all();
+        $ongs = Ong::all();
+        foreach($ongs as $ong);
+        
         return view('ong.vaga-ong', ['vaga' => $vaga], compact('ong'));
     }
 
