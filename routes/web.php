@@ -70,16 +70,15 @@ Route::controller(CadastroVoluntarioController::class)->group(function () {
 Route::controller(VagaVoluntarioController::class)->group(function () {
     Route::get('/vaga-voluntario/{id?}', 'index')->name('vaga-voluntario');
     Route::get('/minhas-vagas/{id?}', 'show')->name('minhas-vagas');
-    Route::get('/listar-vagas/{id?}', 'listar')->name('listar-vagas');
 });
 
 Route::controller(VoluntarioController::class)->group(function(){
     Route::get('/home-voluntario/{id?}', 'home')->name('home-voluntario');
-    Route::get('/ong-voluntario/{id?}', 'verOng')->name('ong-voluntario');
+    Route::get('/ong-voluntario/{ong}', 'verOng')->name('ong-voluntario');
     Route::get('/campanha-voluntario', 'verCampanha')->name('campanha-voluntario');
-    Route::get('/voluntario/listar-ong/{id?}', 'listarOng')->name('listar-ong-voluntario');
+    Route::get('/voluntario/listar-ong/{voluntario}', 'listarOng')->name('listar-ong-voluntario');
     Route::get('/voluntario/listar-campanha/{id?}', 'listarCampanha')->name('listar-campanha-voluntario');
-    Route::get('/voluntario/listar-vaga/{id?}', 'listarVaga')->name('listar-vaga-voluntario');
+    Route::get('voluntario/listar-vagas/{voluntario}', 'listarVaga')->name('listar-vaga-voluntario');
 });
 
 

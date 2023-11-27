@@ -2,7 +2,7 @@
 @section('title', 'Criar Cadastro')
 
 @section('content')
-        <form action="{{ route('criar-cadastro-voluntario.store') }}" method="POST">
+        <form action="{{ route('criar-perfil-voluntario.store') }}" method="POST">
             @csrf
             <div class="bg-white space-y-12">
                 <div class="bg-white ml-10 mr-10 border-b border-gray-900/10 pb-12">
@@ -48,7 +48,7 @@
                         <div class="mt-4 sm:col-span-2">
                             <label  class="block text-sm font-medium leading-6 text-gray-900">CPF</label>
                             <div class="mt-2">
-                                <input type="number" required name="cpf" id="cpf" 
+                                <input type="text" required name="cpf" id="cpf" 
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
@@ -136,20 +136,6 @@
                                     <option value="8">Tecnologia</option>
                                     <option value="9">Outros</option>
                                 </select>
-                            </div>
-                        </div>
-                        <div class="mt-4 sm:col-span-2">
-                            <label  class="block text-sm font-medium leading-6 text-gray-900">Criar senha</label>
-                            <div class="mt-2">
-                                <input type="password" required name="password" id="password" autocomplete="password"
-                                    class="block w-32 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                            </div>
-                        </div>
-                        <div class="mt-4 sm:col-span-2">
-                            <label  class="block text-sm font-medium leading-6 text-gray-900">Confirmar senha</label>
-                            <div class="mt-2">
-                                <input type="password_confirm" name="password_confirm" id="password_confirm" autocomplete="password"
-                                    class="block w-32 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
                     </div>

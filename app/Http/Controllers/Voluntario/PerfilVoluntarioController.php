@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Voluntario;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+
 
 class PerfilVoluntarioController extends Controller
 {
@@ -50,7 +50,7 @@ class PerfilVoluntarioController extends Controller
      */
     public function show(Voluntario $voluntario)
     {
-        return view('voluntario.perfil-voluntario', ['voluntario'=>$voluntario->id]);
+        return view('voluntario.perfil-voluntario', ['voluntario'=>$voluntario]);
     }
 
     

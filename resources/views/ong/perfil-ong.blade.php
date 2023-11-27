@@ -17,7 +17,7 @@
     <div class="w-full flex flex-col 2xl:w-1/3">
         <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
                     <figure class="max-w-lg">
-                        <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-500" src="" alt="image description">
+                        <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-500"  alt="image description">
                     </figure>
                     <h4 class="mt-8 text-xl text-gray-900 font-bold">Sobre Nós</h4>
                     <p class="mt-2 text-gray-700">{{$ong->sobre}}</p>

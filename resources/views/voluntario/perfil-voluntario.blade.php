@@ -10,7 +10,7 @@
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
                     <div class="flex items-center gap-x-6">
                         <img class="h-29 w-29 rounded-lg items-start"
-                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            
                             alt="">
                     </div>
                     <h4 class="text-xl text-gray-700 font-bold">Dados Pessoais</h4>
@@ -21,7 +21,7 @@
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">Celular:</span>
-                            <span class="text-gray-700">{{$voluntario-telefone>}}</span>
+                            <span class="text-gray-700">{{$voluntario->telefone}}</span>
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">E-mail:</span>
@@ -34,7 +34,7 @@
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">Habilidades:</span>
-                            <span class="text-gray-700">{{$voluntario->}}</span>
+                            <span class="text-gray-700">{{$voluntario->habilidade_id}}</span>
                         </li>
                     </ul>
                 </div>
