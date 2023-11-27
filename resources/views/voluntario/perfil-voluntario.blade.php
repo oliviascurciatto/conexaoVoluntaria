@@ -17,23 +17,24 @@
                     <ul class="mt-2 text-gray-700">
                         <li class="flex border-y py-2">
                             <span class="font-bold w-24">Nome:</span>
-                            <span class="text-gray-700">Amanda S. Ross</span>
+                            <span class="text-gray-700">{{$voluntario->nome}}</span>
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">Celular:</span>
-                            <span class="text-gray-700">(123) 123-1234</span>
+                            <span class="text-gray-700">{{$voluntario-telefone>}}</span>
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">E-mail:</span>
-                            <span class="text-gray-700">amandaross@example.com</span>
+                            <span class="text-gray-700"></span>
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">Endereço:</span>
-                            <span class="text-gray-700">Santa Fé do Sul, São Paulo</span>
+                            <span class="text-gray-700">Cidade:{{$voluntario->cidade}}</span>
+                            <span class="text-gray-700">Estado:{{$voluntario->estado}}</span>
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">Habilidades:</span>
-                            <span class="text-gray-700">Programação</span>
+                            <span class="text-gray-700">{{$voluntario->}}</span>
                         </li>
                     </ul>
                 </div>
@@ -41,12 +42,7 @@
             <div class="flex flex-col w-full 2xl:w-2/3">
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
                     <h4 class="text-xl text-gray-700 font-bold">Sobre</h4>
-                    <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                        voluptates obcaecati numquam error et ut fugiat asperiores. Sunt nulla ad incidunt
-                        laboriosam,
-                        laudantium est unde natus cum numquam, neque facere. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Ut, magni odio magnam commodi sunt ipsum eum! Voluptas eveniet aperiam at
-                        maxime, iste id dicta autem odio laudantium eligendi commodi distinctio!</p>
+                    <p class="mt-2 text-gray-700">{{$voluntario->sobre}}</p>
                 </div>
             </div>
         </div>

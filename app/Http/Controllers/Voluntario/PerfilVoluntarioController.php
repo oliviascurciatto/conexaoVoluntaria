@@ -2,61 +2,68 @@
 
 namespace App\Http\Controllers\Voluntario;
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use App\Models\Voluntario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class PerfilVoluntarioController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
-        return view('voluntario.perfil-voluntario');
+        
     }
 
    
     public function create()
     {
-    
+        return view('voluntario.criar-perfil-voluntario');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    
     public function store(Request $request)
     {
-        //
+        
+        $users = User::all();
+    
+        foreach ($users as $user);
+        $voluntario = Voluntario::create([
+        'nome' => $request -> nome, 
+        'cpf' => $request ->cpf,
+        'imagem' => $request ->imagem,
+        'sobre' => $request -> sobre,
+        'telefone' => $request ->telefone,
+        'cidade' => $request ->cidade,
+        'estado' => $request ->estado,
+        'genero_id' => $request ->genero,
+        'habilidade_id' => $request ->habilidade,
+        'user_id'=> $user->id
+        ]);
+                
+
+        return redirect()->route('perfil-voluntario.show', ['voluntario'=> $voluntario->id]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Voluntario $voluntario)
     {
-        //
+        return view('voluntario.perfil-voluntario', ['voluntario'=>$voluntario->id]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    
     public function edit()
     {
         return view('voluntario.edit-perfil-voluntario');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    
     public function update(Request $request, string $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+    
 }

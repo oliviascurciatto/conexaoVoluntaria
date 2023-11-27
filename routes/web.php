@@ -48,7 +48,9 @@ Route::controller(UserController::class)->group(function(){
 /*----- Rotas Voluntario -----*/
 
 Route::controller(PerfilVoluntarioController::class)->group(function () {
-    Route::get('/perfil-voluntario/{id?}', 'index')->name('perfil-voluntario');
+    Route::get('/criar-perfil-voluntario', 'create')->name('criar-perfil-voluntario.create');
+    Route::post('/criar-perfil-voluntario', 'store')->name('criar-perfil-voluntario.store');
+    Route::get('/perfil-voluntario/{voluntario}', 'show')->name('perfil-voluntario.show');
     Route::get('/edit-perfil-voluntario/{id?}', 'edit')->name('edit-perfil-voluntario');
 });
 
@@ -60,10 +62,10 @@ Route::controller(LoginVoluntarioController::class)->group(function () {
 Route::delete('/login-voluntario', [LoginVoluntarioController::class, 'destroy'])->name('login-voluntario.destroy');
 
 Route::controller(CadastroVoluntarioController::class)->group(function () {
-    Route::get('/criar-perfil-voluntario', 'index')->name('criar-perfil-voluntario.index');
+    
 });
 
-Route::post('/criar-cadastro-voluntario', [CadastroVoluntarioController::class, 'store'])->name('criar-cadastro-voluntario.store');
+
 
 Route::controller(VagaVoluntarioController::class)->group(function () {
     Route::get('/vaga-voluntario/{id?}', 'index')->name('vaga-voluntario');

@@ -44,8 +44,11 @@ class CampanhaOngController extends Controller
 
     public function index(Campanha $campanha)
     {
+        $ongs = Ong::all();
+        
+        foreach ($ongs as $ong);
         $campanhas = $campanha->all();
-        return view('ong.listar-campanha', compact('campanhas'));
+        return view('ong.listar-campanha', compact('campanhas', 'ong'));
     }
     
     public function show(Campanha $campanha)
