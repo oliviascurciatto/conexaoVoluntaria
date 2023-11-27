@@ -7,7 +7,7 @@
         <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
             <div class="w-full flex flex-col 2xl:w-1/3">
                 <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
-                    @foreach ($campanhas as $campanha)
+                    
                         
                    
                     <h4 class="mt-0 mb-6 text-xl text-gray-700 underline font-bold text-center">{{$campanha->nomeCampanha}}</h4>
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                     </div> 
-                    @endforeach       
+                          
                 </div>
             </div>
         </div>

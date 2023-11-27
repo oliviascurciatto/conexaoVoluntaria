@@ -8,6 +8,7 @@ use App\Http\Controllers\Ong\OngController;
 use App\Http\Controllers\Ong\PerfilOngController;
 use App\Http\Controllers\Ong\VagaOngController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VagaController;
 use App\Http\Controllers\Voluntario\CadastroVoluntarioController;
 use App\Http\Controllers\Voluntario\LoginVoluntarioController;
 use App\Http\Controllers\Voluntario\PerfilVoluntarioController;
@@ -67,18 +68,17 @@ Route::controller(CadastroVoluntarioController::class)->group(function () {
 
 
 
-Route::controller(VagaVoluntarioController::class)->group(function () {
-    Route::get('/vaga-voluntario/{id?}', 'index')->name('vaga-voluntario');
-    Route::get('/minhas-vagas/{id?}', 'show')->name('minhas-vagas');
-});
 
 Route::controller(VoluntarioController::class)->group(function(){
+    Route::get('/vaga-voluntario/{vaga}', 'verVaga')->name('vaga-voluntario');
+    Route::post('/vaga-voluntario/{vaga}', 'addVoluntario')->name('vaga-voluntario.add');
     Route::get('/home-voluntario/{id?}', 'home')->name('home-voluntario');
     Route::get('/ong-voluntario/{ong}', 'verOng')->name('ong-voluntario');
-    Route::get('/campanha-voluntario', 'verCampanha')->name('campanha-voluntario');
+    Route::get('/campanha-voluntario/{campanha}', 'verCampanha')->name('campanha-voluntario');
     Route::get('/voluntario/listar-ong/{voluntario}', 'listarOng')->name('listar-ong-voluntario');
-    Route::get('/voluntario/listar-campanha/{id?}', 'listarCampanha')->name('listar-campanha-voluntario');
-    Route::get('voluntario/listar-vagas/{voluntario}', 'listarVaga')->name('listar-vaga-voluntario');
+    Route::get('/listar-vagas/{voluntario}', 'listarVaga')->name('listar-vaga-voluntario');
+    Route::get('/listar-campanha/{voluntario}', 'listarCampanha')->name('listar-campanha-voluntario');
+    Route::get('/minhas-vagas/{id?}', 'show')->name('minhas-vagas');
 });
 
 
@@ -136,6 +136,7 @@ Route::controller(OngController::class)->group(function(){
 
 
 /*----- Outas Rotas -----*/
+
 
 Route::get('/vaga', function () {
     return view('vagas/vaga');

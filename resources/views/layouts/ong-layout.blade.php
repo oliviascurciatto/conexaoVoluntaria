@@ -30,8 +30,6 @@
                                     class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
                                 <a href="{{ route('listar-vaga-ong') }}"
                                     class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Vagas</a>
-                                <a href="{{ route('listar-campanha-ong', ['id'=>1]) }}"
-                                    class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Campanhas</a>
 
                             </div>
                         </div>

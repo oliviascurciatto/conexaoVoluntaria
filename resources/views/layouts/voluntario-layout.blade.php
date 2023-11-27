@@ -25,11 +25,13 @@
                             <div class="ml-10 flex-  items-baseline space-x-4">
                                 <a href="{{ route('home-voluntario', ['id'=>1]) }}"
                                     class="bg-orange-500 text-white hover:bg-green-400 rounded-md px-3 py-2 text-sm font-medium"
-                                    aria-current="page">Início</a>
-                                <a href="{{ route('listar-ong-voluntario', ['voluntario'=>$voluntario->id]) }}"
-                                    class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
-                                <a href="{{ route('listar-vaga-voluntario', ['voluntario'=>$voluntario->id]) }}"
+                                    aria-current="page">Início</a> 
+                                    <a href="{{ route('listar-ong-voluntario', ['voluntario'=>$voluntario->id]) }}"
+                                        class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Ongs</a>
+                                    <a href="{{ route('listar-vaga-voluntario', ['voluntario'=>$voluntario->id]) }}"
                                     class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Vagas</a>
+                                    <a href="{{ route('listar-campanha-voluntario', ['voluntario'=>$voluntario->id]) }}"
+                                    class="text-gray-700 hover:bg-green-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Campanhas</a>
 
                             </div>
                         </div>

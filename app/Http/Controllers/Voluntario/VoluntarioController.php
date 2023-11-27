@@ -12,25 +12,37 @@ use Illuminate\Http\Request;
 class VoluntarioController extends Controller
 {
     
-    public function home()
+    public function home(Voluntario $voluntario)
     {
-        return view('voluntario.home-voluntario');
+        return view('voluntario.home-voluntario', ['voluntario'=>$voluntario]);
     }
 
     
-    public function verOng(Ong $ong, Voluntario $voluntario)
+    public function verOng(Voluntario $voluntario, Ong $ong)
     {
+        
+        $ong = Ong::findOrFail($ong->id);
+        $voluntario = Voluntario::findOrFail(3);
         $vagas = Vaga::where('ong_id', $ong->id)->get();
         $campanhas = Campanha::where('ong_id', $ong->id)->get();
-
-        $ong = Ong::findOrFail($ong->id);
-        return view('voluntario.ong-voluntario', ['voluntario'=>$voluntario, 'vagas'=>$vagas, 'campanhas'=>$campanhas], compact('ong'));
+        return view('voluntario.ong-voluntario', ['voluntario'=>$voluntario, 'ong'=>$ong], compact( 'vagas', 'campanhas'));
     }
-    
-    public function verCampanha(Campanha $campanha)
+
+    public function verVaga(Voluntario $voluntario, Vaga $vaga)
     {
-        $campanhas = $campanha->all();
-        return view('voluntario.campanha-voluntario', compact('campanhas'));
+        
+        $vaga = Vaga::findOrFail($vaga->id);
+        $voluntario = Voluntario::findOrFail(3);
+        return view('voluntario.vaga-voluntario', ['voluntario'=>$voluntario, 'vaga'=>$vaga], compact('vaga'));
+    }
+
+    
+    
+    public function verCampanha(Campanha $campanha, Voluntario $voluntario)
+    {
+        $campanha = Campanha::findOrFail($campanha->id);
+        $voluntario = Voluntario::findOrFail(3);
+        return view('voluntario.campanha-voluntario', ['voluntario'=>$voluntario, 'campanha'=>$campanha], compact('campanha'));
     }
 
     public function listarOng(Ong $ong, Voluntario $voluntario)  {
@@ -44,11 +56,16 @@ class VoluntarioController extends Controller
         $vagas = $vaga->all();
         return view('voluntario.listar-vagas', ['voluntario'=>$voluntario], compact('vagas'));
     }
-    public function listarCampanha(Campanha $campanha)  {
-
+    public function listarCampanha(Campanha $campanha, Voluntario $voluntario)  {
+        $voluntario = Voluntario::findOrFail($voluntario->id);
         $campanhas = $campanha->all();
-        return view('voluntario.listar-campanha', compact('campanhas'));
+        return view('voluntario.listar-campanha', ['voluntario'=>$voluntario], compact('campanhas'));
     }
 
+    public function addVoluntario(Request $request, Vaga $vaga){
+        $vaga = Vaga::find(1);
+        $voluntario = Voluntario::find(2);
+        $vaga->voluntarios()->attach($voluntario);
+    }
    
 }
