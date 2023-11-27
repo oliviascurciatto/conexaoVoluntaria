@@ -2,8 +2,7 @@
 @section('title', 'Campanha')
 
 @section('content')
-@foreach ($campanhas as $campanha)
-    
+
 <div class="bg-white items-center my-0 flex flex-col 2xl:flex-row space-y- 2xl:space-y-0 2xl:space-x-4">
     <div class="w-8/12 flex flex-col 2xl:w-1/3 bg-white">
         <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
@@ -33,5 +32,5 @@
                 </div>
             </div>
 </div>
-@endforeach
+
 @endsection

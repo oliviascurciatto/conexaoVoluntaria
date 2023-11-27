@@ -50,9 +50,8 @@ class CampanhaOngController extends Controller
     
     public function show(Campanha $campanha)
     {
-        $ongs = Ong::find(1)->get();
-        $campanhas = Campanha::find(1)->get();
-        return view('ong.campanha-ong', ['campanha' => $campanha], compact('ongs', 'campanhas'));
+        $ong = Ong::findOrFail($campanha->ong_id);
+        return view('ong.campanha-ong', ['campanha' => $campanha], compact('ong'));
     }
 
     /**

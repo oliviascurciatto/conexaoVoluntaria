@@ -45,21 +45,32 @@ class VagaOngController extends Controller
     public function show(Vaga $vaga)
     {
         
-        $ongs = Ong::find(1)->get();
-        $vagas = Vaga::find(1)->get();
-        return view('ong.vaga-ong', ['vaga' => $vaga], compact('vagas', 'ongs'));
+        $ong = Ong::findOrFail($vaga->ong_id);
+        return view('ong.vaga-ong', ['vaga' => $vaga], compact('ong'));
+       
     }
 
     
-    public function edit()
+    public function edit(Vaga $vaga)
     {
-        return view('ong.edit-vaga');
+        $ong = Ong::findOrFail($vaga->ong_id);
+        $vaga = Vaga::findOrFail($vaga->id);
+        return view('ong.edit-vaga', ['vaga'=>$vaga->id], compact('ong'));
     }
 
    
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+    public function update(Request $request, Vaga $vaga)
+{
+    $vaga = Vaga::findOrFail($vaga->id);
+    $vaga->update([
+        'nomeVaga' => $request->nomeVaga,
+        'quantidade' => $request->quantidade,
+        'encerra_em' => $request->encerra_em,
+        'descricaoVaga' => $request->descricaoVaga,
+        'habilidade_id' => $request->habilidades,
+    ]);
+
+    return redirect()->route('vaga-ong.show', ['vaga' => $vaga->id]);
+}
 
 }

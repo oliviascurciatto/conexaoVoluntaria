@@ -1,4 +1,4 @@
-@extends('layouts.ong-layout')
+@extends('layouts.pre-profile-ong-layout')
 @section('title', 'Criar Perfil')
 
 @section('content')

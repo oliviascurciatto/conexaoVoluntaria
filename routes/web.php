@@ -98,7 +98,7 @@ Route::controller(CadastroOngController::class)->group(function(){
 });
 
 Route::controller(PerfilOngController::class)->group(function (){
-    Route::get('/perfil-ong/{ong?}', 'show')->name('perfil-ong.show');
+    Route::get('/perfil-ong/{ong}', 'show')->name('perfil-ong.show');
     Route::get('/edit-perfil-ong/{id?}', 'showEdit')->name('edit-perfil-ong.show');
     Route::post('/edit-perfil-ong/{id?}', 'edit')->name('edit-perfil-ong.edit');
     Route::get('/criar-perfil-ong', 'create')->name('criar-perfil-ong.create');
@@ -106,10 +106,11 @@ Route::controller(PerfilOngController::class)->group(function (){
 });
 
 Route::controller(VagaOngController::class)->group(function(){
-    Route::get('/vaga-ong/{vaga?}', 'show')->name('vaga-ong.show');
+    Route::get('/vaga-ong/{vaga}', 'show')->name('vaga-ong.show');
     Route::get('/criar-vaga', 'create')->name('criar-vaga.create');
     Route::post('/criar-vaga', 'store')->name('criar-vaga.store');
-    Route::get('/edit-vaga/{id?}', 'edit')->name('edit-vaga');
+    Route::get('/edit-vaga/{vaga}', 'edit')->name('edit-vaga');
+    Route::put('/edit-vaga/{vaga}', 'update')->name('edit-vaga.update');
     Route::get('/ong/listar-vagas', 'index')->name('listar-vaga-ong');
 });
 
@@ -117,7 +118,8 @@ Route::controller(CampanhaOngController::class)->group(function(){
     Route::get('/campanha-ong/{campanha?}', 'show')->name('campanha-ong');
     Route::get('/criar-campanha', 'create')->name('criar-campanha.create');
     Route::post('/criar-campanha', 'store')->name('criar-campanha.store');
-    Route::get('/edit-campanha', 'edit')->name('edit-campanha');
+    Route::get('/edit-campanha', 'createEdit')->name('edit-campanha');
+    Route::post('/edit-campanha', 'edit')->name('edit-campanha.edit');
     Route::get('/ong/listar-campanha', 'index')->name('listar-campanha-ong');
 });
 
