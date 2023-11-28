@@ -62,10 +62,13 @@ class VoluntarioController extends Controller
         return view('voluntario.listar-campanha', ['voluntario'=>$voluntario], compact('campanhas'));
     }
 
-    public function addVoluntario(Request $request, Vaga $vaga){
-        $vaga = Vaga::find(1);
-        $voluntario = Voluntario::find(2);
+    public function addVoluntario(){
+        $voluntario = Voluntario::findOrFail(2);
+        $vaga = Vaga::findOrFail(6);
         $vaga->voluntarios()->attach($voluntario);
+
+        return redirect('/vaga-voluntario/{vaga}')->with('msg', 'Candidatura realizada com sucesso!'. $vaga->nomeVaga);
+        
     }
    
 }
