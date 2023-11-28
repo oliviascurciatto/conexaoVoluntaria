@@ -73,7 +73,7 @@
                                         id="user-menu-button" aria-expanded="false" aria-haspopup="false">
                                         <span class="sr-only">Open user menu</span>
                                         <img class="h-8 w-8 rounded-full"
-                                            src="/images/apae_perfil.png">
+                                            src="/images/perfil.jpg">
                                     </button>
                                 </div>
                                 <div x-show="dropdown"

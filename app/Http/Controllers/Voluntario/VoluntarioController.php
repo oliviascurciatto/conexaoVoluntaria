@@ -22,7 +22,7 @@ class VoluntarioController extends Controller
     {
         
         $ong = Ong::findOrFail($ong->id);
-        $voluntario = Voluntario::findOrFail(3);
+        $voluntario = Voluntario::findOrFail(1);
         $vagas = Vaga::where('ong_id', $ong->id)->get();
         $campanhas = Campanha::where('ong_id', $ong->id)->get();
         return view('voluntario.ong-voluntario', ['voluntario'=>$voluntario, 'ong'=>$ong], compact( 'vagas', 'campanhas'));
@@ -32,7 +32,7 @@ class VoluntarioController extends Controller
     {
         
         $vaga = Vaga::findOrFail($vaga->id);
-        $voluntario = Voluntario::findOrFail(3);
+        $voluntario = Voluntario::findOrFail(1);
         return view('voluntario.vaga-voluntario', ['voluntario'=>$voluntario, 'vaga'=>$vaga], compact('vaga'));
     }
 
@@ -41,7 +41,7 @@ class VoluntarioController extends Controller
     public function verCampanha(Campanha $campanha, Voluntario $voluntario)
     {
         $campanha = Campanha::findOrFail($campanha->id);
-        $voluntario = Voluntario::findOrFail(3);
+        $voluntario = Voluntario::findOrFail(1);
         return view('voluntario.campanha-voluntario', ['voluntario'=>$voluntario, 'campanha'=>$campanha], compact('campanha'));
     }
 
@@ -63,11 +63,11 @@ class VoluntarioController extends Controller
     }
 
     public function addVoluntario(){
-        $voluntario = Voluntario::findOrFail(2);
-        $vaga = Vaga::findOrFail(6);
+        $voluntario = Voluntario::findOrFail(1);
+        $vaga = Vaga::findOrFail(2);
         $vaga->voluntarios()->attach($voluntario);
 
-        return redirect('/vaga-voluntario/{vaga}')->with('msg', 'Candidatura realizada com sucesso!'. $vaga->nomeVaga);
+        return view('voluntario.vaga-voluntario', ['vaga'=>$vaga], compact('voluntario'));
         
     }
    

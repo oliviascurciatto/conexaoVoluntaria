@@ -25,16 +25,16 @@
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">E-mail:</span>
-                            <span class="text-gray-700"></span>
+                            <span class="text-gray-700">{{DB::table('users')->where('id', $voluntario->user_id)->value('email')}}</span>
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">Endereço:</span>
-                            <span class="text-gray-700">Cidade:{{$voluntario->cidade}}</span>
-                            <span class="text-gray-700">Estado:{{$voluntario->estado}}</span>
+                            <span class="text-gray-700">{{$voluntario->cidade}}</span>
+                            <span class="text-gray-700">{{$voluntario->estado}}</span>
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">Habilidades:</span>
-                            <span class="text-gray-700">{{$voluntario->habilidade_id}}</span>
+                            <span class="text-gray-700">{{DB::table('habilidades')->where('id', $voluntario->habilidade_id)->value('nomeHabilidade')}}</span>
                         </li>
                     </ul>
                 </div>

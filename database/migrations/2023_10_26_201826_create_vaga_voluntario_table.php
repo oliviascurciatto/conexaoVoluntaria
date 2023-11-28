@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vaga_voluntarios', function (Blueprint $table) {
+        Schema::create('vaga_voluntario', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\Voluntario::class)->constrained();
-            $table->foreignIdFor(\App\Models\Vaga::class)->constrained();
+            $table->foreignIdFor(\App\Models\Voluntario::class)->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignIdFor(\App\Models\Vaga::class)->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('vaga_voluntarios');
+        Schema::dropIfExists('vaga_voluntario');
     }
 };

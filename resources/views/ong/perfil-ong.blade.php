@@ -17,7 +17,7 @@
     <div class="w-full flex flex-col 2xl:w-1/3">
         <div class="flex-1 bg-white rounded-lg shadow-xl p-8 items-center">
                     <figure class="max-w-lg">
-                        <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-500"  alt="image description">
+                        <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-500" >
                     </figure>
                     <h4 class="mt-8 text-xl text-gray-900 font-bold">Sobre Nós</h4>
                     <p class="mt-2 text-gray-700">{{$ong->sobre}}</p>
@@ -35,17 +35,21 @@
                             <span class="text-gray-700">{{$ong->telefone}}</span>
                         </li>
                         <li class="flex border-b py-2">
-                            <span class="font-bold w-24">E-mail:</span>
-                            <span class="text-gray-700"></span>
+                            <span class="font-bold w-24">E-mail: </span>
+                            <span class="text-gray-700">{{DB::table('users')->where('id', $ong->user_id)->value('email')}}</span>
+                        </li>
+                        <li class="flex border-b py-2">
+                            <span class="font-bold w-24">Causa: </span>
+                            <span class="text-gray-700">{{DB::table('causas')->where('id', $ong->causa_id)->value('nomeCausa')}}</span>
                         </li>
                         <li class="flex border-b py-2">
                             <span class="font-bold w-24">Endereço:</span>
-                            <span class="text-gray-700">Rua: {{$ong->rua}} &nbsp;</span>
-                            <span class="text-gray-700">Número: {{$ong->numero}} &nbsp;</span>
-                            <span class="text-gray-700">Complemento: {{$ong->complemento}} &nbsp;</span>
-                            <span class="text-gray-700">Bairro: {{$ong->bairro}} &nbsp;</span>
-                            <span class="text-gray-700">Cidade: {{$ong->cidade}} &nbsp;</span>
-                            <span class="text-gray-700">Estado: {{$ong->estado}} &nbsp;</span>
+                            <span class="text-gray-700"> {{$ong->rua}} ,&nbsp; </span>
+                            <span class="text-gray-700"> {{$ong->numero}}. &nbsp;</span>
+                            <span class="text-gray-700"> {{$ong->complemento}} &nbsp;</span>
+                            <span class="text-gray-700"> {{$ong->bairro}}, &nbsp;</span>
+                            <span class="text-gray-700"> {{$ong->cidade}}-</span>
+                            <span class="text-gray-700"> {{$ong->estado}} &nbsp;</span>
                         </li>
                     </ul>
                     
