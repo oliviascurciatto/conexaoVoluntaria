@@ -64,10 +64,11 @@ class VoluntarioController extends Controller
 
     public function addVoluntario(){
         $voluntario = Voluntario::findOrFail(1);
-        $vaga = Vaga::findOrFail(2);
+        $vaga = Vaga::findOrFail(1);
         $vaga->voluntarios()->attach($voluntario);
-
-        return view('voluntario.vaga-voluntario', ['vaga'=>$vaga], compact('voluntario'));
+        
+        
+        return view('voluntario.vaga-voluntario', ['voluntario'=>$voluntario, 'vaga'=>$vaga], compact('vaga'));
         
     }
    
